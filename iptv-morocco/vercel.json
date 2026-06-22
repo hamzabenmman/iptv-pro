@@ -2,7 +2,7 @@
   "framework": "nextjs",
   "buildCommand": "next build",
   "outputDirectory": ".next",
-  "installCommand": "npm install --ignore-scripts --no-frozen-lockfile",
+  "installCommand": "npm install --no-frozen-lockfile",
   "headers": [
     {
       "source": "/images/(.*)",
