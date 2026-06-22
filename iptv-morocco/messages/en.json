@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "title": "IPTV Pro | Best IPTV Service for the Arab World - 25,000+ Channels",
+    "description": "Best IPTV service for Arabic and international audiences. Over 25,000 TV channels and VOD in HD, 4K & 8K. Subscribe now and enjoy the best entertainment!",
+    "keywords": "IPTV, IPTV subscription, best IPTV, beIN Sports, TV channels, streaming, VOD, IPTV Pro"
+  },
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "testimonials": "Reviews",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "🔥 Special Offer: 50% off for the 2026 World Cup",
+    "title": "A World of Entertainment at Your Fingertips",
+    "subtitle": "Over 25,000 TV channels and VOD in HD - 4K - 8K",
+    "description": "Enjoy all Arabic and international channels with the latest movies and series. Exclusive sports channels, Ramadan series, global movies, and more. Stable connection, high quality, competitive prices.",
+    "cta": "Contact us on WhatsApp",
+    "secondary_cta": "Explore Plans",
+    "stats": {
+      "channels": "25,000+ Channels",
+      "quality": "HD & 4K & 8K",
+      "servers": "Ultra-Fast Servers",
+      "support": "24/7 Support"
+    }
+  },
+  "features": {
+    "title": "Why Choose IPTV Pro?",
+    "subtitle": "A professional IPTV service with world-class features",
+    "items": [
+      {
+        "title": "25,000+ Channels",
+        "description": "All Arabic, international and sports channels in one place. beIN Sports, MBC, Rotana, and more"
+      },
+      {
+        "title": "HD - 4K - 8K Quality",
+        "description": "Best viewing quality with resolution up to 8K. A true cinematic experience at home"
+      },
+      {
+        "title": "Ultra-Fast Servers",
+        "description": "Global server network with stable, fast connection - no buffering or lag"
+      },
+      {
+        "title": "All Devices",
+        "description": "Works on Smart TV, phone, PC, tablet, MAG, Enigma 2, Apple TV"
+      },
+      {
+        "title": "24/7 Support",
+        "description": "Professional support team available 24 hours a day, 7 days a week"
+      },
+      {
+        "title": "EPG + VOD + Series",
+        "description": "Complete Electronic Program Guide + latest Arabic and international movies and series on demand"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Our Plans",
+    "subtitle": "Choose the plan that fits your needs",
+    "popular": "Most Popular",
+    "best_value": "Best Value",
+    "plans": [
+      {
+        "name": "1 Month",
+        "price": "9.99",
+        "currency": "$",
+        "period": "per month",
+        "original_price": "19.99",
+        "features": [
+          "25,000+ Channels",
+          "VOD + EPG",
+          "HD Quality",
+          "1 Device",
+          "Technical Support",
+          "Sports Channels"
+        ]
+      },
+      {
+        "name": "3 Months",
+        "price": "19.99",
+        "currency": "$",
+        "period": "per quarter",
+        "original_price": "59.97",
+        "features": [
+          "25,000+ Channels",
+          "VOD + EPG",
+          "HD & 4K Quality",
+          "2 Devices",
+          "24/7 Support",
+          "Exclusive Sports Channels",
+          "Save 67%"
+        ]
+      },
+      {
+        "name": "1 Year",
+        "price": "49.99",
+        "currency": "$",
+        "period": "per year",
+        "original_price": "239.88",
+        "features": [
+          "25,000+ Channels",
+          "VOD + EPG",
+          "4K & 8K Quality",
+          "5 Devices",
+          "VIP 24/7 Support",
+          "All Sports Channels",
+          "Save 79%",
+          "Money-back Guarantee"
+        ]
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "subtitle": "Over 50,000 customers across the Arab world trust us",
+    "items": [
+      {
+        "name": "Ahmed",
+        "location": "Riyadh",
+        "rating": 5,
+        "text": "Excellent service! Channels work flawlessly without buffering and quality is superb. beIN Sports channels work perfectly. Highly recommended.",
+        "verified": true
+      },
+      {
+        "name": "Mariam",
+        "location": "Dubai",
+        "rating": 5,
+        "text": "I tried several IPTV services before but IPTV Pro is by far the best. Reasonable price and great content. Thank you!",
+        "verified": true
+      },
+      {
+        "name": "Khaled",
+        "location": "Cairo",
+        "rating": 5,
+        "text": "Professional service in every sense. Annual subscription is the best decision. All Arabic and international channels available. Great experience!",
+        "verified": true
+      },
+      {
+        "name": "Sarah",
+        "location": "Jeddah",
+        "rating": 5,
+        "text": "Technical support responds quickly and the service is very stable. I watch Ramadan series and matches without any issues. Very satisfied!",
+        "verified": true
+      },
+      {
+        "name": "Mohamed",
+        "location": "Doha",
+        "rating": 5,
+        "text": "World Cup 2026 channels in 4K! The experience is amazing and the service is stable. I recommend everyone to subscribe.",
+        "verified": true
+      },
+      {
+        "name": "Noura",
+        "location": "Abu Dhabi",
+        "rating": 5,
+        "text": "Excellent service! Series and movie library constantly updated. Support is always available. Well-deserved five stars!",
+        "verified": true
+      }
+    ]
+  },
+  "scarcity": {
+    "title": "Limited Offer!",
+    "subtitle": "50% off for the first 100 subscribers - World Cup 2026",
+    "remaining": "Only",
+    "spots": "spots left",
+    "timer_title": "Offer ends in:",
+    "days": "days",
+    "hours": "hours",
+    "minutes": "minutes",
+    "seconds": "seconds",
+    "cta": "Grab the offer now - Contact us on WhatsApp"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about IPTV Pro",
+    "items": [
+      {
+        "question": "What is IPTV?",
+        "answer": "IPTV is a TV broadcasting service over the Internet. It allows you to watch thousands of TV channels, movies and series through your internet connection without needing a satellite dish or cable. You can watch Arabic, international and sports channels from anywhere in the world."
+      },
+      {
+        "question": "How do I subscribe?",
+        "answer": "Simply contact us on WhatsApp at the number shown on the website. We'll set up your account in less than 5 minutes and send you your login details with step-by-step instructions with images and video."
+      },
+      {
+        "question": "Which devices are supported?",
+        "answer": "Our service works on all devices: Smart TVs (Android TV, Samsung, LG), phones (Android & iOS), PC, tablets, MAG, Enigma 2, and Apple TV."
+      },
+      {
+        "question": "Is there a money-back guarantee?",
+        "answer": "Yes, we offer a full 7-day money-back guarantee if you're not satisfied with the service. Customer satisfaction is our priority and we are confident in the quality of our services."
+      },
+      {
+        "question": "Do you have beIN Sports channels?",
+        "answer": "Yes, all sports channels are available including beIN Sports, SSC, and IPTV. All matches and world championships like Premier League, La Liga, Serie A, and Champions League."
+      },
+      {
+        "question": "What if I have connection issues?",
+        "answer": "Our technical support team is available 24/7. Contact us on WhatsApp and we'll resolve the issue immediately. We also offer support via email and SMS."
+      }
+    ]
+  },
+  "footer": {
+    "rights": "© 2026 IPTV Pro. All rights reserved.",
+    "whatsapp_cta": "Contact us on WhatsApp",
+    "payment_methods": "Accepted payment methods",
+    "accepted_payments": "We accept: PayPal, credit cards, bank transfer, cryptocurrencies"
+  },
+  "language": {
+    "label": "Language",
+    "current": "English"
+  },
+  "whatsapp": {
+    "message": "Hello, I would like to subscribe to IPTV Pro please",
+    "button": "WhatsApp"
+  }
+}

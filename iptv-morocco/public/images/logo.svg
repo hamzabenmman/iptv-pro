@@ -1,0 +1,11 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="10" width="40" height="40" rx="8" fill="url(#logoGradient)"/>
+  <text x="20" y="37" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">IPTV</text>
+  <text x="55" y="37" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="bold">Maroc</text>
+  <defs>
+    <linearGradient id="logoGradient" x1="0" y1="0" x2="40" y2="40">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+  </defs>
+</svg>

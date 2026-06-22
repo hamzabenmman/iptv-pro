@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "title": "IPTV Pro | Meilleur Service IPTV pour le Monde Arabe - 25 000+ Chaînes",
+    "description": "Meilleur service IPTV pour le public arabe et international. Plus de 25 000 chaînes TV et VOD en HD, 4K et 8K. Abonnez-vous et profitez du meilleur divertissement !",
+    "keywords": "IPTV, abonnement IPTV, meilleur IPTV, chaînes TV, streaming, VOD, beIN Sports, IPTV Pro"
+  },
+  "nav": {
+    "home": "Accueil",
+    "features": "Fonctionnalités",
+    "pricing": "Forfaits",
+    "testimonials": "Avis",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "🔥 Offre Spéciale : 50% de réduction pour le Mondial 2026",
+    "title": "Le Divertissement à Portée de Main",
+    "subtitle": "Plus de 25 000 chaînes TV et VOD en HD - 4K - 8K",
+    "description": "Profitez de toutes les chaînes arabes et internationales avec les derniers films et séries. Chaînes sportives exclusives, séries Ramadan, films mondiaux. Connexion stable, haute qualité, prix compétitifs.",
+    "cta": "Contactez-nous sur WhatsApp",
+    "secondary_cta": "Découvrir les forfaits",
+    "stats": {
+      "channels": "25 000+ Chaînes",
+      "quality": "HD & 4K & 8K",
+      "servers": "Serveurs Ultra-Rapides",
+      "support": "Support 24/7"
+    }
+  },
+  "features": {
+    "title": "Pourquoi choisir IPTV Pro ?",
+    "subtitle": "Un service IPTV professionnel avec des fonctionnalités de classe mondiale",
+    "items": [
+      {
+        "title": "25 000+ Chaînes",
+        "description": "Toutes les chaînes arabes, internationales et sportives en un seul endroit. beIN Sports, MBC, Rotana, et plus encore"
+      },
+      {
+        "title": "Qualité HD - 4K - 8K",
+        "description": "La meilleure qualité d'image avec une résolution allant jusqu'à 8K. Une expérience cinématographique chez vous"
+      },
+      {
+        "title": "Serveurs Ultra-Rapides",
+        "description": "Réseau de serveurs mondiaux avec connexion stable et rapide, sans coupure ni latence"
+      },
+      {
+        "title": "Tous les Appareils",
+        "description": "Fonctionne sur Smart TV, téléphone, PC, tablette, MAG, Enigma 2, Apple TV"
+      },
+      {
+        "title": "Support 24/7",
+        "description": "Une équipe de support professionnelle disponible 24h/24 et 7j/7 pour vous aider"
+      },
+      {
+        "title": "EPG + VOD + Séries",
+        "description": "Guide des programmes électronique complet + films et séries arabes et internationales à la demande"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Nos Forfaits",
+    "subtitle": "Choisissez le forfait qui correspond à vos besoins",
+    "popular": "Le Plus Populaire",
+    "best_value": "Meilleur Rapport Qualité/Prix",
+    "plans": [
+      {
+        "name": "1 Mois",
+        "price": "9.99",
+        "currency": "$",
+        "period": "par mois",
+        "original_price": "19.99",
+        "features": [
+          "25 000+ Chaînes",
+          "VOD + EPG",
+          "Qualité HD",
+          "1 Appareil",
+          "Support technique",
+          "Chaînes sportives"
+        ]
+      },
+      {
+        "name": "3 Mois",
+        "price": "19.99",
+        "currency": "$",
+        "period": "par trimestre",
+        "original_price": "59.97",
+        "features": [
+          "25 000+ Chaînes",
+          "VOD + EPG",
+          "Qualité HD & 4K",
+          "2 Appareils",
+          "Support 24/7",
+          "Chaînes sportives exclusives",
+          "Économisez 67%"
+        ]
+      },
+      {
+        "name": "1 An",
+        "price": "49.99",
+        "currency": "$",
+        "period": "par an",
+        "original_price": "239.88",
+        "features": [
+          "25 000+ Chaînes",
+          "VOD + EPG",
+          "Qualité 4K & 8K",
+          "5 Appareils",
+          "Support VIP 24/7",
+          "Toutes les chaînes sportives",
+          "Économisez 79%",
+          "Garantie remboursement"
+        ]
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce que disent nos clients",
+    "subtitle": "Plus de 50 000 clients dans tout le monde arabe nous font confiance",
+    "items": [
+      {
+        "name": "Ahmed",
+        "location": "Riyad",
+        "rating": 5,
+        "text": "Excellent service ! Les chaînes fonctionnent parfaitement sans coupure et la qualité est superbe. Les chaînes beIN Sports fonctionnent parfaitement. Je recommande vivement.",
+        "verified": true
+      },
+      {
+        "name": "Mariam",
+        "location": "Dubaï",
+        "rating": 5,
+        "text": "J'ai essayé plusieurs services IPTV mais IPTV Pro est de loin le meilleur. Prix raisonnable et contenu excellent. Merci !",
+        "verified": true
+      },
+      {
+        "name": "Khaled",
+        "location": "Le Caire",
+        "rating": 5,
+        "text": "Service professionnel dans tous les sens du terme. L'abonnement annuel est la meilleure décision. Toutes les chaînes arabes et internationales disponibles. Expérience formidable !",
+        "verified": true
+      },
+      {
+        "name": "Sarah",
+        "location": "Djeddah",
+        "rating": 5,
+        "text": "Le support technique répond rapidement et le service est très stable. Je regarde les séries du Ramadan et les matchs sans aucun problème. Très satisfaite !",
+        "verified": true
+      },
+      {
+        "name": "Mohamed",
+        "location": "Doha",
+        "rating": 5,
+        "text": "Les chaînes de la Coupe du Monde 2026 en 4K ! L'expérience est incroyable et le service stable. Je recommande à tout le monde de s'abonner.",
+        "verified": true
+      },
+      {
+        "name": "Noura",
+        "location": "Abou Dabi",
+        "rating": 5,
+        "text": "Excellent service ! Bibliothèque de séries et films constamment mise à jour. Le support est toujours disponible. Cinq étoiles bien méritées !",
+        "verified": true
+      }
+    ]
+  },
+  "scarcity": {
+    "title": "Offre Limitée !",
+    "subtitle": "50% de réduction pour les 100 premiers abonnés - Coupe du Monde 2026",
+    "remaining": "Plus que",
+    "spots": "places",
+    "timer_title": "L'offre se termine dans :",
+    "days": "jours",
+    "hours": "heures",
+    "minutes": "minutes",
+    "seconds": "secondes",
+    "cta": "Profitez de l'offre maintenant - Contactez-nous sur WhatsApp"
+  },
+  "faq": {
+    "title": "Questions Fréquentes",
+    "subtitle": "Tout ce que vous devez savoir sur IPTV Pro",
+    "items": [
+      {
+        "question": "Qu'est-ce que l'IPTV ?",
+        "answer": "L'IPTV est un service de diffusion télévisée via Internet. Il vous permet de regarder des milliers de chaînes TV, films et séries via votre connexion Internet, sans besoin d'antenne parabolique ou de câble. Vous pouvez regarder des chaînes arabes, internationales et sportives de n'importe où dans le monde."
+      },
+      {
+        "question": "Comment puis-je m'abonner ?",
+        "answer": "Il vous suffit de nous contacter sur WhatsApp au numéro indiqué sur le site. Nous configurons votre compte en moins de 5 minutes et vous envoyons vos identifiants avec des instructions détaillées en images et vidéo."
+      },
+      {
+        "question": "Quels appareils sont compatibles ?",
+        "answer": "Notre service fonctionne sur tous les appareils : Smart TV (Android TV, Samsung, LG), smartphones (Android & iOS), PC, tablettes, MAG, Enigma 2 et Apple TV."
+      },
+      {
+        "question": "Y a-t-il une garantie de remboursement ?",
+        "answer": "Oui, nous offrons une garantie de remboursement intégral de 7 jours si vous n'êtes pas satisfait du service. La satisfaction client est notre priorité et nous avons confiance en la qualité de nos services."
+      },
+      {
+        "question": "Proposez-vous les chaînes beIN Sports ?",
+        "answer": "Oui, toutes les chaînes sportives sont disponibles, incluant beIN Sports, SSC et IPTV. Tous les matchs et championnats mondiaux comme la Premier League, La Liga, Serie A et la Ligue des Champions."
+      },
+      {
+        "question": "Que faire en cas de problème de connexion ?",
+        "answer": "Notre équipe de support technique est disponible 24h/24 et 7j/7. Contactez-nous sur WhatsApp et nous résoudrons le problème immédiatement. Nous offrons aussi un support par email et SMS."
+      }
+    ]
+  },
+  "footer": {
+    "rights": "© 2026 IPTV Pro. Tous droits réservés.",
+    "whatsapp_cta": "Contactez-nous sur WhatsApp",
+    "payment_methods": "Moyens de paiement acceptés",
+    "accepted_payments": "Nous acceptons : PayPal, cartes bancaires, virement, cryptomonnaies"
+  },
+  "language": {
+    "label": "Langue",
+    "current": "Français"
+  },
+  "whatsapp": {
+    "message": "Bonjour, je souhaite m'abonner au service IPTV Pro s'il vous plaît",
+    "button": "WhatsApp"
+  }
+}
