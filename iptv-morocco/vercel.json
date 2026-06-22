@@ -3,7 +3,6 @@
   "buildCommand": "next build",
   "outputDirectory": ".next",
   "installCommand": "npm install",
-  "regions": ["fra1", "cdg1"],
   "headers": [
     {
       "source": "/images/(.*)",

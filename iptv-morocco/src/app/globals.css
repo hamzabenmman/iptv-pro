@@ -12,6 +12,17 @@
   --cursor-y: 0px;
 }
 
+[data-theme='light'] {
+  --foreground-rgb: 17, 24, 39;
+  --background-start: 248, 247, 245;
+  --background-end: 239, 236, 230;
+  --brand-glow: rgba(212, 175, 55, 0.18);
+}
+
+html, body {
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -57,6 +68,46 @@ body {
   transition: all 0.4s ease;
 }
 ::-webkit-scrollbar-thumb:hover { background: #facc15; }
+
+/* ===== Enhanced Animations & Transitions ===== */
+@keyframes fadeInStagger {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmerFlow {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+@keyframes floatSoft {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes glowPulseAlt {
+  0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.6); }
+}
+
+@keyframes slideInLeft {
+  0% { opacity: 0; transform: translateX(-40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  0% { opacity: 0; transform: translateX(40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* ===== Smooth Component Transitions ===== */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-smooth-lg {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 /* ===== Glassmorphism 2.0 — Warmer & Smoother ===== */
 .glass {

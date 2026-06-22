@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const languages = [
   { code: 'ar', name: 'العربية', dir: 'rtl' },
@@ -52,6 +53,7 @@ export default function Navbar() {
     { key: 'pricing', href: '#pricing' },
     { key: 'testimonials', href: '#testimonials' },
     { key: 'faq', href: '#faq' },
+    { key: 'contact', href: '#contact' },
   ];
 
   // Sync cookie with current locale on mount so refresh respects it
@@ -108,6 +110,7 @@ export default function Navbar() {
 
           {/* Right */}
           <div className="flex items-center gap-2 md:gap-3">
+            <ThemeToggle />
             {/* Language Selector */}
             <div className="relative">
               <button

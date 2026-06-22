@@ -1,0 +1,297 @@
+{
+  "meta": {
+    "title": "IPTV Pro | アラブ世界向け最高のIPTVサービス - 25,000+チャンネル",
+    "description": "アラブおよび国際的な視聴者向けの最高のIPTVサービス。HD、4K、8Kの25,000以上のTVチャンネルとVOD。今すぐ購読！",
+    "keywords": "IPTV, IPTV Pro, IPTV購読, beIN Sports, テレビチャンネル, ストリーミング, VOD"
+  },
+  "nav": {
+    "home": "ホーム",
+    "features": "特徴",
+    "pricing": "料金",
+    "testimonials": "レビュー",
+    "faq": "よくある質問",
+    "contact": "お問い合わせ",
+    "guide": "ガイド",
+    "matches": "試合"
+  },
+  "hero": {
+    "badge": "🔥 特別オファー：2026ワールドカップ記念50％オフ",
+    "title": "手の中のエンターテイメントの世界",
+    "subtitle": "HD - 4K - 8K画質の25,000以上のTVチャンネルとVOD",
+    "description": "最新の映画やシリーズとともに、すべてのアラブおよび国際チャンネルをお楽しみください。独占スポーツチャンネル。安定した接続、高品質。",
+    "cta": "WhatsAppでお問い合わせ",
+    "secondary_cta": "プランを見る",
+    "stats": {
+      "channels": "25,000+ チャンネル",
+      "quality": "HD & 4K & 8K",
+      "servers": "超高速サーバー",
+      "support": "24/7 サポート"
+    }
+  },
+  "features": {
+    "title": "なぜIPTV Proを選ぶのか？",
+    "subtitle": "ワールドクラスの機能を備えたプロフェッショナルなIPTVサービス",
+    "items": [
+      {
+        "title": "25,000+ チャンネル",
+        "description": "すべてのアラブ、国際、スポーツチャンネルがひとつに"
+      },
+      {
+        "title": "HD - 4K - 8K 画質",
+        "description": "8Kまでの最高の画質"
+      },
+      {
+        "title": "超高速サーバー",
+        "description": "グローバルサーバーネットワーク、安定した接続"
+      },
+      {
+        "title": "すべてのデバイス",
+        "description": "スマートTV、電話、PC、タブレット、MAG、Enigma 2に対応"
+      },
+      {
+        "title": "24/7 サポート",
+        "description": "プロフェッショナルなサポートチームが24時間対応"
+      },
+      {
+        "title": "EPG + VOD + シリーズ",
+        "description": "電子番組ガイド + 映画やシリーズのオンデマンド配信"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "料金プラン",
+    "subtitle": "ニーズに合ったプランをお選びください",
+    "popular": "最も人気",
+    "best_value": "最高の価値",
+    "plans": [
+      {
+        "name": "1ヶ月",
+        "price": "9.99",
+        "currency": "$",
+        "period": "月額",
+        "original_price": "19.99",
+        "features": [
+          "25,000+ チャンネル",
+          "VOD + EPG",
+          "HD画質",
+          "1台のデバイス",
+          "テクニカルサポート",
+          "スポーツチャンネル"
+        ]
+      },
+      {
+        "name": "3ヶ月",
+        "price": "19.99",
+        "currency": "$",
+        "period": "3ヶ月ごと",
+        "original_price": "59.97",
+        "features": [
+          "25,000+ チャンネル",
+          "VOD + EPG",
+          "HD & 4K画質",
+          "2台のデバイス",
+          "24/7 サポート",
+          "独占スポーツチャンネル",
+          "67%お得"
+        ]
+      },
+      {
+        "name": "1年",
+        "price": "49.99",
+        "currency": "$",
+        "period": "年額",
+        "original_price": "239.88",
+        "features": [
+          "25,000+ チャンネル",
+          "VOD + EPG",
+          "4K & 8K画質",
+          "5台のデバイス",
+          "VIP 24/7 サポート",
+          "すべてのスポーツチャンネル",
+          "79%お得",
+          "返金保証"
+        ]
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "お客様の声",
+    "subtitle": "アラブ世界全体で50,000人以上のお客様に信頼されています",
+    "items": [
+      {
+        "name": "アハメド",
+        "location": "リヤド",
+        "rating": 5,
+        "text": "素晴らしいサービス！チャンネルは完璧に動作し、画質も最高です。",
+        "verified": true
+      },
+      {
+        "name": "マリアム",
+        "location": "ドバイ",
+        "rating": 5,
+        "text": "いろいろなサービスを試しましたが、IPTV Proが一番です。",
+        "verified": true
+      },
+      {
+        "name": "ハリド",
+        "location": "カイロ",
+        "rating": 5,
+        "text": "プロフェッショナルなサービス。年間購読が最良の選択です。",
+        "verified": true
+      },
+      {
+        "name": "ヌーラ",
+        "location": "アブダビ",
+        "rating": 5,
+        "text": "素晴らしいサービス！常に更新されるライブラリ。星5つ！",
+        "verified": true
+      }
+    ]
+  },
+  "scarcity": {
+    "title": "期間限定オファー！",
+    "subtitle": "2026ワールドカップ記念、最初の100名様限定50％オフ",
+    "remaining": "残り",
+    "spots": "枠",
+    "timer_title": "オファー終了まで：",
+    "days": "日",
+    "hours": "時間",
+    "minutes": "分",
+    "seconds": "秒",
+    "cta": "今すぐお問い合わせ - WhatsAppでご連絡を"
+  },
+  "faq": {
+    "title": "よくある質問",
+    "subtitle": "IPTV Proについてのすべて",
+    "items": [
+      {
+        "question": "IPTVとは？",
+        "answer": "IPTVはインターネット経由のテレビ放送サービスです。数千のチャンネル、映画、シリーズを視聴できます。"
+      },
+      {
+        "question": "購読方法は？",
+        "answer": "WhatsAppでお問い合わせください。5分以内にアカウントを設定します。"
+      },
+      {
+        "question": "対応デバイスは？",
+        "answer": "スマートTV、電話、PC、タブレット、MAG、Enigma 2、Apple TV。"
+      },
+      {
+        "question": "返金保証は？",
+        "answer": "はい、7日間の返金保証があります。"
+      },
+      {
+        "question": "beIN Sportsはありますか？",
+        "answer": "はい、beIN Sportsを含むすべてのスポーツチャンネルがあります。"
+      },
+      {
+        "question": "接続の問題は？",
+        "answer": "テクニカルサポートは24/7対応。WhatsAppでご連絡ください。"
+      }
+    ]
+  },
+  "trial": {
+    "title": "無料トライアル",
+    "subtitle": "IPTV Proを無料でお試しください",
+    "name_label": "お名前",
+    "name_placeholder": "お名前を入力",
+    "whatsapp_label": "WhatsApp番号",
+    "whatsapp_placeholder": "例: 2126XXXXXXXX",
+    "duration_label": "トライアル期間",
+    "durations": {
+      "24h": "24時間",
+      "48h": "48時間",
+      "3d": "3日間"
+    },
+    "submit": "無料トライアルを開始",
+    "cta": "無料トライアル",
+    "cta_subtitle": "24時間無料でお試し",
+    "whatsapp_prefix": "こんにちは、IPTV Proの無料トライアルを希望します。",
+    "guarantee": "🔒 義務はありません - いつでもキャンセル可能"
+  },
+  "guide": {
+    "title": "インストールガイド",
+    "subtitle": "すべてのデバイスにIPTV Proを数分でインストール",
+    "tabs": {
+      "android_tv": "Android TV",
+      "smart_tv": "スマートTV",
+      "iphone": "iPhone/iPad",
+      "android": "Android",
+      "pc": "PC/Mac",
+      "firestick": "Fire Stick"
+    },
+    "steps": [
+      {"title": "IPTVアプリをダウンロード", "desc": "Google Playストア/App Storeからダウンロード：IPTV Smarters、TiviMate、またはSMART IPTV"},
+      {"title": "アプリを開く", "desc": "アプリを起動し、「リストを追加」または「ログイン」をクリック"},
+      {"title": "ログイン情報を入力", "desc": "WhatsAppで送信したユーザー名、パスワード、サーバーURLを入力"},
+      {"title": "チャンネルリストを読み込む", "desc": "アプリが自動的にチャンネルリストとEPG番組ガイドを読み込みます"},
+      {"title": "お楽しみください！", "desc": "HD、4K、8Kでお気に入りのチャンネルを視聴できます！"}
+    ],
+    "need_help": "ヘルプが必要ですか？WhatsAppでお問い合わせください"
+  },
+  "matches": {
+    "title": "スポーツカレンダー",
+    "subtitle": "IPTV Proで重要な試合を見逃さない",
+    "filters": {
+      "all": "すべて",
+      "world_cup": "2026ワールドカップ",
+      "champions_league": "チャンピオンズリーグ",
+      "premier_league": "プレミアリーグ",
+      "la_liga": "ラ・リーガ",
+      "bein": "beIN Sports"
+    },
+    "today": "今日",
+    "tomorrow": "明日",
+    "upcoming": "今後の予定",
+    "watch_on": "視聴する",
+    "matches_list": [
+      {"date": "2026-06-15", "time": "21:00", "team1": "モロッコ", "team2": "フランス", "competition": "world_cup", "stadium": "ハリファ競技場, ドーハ"},
+      {"date": "2026-06-18", "time": "18:00", "team1": "ブラジル", "team2": "ポルトガル", "competition": "world_cup", "stadium": "ルサイル競技場"},
+      {"date": "2026-06-20", "time": "21:00", "team1": "アルジェリア", "team2": "アルゼンチン", "competition": "world_cup", "stadium": "974競技場, ドーハ"},
+      {"date": "2026-06-22", "time": "20:00", "team1": "レアル・マドリード", "team2": "バルセロナ", "competition": "la_liga", "stadium": "サンティアゴ・ベルナベウ"},
+      {"date": "2026-06-25", "time": "21:00", "team1": "マン・シティ", "team2": "バイエルン・ミュンヘン", "competition": "champions_league", "stadium": "エティハド競技場"},
+      {"date": "2026-06-28", "time": "17:30", "team1": "リバプール", "team2": "アーセナル", "competition": "premier_league", "stadium": "アンフィールド"},
+      {"date": "2026-07-02", "time": "21:00", "team1": "PSG", "team2": "マルセイユ", "competition": "bein", "stadium": "パルク・デ・プランス"},
+      {"date": "2026-07-05", "time": "20:00", "team1": "インテル", "team2": "ACミラン", "competition": "champions_league", "stadium": "サン・シーロ"}
+    ]
+  },
+  "footer": {
+    "rights": "© 2026 IPTV Pro. 全著作権所有。",
+    "whatsapp_cta": "WhatsAppでお問い合わせ",
+    "payment_methods": "お支払い方法",
+    "accepted_payments": "対応：PayPal、カード、銀行振込、暗号通貨"
+  },
+  "language": {
+    "label": "言語",
+    "current": "日本語"
+  },
+  "whatsapp": {
+    "message": "こんにちは、IPTV Proに登録したいです",
+    "button": "WhatsApp"
+  },
+  "theme": {
+    "toggle": "Toggle theme"
+  },
+  "contact": {
+    "headline": "Talk to us directly",
+    "title": "Contact Sales Now",
+    "subtitle": "Send your details and get a fast premium IPTV offer",
+    "form_label": "Request",
+    "form_help": "Send your request and we will reply immediately",
+    "name_label": "Name",
+    "name_placeholder": "Your name",
+    "email_label": "Email",
+    "email_placeholder": "Your email",
+    "message_label": "Your message",
+    "message_placeholder": "Describe your request",
+    "button": "Send via WhatsApp",
+    "form_note": "We will reply within minutes on WhatsApp.",
+    "whatsapp_prompt": "I want to subscribe to IPTV Pro.",
+    "trust_title": "Trusted and Secure",
+    "trust_description": "We protect your data and guarantee fast setup with dedicated support.",
+    "cta_title": "Fast WhatsApp Support",
+    "cta_description": "Contact us instantly and get your IPTV subscription ready in minutes.",
+    "whatsapp_button": "Contact on WhatsApp",
+    "submitted": "Message opened in WhatsApp."
+  }
+}

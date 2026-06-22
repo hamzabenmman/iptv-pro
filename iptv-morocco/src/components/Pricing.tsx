@@ -1,13 +1,12 @@
 'use client';
 
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { Check, Star, Sparkles, Zap } from 'lucide-react';
 import RevealAnimation from './RevealAnimation';
 
 export default function Pricing() {
   const t = useTranslations('pricing');
   const tWhatsapp = useTranslations('whatsapp');
-  const locale = useLocale();
   const plans = t.raw('plans') as Array<{
     name: string; price: string; currency: string; period: string;
     original_price: string; features: string[];

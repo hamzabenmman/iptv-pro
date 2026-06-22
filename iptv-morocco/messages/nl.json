@@ -1,6 +1,19 @@
 {
-  "meta": { "title": "IPTV Pro | Beste IPTV-Dienst voor de Arabische Wereld - 25.000+ Zenders", "description": "Beste IPTV-dienst voor Arabische en internationale doelgroepen. Meer dan 25.000 TV-zenders en VOD in HD, 4K & 8K. Abonneer nu!", "keywords": "IPTV, IPTV Pro, IPTV-abonnement, beIN Sports, TV-zenders, streaming, VOD" },
-  "nav": { "home": "Home", "features": "Functies", "pricing": "Prijzen", "testimonials": "Beoordelingen", "faq": "FAQ", "contact": "Contact" },
+  "meta": {
+    "title": "IPTV Pro | Beste IPTV-Dienst voor de Arabische Wereld - 25.000+ Zenders",
+    "description": "Beste IPTV-dienst voor Arabische en internationale doelgroepen. Meer dan 25.000 TV-zenders en VOD in HD, 4K & 8K. Abonneer nu!",
+    "keywords": "IPTV, IPTV Pro, IPTV-abonnement, beIN Sports, TV-zenders, streaming, VOD"
+  },
+  "nav": {
+    "home": "Home",
+    "features": "Functies",
+    "pricing": "Prijzen",
+    "testimonials": "Beoordelingen",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "guide": "Handleiding",
+    "matches": "Wedstrijden"
+  },
   "hero": {
     "badge": "🔥 Speciale Aanbieding: 50% korting voor WK 2026",
     "title": "Een Wereld van Entertainment in uw Handen",
@@ -8,48 +21,277 @@
     "description": "Geniet van alle Arabische en internationale zenders met de nieuwste films en series. Exclusieve sportkanalen. Stabiele verbinding.",
     "cta": "Neem contact op via WhatsApp",
     "secondary_cta": "Bekijk Abonnementen",
-    "stats": { "channels": "25.000+ Zenders", "quality": "HD & 4K & 8K", "servers": "Ultrasnelle Servers", "support": "24/7 Ondersteuning" }
+    "stats": {
+      "channels": "25.000+ Zenders",
+      "quality": "HD & 4K & 8K",
+      "servers": "Ultrasnelle Servers",
+      "support": "24/7 Ondersteuning"
+    }
   },
   "features": {
-    "title": "Waarom kiezen voor IPTV Pro?", "subtitle": "Een professionele IPTV-dienst met wereldklasse functies",
+    "title": "Waarom kiezen voor IPTV Pro?",
+    "subtitle": "Een professionele IPTV-dienst met wereldklasse functies",
     "items": [
-      { "title": "25.000+ Zenders", "description": "Alle Arabische, internationale en sportzenders op één plek" },
-      { "title": "HD - 4K - 8K Kwaliteit", "description": "Beste beeldkwaliteit met resolutie tot 8K" },
-      { "title": "Ultrasnelle Servers", "description": "Wereldwijd servernetwerk met stabiele verbinding" },
-      { "title": "Alle Apparaten", "description": "Werkt op Smart TV, telefoon, PC, tablet, MAG, Enigma 2" },
-      { "title": "24/7 Ondersteuning", "description": "Professioneel ondersteuningsteam 24/7 beschikbaar" },
-      { "title": "EPG + VOD + Series", "description": "Programmagids + films en series op aanvraag" }
+      {
+        "title": "25.000+ Zenders",
+        "description": "Alle Arabische, internationale en sportzenders op één plek"
+      },
+      {
+        "title": "HD - 4K - 8K Kwaliteit",
+        "description": "Beste beeldkwaliteit met resolutie tot 8K"
+      },
+      {
+        "title": "Ultrasnelle Servers",
+        "description": "Wereldwijd servernetwerk met stabiele verbinding"
+      },
+      {
+        "title": "Alle Apparaten",
+        "description": "Werkt op Smart TV, telefoon, PC, tablet, MAG, Enigma 2"
+      },
+      {
+        "title": "24/7 Ondersteuning",
+        "description": "Professioneel ondersteuningsteam 24/7 beschikbaar"
+      },
+      {
+        "title": "EPG + VOD + Series",
+        "description": "Programmagids + films en series op aanvraag"
+      }
     ]
   },
   "pricing": {
-    "title": "Onze Abonnementen", "subtitle": "Kies het abonnement dat bij u past", "popular": "Meest Populair", "best_value": "Beste Waarde",
+    "title": "Onze Abonnementen",
+    "subtitle": "Kies het abonnement dat bij u past",
+    "popular": "Meest Populair",
+    "best_value": "Beste Waarde",
     "plans": [
-      { "name": "1 Maand", "price": "9.99", "currency": "$", "period": "per maand", "original_price": "19.99", "features": ["25.000+ Zenders", "VOD + EPG", "HD Kwaliteit", "1 Apparaat", "Technische Ondersteuning", "Sportkanalen"] },
-      { "name": "3 Maanden", "price": "19.99", "currency": "$", "period": "per kwartaal", "original_price": "59.97", "features": ["25.000+ Zenders", "VOD + EPG", "HD & 4K Kwaliteit", "2 Apparaten", "24/7 Ondersteuning", "Exclusieve Sportkanalen", "Bespaar 67%"] },
-      { "name": "1 Jaar", "price": "49.99", "currency": "$", "period": "per jaar", "original_price": "239.88", "features": ["25.000+ Zenders", "VOD + EPG", "4K & 8K Kwaliteit", "5 Apparaten", "VIP 24/7 Ondersteuning", "Alle Sportkanalen", "Bespaar 79%", "Geld-terug-garantie"] }
+      {
+        "name": "1 Maand",
+        "price": "9.99",
+        "currency": "$",
+        "period": "per maand",
+        "original_price": "19.99",
+        "features": [
+          "25.000+ Zenders",
+          "VOD + EPG",
+          "HD Kwaliteit",
+          "1 Apparaat",
+          "Technische Ondersteuning",
+          "Sportkanalen"
+        ]
+      },
+      {
+        "name": "3 Maanden",
+        "price": "19.99",
+        "currency": "$",
+        "period": "per kwartaal",
+        "original_price": "59.97",
+        "features": [
+          "25.000+ Zenders",
+          "VOD + EPG",
+          "HD & 4K Kwaliteit",
+          "2 Apparaten",
+          "24/7 Ondersteuning",
+          "Exclusieve Sportkanalen",
+          "Bespaar 67%"
+        ]
+      },
+      {
+        "name": "1 Jaar",
+        "price": "49.99",
+        "currency": "$",
+        "period": "per jaar",
+        "original_price": "239.88",
+        "features": [
+          "25.000+ Zenders",
+          "VOD + EPG",
+          "4K & 8K Kwaliteit",
+          "5 Apparaten",
+          "VIP 24/7 Ondersteuning",
+          "Alle Sportkanalen",
+          "Bespaar 79%",
+          "Geld-terug-garantie"
+        ]
+      }
     ]
   },
   "testimonials": {
-    "title": "Wat onze klanten zeggen", "subtitle": "Meer dan 50.000 klanten in de Arabische wereld vertrouwen ons", "items": [
-      { "name": "Ahmed", "location": "Riyad", "rating": 5, "text": "Uitstekende service! De zenders werken perfect en de kwaliteit is geweldig.", "verified": true },
-      { "name": "Mariam", "location": "Dubai", "rating": 5, "text": "Ik heb verschillende diensten geprobeerd maar IPTV Pro is de beste.", "verified": true },
-      { "name": "Khaled", "location": "Caïro", "rating": 5, "text": "Professionele service. Het jaarabonnement is de beste keuze.", "verified": true },
-      { "name": "Noura", "location": "Abu Dhabi", "rating": 5, "text": "Uitstekende service! Constant bijgewerkte serie- en filmbibliotheek.", "verified": true }
-    ]
-  },
-  "scarcity": { "title": "Beperkte Aanbieding!", "subtitle": "50% korting voor de eerste 100 abonnees - WK 2026", "remaining": "Slechts", "spots": "plaatsen over", "timer_title": "Aanbieding eindigt over:", "days": "dagen", "hours": "uren", "minutes": "minuten", "seconds": "seconden", "cta": "Grijp de aanbieding nu - Neem contact op via WhatsApp" },
-  "faq": {
-    "title": "Veelgestelde Vragen", "subtitle": "Alles over IPTV Pro",
+    "title": "Wat onze klanten zeggen",
+    "subtitle": "Meer dan 50.000 klanten in de Arabische wereld vertrouwen ons",
     "items": [
-      { "question": "Wat is IPTV?", "answer": "IPTV is een tv-uitzenddienst via internet. Duizenden zenders, films en series." },
-      { "question": "Hoe abonneren?", "answer": "Neem contact op via WhatsApp. Account in 5 minuten klaar." },
-      { "question": "Welke apparaten?", "answer": "Smart TV, telefoon, PC, tablet, MAG, Enigma 2, Apple TV." },
-      { "question": "Geld-terug-garantie?", "answer": "Ja, 7 dagen geld-terug-garantie." },
-      { "question": "Heeft u beIN Sports?", "answer": "Ja, alle sportkanalen inclusief beIN Sports." },
-      { "question": "Verbindingsproblemen?", "answer": "Technische ondersteuning 24/7. WhatsApp ons." }
+      {
+        "name": "Ahmed",
+        "location": "Riyad",
+        "rating": 5,
+        "text": "Uitstekende service! De zenders werken perfect en de kwaliteit is geweldig.",
+        "verified": true
+      },
+      {
+        "name": "Mariam",
+        "location": "Dubai",
+        "rating": 5,
+        "text": "Ik heb verschillende diensten geprobeerd maar IPTV Pro is de beste.",
+        "verified": true
+      },
+      {
+        "name": "Khaled",
+        "location": "Caïro",
+        "rating": 5,
+        "text": "Professionele service. Het jaarabonnement is de beste keuze.",
+        "verified": true
+      },
+      {
+        "name": "Noura",
+        "location": "Abu Dhabi",
+        "rating": 5,
+        "text": "Uitstekende service! Constant bijgewerkte serie- en filmbibliotheek.",
+        "verified": true
+      }
     ]
   },
-  "footer": { "rights": "© 2026 IPTV Pro. Alle rechten voorbehouden.", "whatsapp_cta": "Neem contact op via WhatsApp", "payment_methods": "Betaalmethoden", "accepted_payments": "Wij accepteren: PayPal, kaarten, overschrijving, crypto" },
-  "language": { "label": "Taal", "current": "Nederlands" },
-  "whatsapp": { "message": "Hallo, ik wil IPTV Pro abonneren", "button": "WhatsApp" }
+  "scarcity": {
+    "title": "Beperkte Aanbieding!",
+    "subtitle": "50% korting voor de eerste 100 abonnees - WK 2026",
+    "remaining": "Slechts",
+    "spots": "plaatsen over",
+    "timer_title": "Aanbieding eindigt over:",
+    "days": "dagen",
+    "hours": "uren",
+    "minutes": "minuten",
+    "seconds": "seconden",
+    "cta": "Grijp de aanbieding nu - Neem contact op via WhatsApp"
+  },
+  "faq": {
+    "title": "Veelgestelde Vragen",
+    "subtitle": "Alles over IPTV Pro",
+    "items": [
+      {
+        "question": "Wat is IPTV?",
+        "answer": "IPTV is een tv-uitzenddienst via internet. Duizenden zenders, films en series."
+      },
+      {
+        "question": "Hoe abonneren?",
+        "answer": "Neem contact op via WhatsApp. Account in 5 minuten klaar."
+      },
+      {
+        "question": "Welke apparaten?",
+        "answer": "Smart TV, telefoon, PC, tablet, MAG, Enigma 2, Apple TV."
+      },
+      {
+        "question": "Geld-terug-garantie?",
+        "answer": "Ja, 7 dagen geld-terug-garantie."
+      },
+      {
+        "question": "Heeft u beIN Sports?",
+        "answer": "Ja, alle sportkanalen inclusief beIN Sports."
+      },
+      {
+        "question": "Verbindingsproblemen?",
+        "answer": "Technische ondersteuning 24/7. WhatsApp ons."
+      }
+    ]
+  },
+  "trial": {
+    "title": "Gratis Proberen",
+    "subtitle": "Probeer IPTV Pro zonder risico",
+    "name_label": "Uw naam",
+    "name_placeholder": "Voer uw naam in",
+    "whatsapp_label": "WhatsApp-nummer",
+    "whatsapp_placeholder": "Bijv: 2126XXXXXXXX",
+    "duration_label": "Proefduur",
+    "durations": {
+      "24h": "24 Uur",
+      "48h": "48 Uur",
+      "3d": "3 Dagen"
+    },
+    "submit": "Start Gratis Proef",
+    "cta": "Gratis Proberen",
+    "cta_subtitle": "Probeer 24u gratis",
+    "whatsapp_prefix": "Hallo, ik wil een gratis proefversie van IPTV Pro.",
+    "guarantee": "🔒 Geen verplichting - Annuleer wanneer u wilt"
+  },
+  "guide": {
+    "title": "Installatiehandleiding",
+    "subtitle": "Installeer IPTV Pro in minuten op al uw apparaten",
+    "tabs": {
+      "android_tv": "Android TV",
+      "smart_tv": "Smart TV",
+      "iphone": "iPhone/iPad",
+      "android": "Android",
+      "pc": "PC/Mac",
+      "firestick": "Fire Stick"
+    },
+    "steps": [
+      {"title": "Download een IPTV-app", "desc": "Download via Google Play Store / App Store: IPTV Smarters, TiviMate of SMART IPTV"},
+      {"title": "Open de app", "desc": "Start de app en klik op 'Lijst toevoegen' of 'Inloggen'"},
+      {"title": "Voer uw gegevens in", "desc": "Voer gebruikersnaam, wachtwoord en server-URL in die we via WhatsApp hebben gestuurd"},
+      {"title": "Laad zenderlijst", "desc": "De app laadt automatisch uw zenderlijst en EPG-gids"},
+      {"title": "Geniet!", "desc": "U kunt nu al uw favoriete zenders bekijken in HD, 4K en 8K!"}
+    ],
+    "need_help": "Hulp nodig? Neem contact op via WhatsApp"
+  },
+  "matches": {
+    "title": "Sportkalender",
+    "subtitle": "Mis geen belangrijke wedstrijd met IPTV Pro",
+    "filters": {
+      "all": "Alle",
+      "world_cup": "WK 2026",
+      "champions_league": "Champions League",
+      "premier_league": "Premier League",
+      "la_liga": "La Liga",
+      "bein": "beIN Sports"
+    },
+    "today": "Vandaag",
+    "tomorrow": "Morgen",
+    "upcoming": "Aankomend",
+    "watch_on": "Bekijk op",
+    "matches_list": [
+      {"date": "2026-06-15", "time": "21:00", "team1": "Marokko", "team2": "Frankrijk", "competition": "world_cup", "stadium": "Khalifa Stadion, Doha"},
+      {"date": "2026-06-18", "time": "18:00", "team1": "Brazilië", "team2": "Portugal", "competition": "world_cup", "stadium": "Lusail Stadion"},
+      {"date": "2026-06-20", "time": "21:00", "team1": "Algerije", "team2": "Argentinië", "competition": "world_cup", "stadium": "Stadion 974, Doha"},
+      {"date": "2026-06-22", "time": "20:00", "team1": "Real Madrid", "team2": "Barcelona", "competition": "la_liga", "stadium": "Santiago Bernabéu"},
+      {"date": "2026-06-25", "time": "21:00", "team1": "Man City", "team2": "Bayern München", "competition": "champions_league", "stadium": "Etihad Stadium"},
+      {"date": "2026-06-28", "time": "17:30", "team1": "Liverpool", "team2": "Arsenal", "competition": "premier_league", "stadium": "Anfield"},
+      {"date": "2026-07-02", "time": "21:00", "team1": "PSG", "team2": "Marseille", "competition": "bein", "stadium": "Parc des Princes"},
+      {"date": "2026-07-05", "time": "20:00", "team1": "Inter Milaan", "team2": "AC Milan", "competition": "champions_league", "stadium": "San Siro"}
+    ]
+  },
+  "footer": {
+    "rights": "© 2026 IPTV Pro. Alle rechten voorbehouden.",
+    "whatsapp_cta": "Neem contact op via WhatsApp",
+    "payment_methods": "Betaalmethoden",
+    "accepted_payments": "Wij accepteren: PayPal, kaarten, overschrijving, crypto"
+  },
+  "language": {
+    "label": "Taal",
+    "current": "Nederlands"
+  },
+  "whatsapp": {
+    "message": "Hallo, ik wil IPTV Pro abonneren",
+    "button": "WhatsApp"
+  },
+  "theme": {
+    "toggle": "Toggle theme"
+  },
+  "contact": {
+    "headline": "Talk to us directly",
+    "title": "Contact Sales Now",
+    "subtitle": "Send your details and get a fast premium IPTV offer",
+    "form_label": "Request",
+    "form_help": "Send your request and we will reply immediately",
+    "name_label": "Name",
+    "name_placeholder": "Your name",
+    "email_label": "Email",
+    "email_placeholder": "Your email",
+    "message_label": "Your message",
+    "message_placeholder": "Describe your request",
+    "button": "Send via WhatsApp",
+    "form_note": "We will reply within minutes on WhatsApp.",
+    "whatsapp_prompt": "I want to subscribe to IPTV Pro.",
+    "trust_title": "Trusted and Secure",
+    "trust_description": "We protect your data and guarantee fast setup with dedicated support.",
+    "cta_title": "Fast WhatsApp Support",
+    "cta_description": "Contact us instantly and get your IPTV subscription ready in minutes.",
+    "whatsapp_button": "Contact on WhatsApp",
+    "submitted": "Message opened in WhatsApp."
+  }
 }

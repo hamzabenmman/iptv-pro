@@ -1,6 +1,19 @@
 {
-  "meta": { "title": "IPTV Pro | 面向阿拉伯世界的最佳IPTV服务 - 25,000+ 频道", "description": "面向阿拉伯和国际观众的最佳IPTV服务。超过25,000个电视频道和VOD，支持HD、4K和8K。立即订阅！", "keywords": "IPTV, IPTV Pro, IPTV订阅, beIN Sports, 电视频道, 流媒体, VOD" },
-  "nav": { "home": "首页", "features": "功能", "pricing": "价格", "testimonials": "评价", "faq": "常见问题", "contact": "联系我们" },
+  "meta": {
+    "title": "IPTV Pro | 面向阿拉伯世界的最佳IPTV服务 - 25,000+ 频道",
+    "description": "面向阿拉伯和国际观众的最佳IPTV服务。超过25,000个电视频道和VOD，支持HD、4K和8K。立即订阅！",
+    "keywords": "IPTV, IPTV Pro, IPTV订阅, beIN Sports, 电视频道, 流媒体, VOD"
+  },
+  "nav": {
+    "home": "首页",
+    "features": "功能",
+    "pricing": "价格",
+    "testimonials": "评价",
+    "faq": "常见问题",
+    "contact": "联系我们",
+    "guide": "指南",
+    "matches": "比赛"
+  },
   "hero": {
     "badge": "🔥 特别优惠：2026世界杯限时5折",
     "title": "掌中娱乐世界",
@@ -8,48 +21,277 @@
     "description": "享受所有阿拉伯和国际频道，以及最新电影和剧集。独家体育频道。稳定连接，高质量。",
     "cta": "通过WhatsApp联系我们",
     "secondary_cta": "查看套餐",
-    "stats": { "channels": "25,000+ 频道", "quality": "HD & 4K & 8K", "servers": "超快服务器", "support": "24/7 支持" }
+    "stats": {
+      "channels": "25,000+ 频道",
+      "quality": "HD & 4K & 8K",
+      "servers": "超快服务器",
+      "support": "24/7 支持"
+    }
   },
   "features": {
-    "title": "为什么选择IPTV Pro？", "subtitle": "世界级的专业IPTV服务",
+    "title": "为什么选择IPTV Pro？",
+    "subtitle": "世界级的专业IPTV服务",
     "items": [
-      { "title": "25,000+ 频道", "description": "所有阿拉伯、国际和体育频道汇集一处" },
-      { "title": "HD - 4K - 8K 画质", "description": "最佳画质，分辨率高达8K" },
-      { "title": "超快服务器", "description": "全球服务器网络，连接稳定" },
-      { "title": "全设备支持", "description": "支持智能电视、手机、电脑、平板、MAG、Enigma 2" },
-      { "title": "24/7 技术支持", "description": "专业技术支持团队全天候服务" },
-      { "title": "EPG + VOD + 剧集", "description": "电子节目指南 + 最新电影和剧集点播" }
+      {
+        "title": "25,000+ 频道",
+        "description": "所有阿拉伯、国际和体育频道汇集一处"
+      },
+      {
+        "title": "HD - 4K - 8K 画质",
+        "description": "最佳画质，分辨率高达8K"
+      },
+      {
+        "title": "超快服务器",
+        "description": "全球服务器网络，连接稳定"
+      },
+      {
+        "title": "全设备支持",
+        "description": "支持智能电视、手机、电脑、平板、MAG、Enigma 2"
+      },
+      {
+        "title": "24/7 技术支持",
+        "description": "专业技术支持团队全天候服务"
+      },
+      {
+        "title": "EPG + VOD + 剧集",
+        "description": "电子节目指南 + 最新电影和剧集点播"
+      }
     ]
   },
   "pricing": {
-    "title": "我们的套餐", "subtitle": "选择适合您需求的套餐", "popular": "最受欢迎", "best_value": "最佳性价比",
+    "title": "我们的套餐",
+    "subtitle": "选择适合您需求的套餐",
+    "popular": "最受欢迎",
+    "best_value": "最佳性价比",
     "plans": [
-      { "name": "1个月", "price": "9.99", "currency": "$", "period": "每月", "original_price": "19.99", "features": ["25,000+ 频道", "VOD + EPG", "HD画质", "1台设备", "技术支持", "体育频道"] },
-      { "name": "3个月", "price": "19.99", "currency": "$", "period": "每季度", "original_price": "59.97", "features": ["25,000+ 频道", "VOD + EPG", "HD & 4K画质", "2台设备", "24/7支持", "独家体育频道", "节省67%"] },
-      { "name": "1年", "price": "49.99", "currency": "$", "period": "每年", "original_price": "239.88", "features": ["25,000+ 频道", "VOD + EPG", "4K & 8K画质", "5台设备", "VIP 24/7支持", "所有体育频道", "节省79%", "退款保证"] }
+      {
+        "name": "1个月",
+        "price": "9.99",
+        "currency": "$",
+        "period": "每月",
+        "original_price": "19.99",
+        "features": [
+          "25,000+ 频道",
+          "VOD + EPG",
+          "HD画质",
+          "1台设备",
+          "技术支持",
+          "体育频道"
+        ]
+      },
+      {
+        "name": "3个月",
+        "price": "19.99",
+        "currency": "$",
+        "period": "每季度",
+        "original_price": "59.97",
+        "features": [
+          "25,000+ 频道",
+          "VOD + EPG",
+          "HD & 4K画质",
+          "2台设备",
+          "24/7支持",
+          "独家体育频道",
+          "节省67%"
+        ]
+      },
+      {
+        "name": "1年",
+        "price": "49.99",
+        "currency": "$",
+        "period": "每年",
+        "original_price": "239.88",
+        "features": [
+          "25,000+ 频道",
+          "VOD + EPG",
+          "4K & 8K画质",
+          "5台设备",
+          "VIP 24/7支持",
+          "所有体育频道",
+          "节省79%",
+          "退款保证"
+        ]
+      }
     ]
   },
   "testimonials": {
-    "title": "客户评价", "subtitle": "超过50,000名客户信赖我们", "items": [
-      { "name": "艾哈迈德", "location": "利雅得", "rating": 5, "text": "出色的服务！频道播放完美，画质极佳。", "verified": true },
-      { "name": "玛丽亚姆", "location": "迪拜", "rating": 5, "text": "我试过很多服务，但IPTV Pro是最好的。", "verified": true },
-      { "name": "哈立德", "location": "开罗", "rating": 5, "text": "专业服务。年度订阅是最好的选择。", "verified": true },
-      { "name": "努拉", "location": "阿布扎比", "rating": 5, "text": "出色的服务！不断更新的影视库。五星好评！", "verified": true }
-    ]
-  },
-  "scarcity": { "title": "限时优惠！", "subtitle": "仅限前100名订阅者享受5折 - 2026世界杯", "remaining": "仅剩", "spots": "个名额", "timer_title": "优惠倒计时：", "days": "天", "hours": "小时", "minutes": "分钟", "seconds": "秒", "cta": "立即行动 - 通过WhatsApp联系我们" },
-  "faq": {
-    "title": "常见问题", "subtitle": "关于IPTV Pro的一切",
+    "title": "客户评价",
+    "subtitle": "超过50,000名客户信赖我们",
     "items": [
-      { "question": "什么是IPTV？", "answer": "IPTV是通过互联网传输电视信号的服务。数千个频道、电影和剧集。" },
-      { "question": "如何订阅？", "answer": "通过WhatsApp联系我们。5分钟内设置好账户。" },
-      { "question": "支持哪些设备？", "answer": "智能电视、手机、电脑、平板、MAG、Enigma 2、Apple TV。" },
-      { "question": "有退款保证吗？", "answer": "是的，7天退款保证。" },
-      { "question": "有beIN Sports吗？", "answer": "有，所有体育频道包括beIN Sports。" },
-      { "question": "遇到连接问题？", "answer": "技术支持24/7。通过WhatsApp联系我们。" }
+      {
+        "name": "艾哈迈德",
+        "location": "利雅得",
+        "rating": 5,
+        "text": "出色的服务！频道播放完美，画质极佳。",
+        "verified": true
+      },
+      {
+        "name": "玛丽亚姆",
+        "location": "迪拜",
+        "rating": 5,
+        "text": "我试过很多服务，但IPTV Pro是最好的。",
+        "verified": true
+      },
+      {
+        "name": "哈立德",
+        "location": "开罗",
+        "rating": 5,
+        "text": "专业服务。年度订阅是最好的选择。",
+        "verified": true
+      },
+      {
+        "name": "努拉",
+        "location": "阿布扎比",
+        "rating": 5,
+        "text": "出色的服务！不断更新的影视库。五星好评！",
+        "verified": true
+      }
     ]
   },
-  "footer": { "rights": "© 2026 IPTV Pro. 保留所有权利。", "whatsapp_cta": "通过WhatsApp联系我们", "payment_methods": "支付方式", "accepted_payments": "接受：PayPal、银行卡、转账、加密货币" },
-  "language": { "label": "语言", "current": "中文" },
-  "whatsapp": { "message": "您好，我想订阅IPTV Pro", "button": "WhatsApp" }
+  "scarcity": {
+    "title": "限时优惠！",
+    "subtitle": "仅限前100名订阅者享受5折 - 2026世界杯",
+    "remaining": "仅剩",
+    "spots": "个名额",
+    "timer_title": "优惠倒计时：",
+    "days": "天",
+    "hours": "小时",
+    "minutes": "分钟",
+    "seconds": "秒",
+    "cta": "立即行动 - 通过WhatsApp联系我们"
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "关于IPTV Pro的一切",
+    "items": [
+      {
+        "question": "什么是IPTV？",
+        "answer": "IPTV是通过互联网传输电视信号的服务。数千个频道、电影和剧集。"
+      },
+      {
+        "question": "如何订阅？",
+        "answer": "通过WhatsApp联系我们。5分钟内设置好账户。"
+      },
+      {
+        "question": "支持哪些设备？",
+        "answer": "智能电视、手机、电脑、平板、MAG、Enigma 2、Apple TV。"
+      },
+      {
+        "question": "有退款保证吗？",
+        "answer": "是的，7天退款保证。"
+      },
+      {
+        "question": "有beIN Sports吗？",
+        "answer": "有，所有体育频道包括beIN Sports。"
+      },
+      {
+        "question": "遇到连接问题？",
+        "answer": "技术支持24/7。通过WhatsApp联系我们。"
+      }
+    ]
+  },
+  "trial": {
+    "title": "免费试用",
+    "subtitle": "免费体验IPTV Pro，无需承诺",
+    "name_label": "您的姓名",
+    "name_placeholder": "请输入您的姓名",
+    "whatsapp_label": "WhatsApp号码",
+    "whatsapp_placeholder": "例如: 2126XXXXXXXX",
+    "duration_label": "试用时长",
+    "durations": {
+      "24h": "24小时",
+      "48h": "48小时",
+      "3d": "3天"
+    },
+    "submit": "开始免费试用",
+    "cta": "免费试用",
+    "cta_subtitle": "24小时免费体验",
+    "whatsapp_prefix": "您好，我想免费试用IPTV Pro。",
+    "guarantee": "🔒 无需承诺 - 随时取消"
+  },
+  "guide": {
+    "title": "安装指南",
+    "subtitle": "几分钟内在您的所有设备上安装IPTV Pro",
+    "tabs": {
+      "android_tv": "Android TV",
+      "smart_tv": "智能电视",
+      "iphone": "iPhone/iPad",
+      "android": "安卓",
+      "pc": "电脑/Mac",
+      "firestick": "Fire Stick"
+    },
+    "steps": [
+      {"title": "下载IPTV应用", "desc": "从Google Play商店/App Store下载：IPTV Smarters、TiviMate或SMART IPTV"},
+      {"title": "打开应用", "desc": "启动应用并点击'添加列表'或'登录'"},
+      {"title": "输入您的账户信息", "desc": "输入我们通过WhatsApp发送的用户名、密码和服务器URL"},
+      {"title": "加载频道列表", "desc": "应用将自动加载您的频道列表和EPG节目指南"},
+      {"title": "尽情享受！", "desc": "您现在可以观看所有喜爱的高清、4K和8K频道！"}
+    ],
+    "need_help": "需要帮助？通过WhatsApp联系我们"
+  },
+  "matches": {
+    "title": "体育赛事日历",
+    "subtitle": "使用IPTV Pro不错过任何重要比赛",
+    "filters": {
+      "all": "全部",
+      "world_cup": "2026世界杯",
+      "champions_league": "欧冠联赛",
+      "premier_league": "英超",
+      "la_liga": "西甲",
+      "bein": "beIN Sports"
+    },
+    "today": "今天",
+    "tomorrow": "明天",
+    "upcoming": "即将",
+    "watch_on": "观看于",
+    "matches_list": [
+      {"date": "2026-06-15", "time": "21:00", "team1": "摩洛哥", "team2": "法国", "competition": "world_cup", "stadium": "哈利法国际体育场，多哈"},
+      {"date": "2026-06-18", "time": "18:00", "team1": "巴西", "team2": "葡萄牙", "competition": "world_cup", "stadium": "卢赛尔体育场"},
+      {"date": "2026-06-20", "time": "21:00", "team1": "阿尔及利亚", "team2": "阿根廷", "competition": "world_cup", "stadium": "974体育场，多哈"},
+      {"date": "2026-06-22", "time": "20:00", "team1": "皇家马德里", "team2": "巴塞罗那", "competition": "la_liga", "stadium": "伯纳乌球场"},
+      {"date": "2026-06-25", "time": "21:00", "team1": "曼城", "team2": "拜仁慕尼黑", "competition": "champions_league", "stadium": "伊蒂哈德球场"},
+      {"date": "2026-06-28", "time": "17:30", "team1": "利物浦", "team2": "阿森纳", "competition": "premier_league", "stadium": "安菲尔德球场"},
+      {"date": "2026-07-02", "time": "21:00", "team1": "巴黎圣日耳曼", "team2": "马赛", "competition": "bein", "stadium": "王子公园球场"},
+      {"date": "2026-07-05", "time": "20:00", "team1": "国际米兰", "team2": "AC米兰", "competition": "champions_league", "stadium": "圣西罗球场"}
+    ]
+  },
+  "footer": {
+    "rights": "© 2026 IPTV Pro. 保留所有权利。",
+    "whatsapp_cta": "通过WhatsApp联系我们",
+    "payment_methods": "支付方式",
+    "accepted_payments": "接受：PayPal、银行卡、转账、加密货币"
+  },
+  "language": {
+    "label": "语言",
+    "current": "中文"
+  },
+  "whatsapp": {
+    "message": "您好，我想订阅IPTV Pro",
+    "button": "WhatsApp"
+  },
+  "theme": {
+    "toggle": "Toggle theme"
+  },
+  "contact": {
+    "headline": "Talk to us directly",
+    "title": "Contact Sales Now",
+    "subtitle": "Send your details and get a fast premium IPTV offer",
+    "form_label": "Request",
+    "form_help": "Send your request and we will reply immediately",
+    "name_label": "Name",
+    "name_placeholder": "Your name",
+    "email_label": "Email",
+    "email_placeholder": "Your email",
+    "message_label": "Your message",
+    "message_placeholder": "Describe your request",
+    "button": "Send via WhatsApp",
+    "form_note": "We will reply within minutes on WhatsApp.",
+    "whatsapp_prompt": "I want to subscribe to IPTV Pro.",
+    "trust_title": "Trusted and Secure",
+    "trust_description": "We protect your data and guarantee fast setup with dedicated support.",
+    "cta_title": "Fast WhatsApp Support",
+    "cta_description": "Contact us instantly and get your IPTV subscription ready in minutes.",
+    "whatsapp_button": "Contact on WhatsApp",
+    "submitted": "Message opened in WhatsApp."
+  }
 }

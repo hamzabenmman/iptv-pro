@@ -1,6 +1,19 @@
 {
-  "meta": { "title": "IPTV Pro | Bester IPTV-Dienst für die Arabische Welt - 25.000+ Sender", "description": "Bester IPTV-Dienst für arabische und internationale Zielgruppen. Über 25.000 TV-Sender und VOD in HD, 4K & 8K. Jetzt abonnieren!", "keywords": "IPTV, IPTV Pro, IPTV-Abonnement, beIN Sports, TV-Sender, Streaming, VOD" },
-  "nav": { "home": "Startseite", "features": "Funktionen", "pricing": "Preise", "testimonials": "Bewertungen", "faq": "FAQ", "contact": "Kontakt" },
+  "meta": {
+    "title": "IPTV Pro | Bester IPTV-Dienst für die Arabische Welt - 25.000+ Sender",
+    "description": "Bester IPTV-Dienst für arabische und internationale Zielgruppen. Über 25.000 TV-Sender und VOD in HD, 4K & 8K. Jetzt abonnieren!",
+    "keywords": "IPTV, IPTV Pro, IPTV-Abonnement, beIN Sports, TV-Sender, Streaming, VOD"
+  },
+  "nav": {
+    "home": "Startseite",
+    "features": "Funktionen",
+    "pricing": "Preise",
+    "testimonials": "Bewertungen",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "guide": "Anleitung",
+    "matches": "Spiele"
+  },
   "hero": {
     "badge": "🔥 Sonderangebot: 50% Rabatt zur WM 2026",
     "title": "Eine Welt der Unterhaltung in Ihrer Hand",
@@ -8,49 +21,277 @@
     "description": "Genießen Sie alle arabischen und internationalen Sender mit den neuesten Filmen und Serien. Exklusive Sportkanäle. Stabile Verbindung, hohe Qualität.",
     "cta": "Kontaktieren Sie uns auf WhatsApp",
     "secondary_cta": "Pläne entdecken",
-    "stats": { "channels": "25.000+ Sender", "quality": "HD & 4K & 8K", "servers": "Superschnelle Server", "support": "Support 24/7" }
+    "stats": {
+      "channels": "25.000+ Sender",
+      "quality": "HD & 4K & 8K",
+      "servers": "Superschnelle Server",
+      "support": "Support 24/7"
+    }
   },
   "features": {
-    "title": "Warum IPTV Pro wählen?", "subtitle": "Ein professioneller IPTV-Dienst mit weltklasse Funktionen",
+    "title": "Warum IPTV Pro wählen?",
+    "subtitle": "Ein professioneller IPTV-Dienst mit weltklasse Funktionen",
     "items": [
-      { "title": "25.000+ Sender", "description": "Alle arabischen, internationalen und Sportkanäle an einem Ort" },
-      { "title": "HD - 4K - 8K Qualität", "description": "Beste Bildqualität mit Auflösung bis zu 8K" },
-      { "title": "Superschnelle Server", "description": "Globales Servernetzwerk mit stabiler Verbindung" },
-      { "title": "Alle Geräte", "description": "Funktioniert auf Smart-TV, Telefon, PC, Tablet, MAG, Enigma 2" },
-      { "title": "24/7 Support", "description": "Professionelles Support-Team rund um die Uhr" },
-      { "title": "EPG + VOD + Serien", "description": "Elektronischer Programmführer + Filme und Serien auf Abruf" }
+      {
+        "title": "25.000+ Sender",
+        "description": "Alle arabischen, internationalen und Sportkanäle an einem Ort"
+      },
+      {
+        "title": "HD - 4K - 8K Qualität",
+        "description": "Beste Bildqualität mit Auflösung bis zu 8K"
+      },
+      {
+        "title": "Superschnelle Server",
+        "description": "Globales Servernetzwerk mit stabiler Verbindung"
+      },
+      {
+        "title": "Alle Geräte",
+        "description": "Funktioniert auf Smart-TV, Telefon, PC, Tablet, MAG, Enigma 2"
+      },
+      {
+        "title": "24/7 Support",
+        "description": "Professionelles Support-Team rund um die Uhr"
+      },
+      {
+        "title": "EPG + VOD + Serien",
+        "description": "Elektronischer Programmführer + Filme und Serien auf Abruf"
+      }
     ]
   },
   "pricing": {
-    "title": "Unsere Pläne", "subtitle": "Wählen Sie den Plan, der zu Ihren Bedürfnissen passt", "popular": "Am beliebtesten", "best_value": "Bestes Preis-Leistungs-Verhältnis",
+    "title": "Unsere Pläne",
+    "subtitle": "Wählen Sie den Plan, der zu Ihren Bedürfnissen passt",
+    "popular": "Am beliebtesten",
+    "best_value": "Bestes Preis-Leistungs-Verhältnis",
     "plans": [
-      { "name": "1 Monat", "price": "9.99", "currency": "$", "period": "pro Monat", "original_price": "19.99", "features": ["25.000+ Sender", "VOD + EPG", "HD-Qualität", "1 Gerät", "Technischer Support", "Sportkanäle"] },
-      { "name": "3 Monate", "price": "19.99", "currency": "$", "period": "pro Quartal", "original_price": "59.97", "features": ["25.000+ Sender", "VOD + EPG", "HD & 4K Qualität", "2 Geräte", "24/7 Support", "Exklusive Sportkanäle", "67% sparen"] },
-      { "name": "1 Jahr", "price": "49.99", "currency": "$", "period": "pro Jahr", "original_price": "239.88", "features": ["25.000+ Sender", "VOD + EPG", "4K & 8K Qualität", "5 Geräte", "VIP 24/7 Support", "Alle Sportkanäle", "79% sparen", "Geld-zurück-Garantie"] }
+      {
+        "name": "1 Monat",
+        "price": "9.99",
+        "currency": "$",
+        "period": "pro Monat",
+        "original_price": "19.99",
+        "features": [
+          "25.000+ Sender",
+          "VOD + EPG",
+          "HD-Qualität",
+          "1 Gerät",
+          "Technischer Support",
+          "Sportkanäle"
+        ]
+      },
+      {
+        "name": "3 Monate",
+        "price": "19.99",
+        "currency": "$",
+        "period": "pro Quartal",
+        "original_price": "59.97",
+        "features": [
+          "25.000+ Sender",
+          "VOD + EPG",
+          "HD & 4K Qualität",
+          "2 Geräte",
+          "24/7 Support",
+          "Exklusive Sportkanäle",
+          "67% sparen"
+        ]
+      },
+      {
+        "name": "1 Jahr",
+        "price": "49.99",
+        "currency": "$",
+        "period": "pro Jahr",
+        "original_price": "239.88",
+        "features": [
+          "25.000+ Sender",
+          "VOD + EPG",
+          "4K & 8K Qualität",
+          "5 Geräte",
+          "VIP 24/7 Support",
+          "Alle Sportkanäle",
+          "79% sparen",
+          "Geld-zurück-Garantie"
+        ]
+      }
     ]
   },
   "testimonials": {
-    "title": "Was unsere Kunden sagen", "subtitle": "Über 50.000 Kunden in der arabischen Welt vertrauen uns",
+    "title": "Was unsere Kunden sagen",
+    "subtitle": "Über 50.000 Kunden in der arabischen Welt vertrauen uns",
     "items": [
-      { "name": "Ahmed", "location": "Riad", "rating": 5, "text": "Hervorragender Service! Die Sender laufen perfekt und die Qualität ist erstklassig.", "verified": true },
-      { "name": "Mariam", "location": "Dubai", "rating": 5, "text": "Ich habe mehrere Dienste ausprobiert, aber IPTV Pro ist der beste.", "verified": true },
-      { "name": "Khaled", "location": "Kairo", "rating": 5, "text": "Professioneller Service. Die Jahresabonnement ist die beste Entscheidung.", "verified": true },
-      { "name": "Noura", "location": "Abu Dhabi", "rating": 5, "text": "Hervorragender Service! Ständig aktualisierte Serien- und Filmbibliothek.", "verified": true }
+      {
+        "name": "Ahmed",
+        "location": "Riad",
+        "rating": 5,
+        "text": "Hervorragender Service! Die Sender laufen perfekt und die Qualität ist erstklassig.",
+        "verified": true
+      },
+      {
+        "name": "Mariam",
+        "location": "Dubai",
+        "rating": 5,
+        "text": "Ich habe mehrere Dienste ausprobiert, aber IPTV Pro ist der beste.",
+        "verified": true
+      },
+      {
+        "name": "Khaled",
+        "location": "Kairo",
+        "rating": 5,
+        "text": "Professioneller Service. Die Jahresabonnement ist die beste Entscheidung.",
+        "verified": true
+      },
+      {
+        "name": "Noura",
+        "location": "Abu Dhabi",
+        "rating": 5,
+        "text": "Hervorragender Service! Ständig aktualisierte Serien- und Filmbibliothek.",
+        "verified": true
+      }
     ]
   },
-  "scarcity": { "title": "Begrenztes Angebot!", "subtitle": "50% Rabatt nur für die ersten 100 Abonnenten - WM 2026", "remaining": "Nur", "spots": "Plätze übrig", "timer_title": "Angebot endet in:", "days": "Tage", "hours": "Stunden", "minutes": "Minuten", "seconds": "Sekunden", "cta": "Sichern Sie sich das Angebot jetzt - Kontaktieren Sie uns auf WhatsApp" },
+  "scarcity": {
+    "title": "Begrenztes Angebot!",
+    "subtitle": "50% Rabatt nur für die ersten 100 Abonnenten - WM 2026",
+    "remaining": "Nur",
+    "spots": "Plätze übrig",
+    "timer_title": "Angebot endet in:",
+    "days": "Tage",
+    "hours": "Stunden",
+    "minutes": "Minuten",
+    "seconds": "Sekunden",
+    "cta": "Sichern Sie sich das Angebot jetzt - Kontaktieren Sie uns auf WhatsApp"
+  },
   "faq": {
-    "title": "Häufig gestellte Fragen", "subtitle": "Alles, was Sie über IPTV Pro wissen müssen",
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles, was Sie über IPTV Pro wissen müssen",
     "items": [
-      { "question": "Was ist IPTV?", "answer": "IPTV ist ein TV-Übertragungsdienst über das Internet. Sie können Tausende von TV-Sendern, Filmen und Serien über Ihre Internetverbindung sehen." },
-      { "question": "Wie abonnieren?", "answer": "Kontaktieren Sie uns auf WhatsApp. Wir richten Ihr Konto in weniger als 5 Minuten ein." },
-      { "question": "Welche Geräte werden unterstützt?", "answer": "Smart-TVs, Telefone, PC, Tablets, MAG, Enigma 2 und Apple TV." },
-      { "question": "Gibt es Geld-zurück-Garantie?", "answer": "Ja, 7-tägige Geld-zurück-Garantie, wenn Sie nicht zufrieden sind." },
-      { "question": "Haben Sie beIN Sports?", "answer": "Ja, alle Sportkanäle inklusive beIN Sports, SSC und alle Weltmeisterschaften." },
-      { "question": "Bei Verbindungsproblemen?", "answer": "Unser technisches Support-Team ist 24/7 erreichbar. Kontaktieren Sie uns auf WhatsApp." }
+      {
+        "question": "Was ist IPTV?",
+        "answer": "IPTV ist ein TV-Übertragungsdienst über das Internet. Sie können Tausende von TV-Sendern, Filmen und Serien über Ihre Internetverbindung sehen."
+      },
+      {
+        "question": "Wie abonnieren?",
+        "answer": "Kontaktieren Sie uns auf WhatsApp. Wir richten Ihr Konto in weniger als 5 Minuten ein."
+      },
+      {
+        "question": "Welche Geräte werden unterstützt?",
+        "answer": "Smart-TVs, Telefone, PC, Tablets, MAG, Enigma 2 und Apple TV."
+      },
+      {
+        "question": "Gibt es Geld-zurück-Garantie?",
+        "answer": "Ja, 7-tägige Geld-zurück-Garantie, wenn Sie nicht zufrieden sind."
+      },
+      {
+        "question": "Haben Sie beIN Sports?",
+        "answer": "Ja, alle Sportkanäle inklusive beIN Sports, SSC und alle Weltmeisterschaften."
+      },
+      {
+        "question": "Bei Verbindungsproblemen?",
+        "answer": "Unser technisches Support-Team ist 24/7 erreichbar. Kontaktieren Sie uns auf WhatsApp."
+      }
     ]
   },
-  "footer": { "rights": "© 2026 IPTV Pro. Alle Rechte vorbehalten.", "whatsapp_cta": "Kontaktieren Sie uns auf WhatsApp", "payment_methods": "Akzeptierte Zahlungsmethoden", "accepted_payments": "Wir akzeptieren: PayPal, Bankkarten, Überweisung, Kryptowährungen" },
-  "language": { "label": "Sprache", "current": "Deutsch" },
-  "whatsapp": { "message": "Hallo, ich möchte IPTV Pro abonnieren", "button": "WhatsApp" }
+  "trial": {
+    "title": "Kostenlos Testen",
+    "subtitle": "Testen Sie IPTV Pro ohne Risiko",
+    "name_label": "Ihr Name",
+    "name_placeholder": "Geben Sie Ihren Namen ein",
+    "whatsapp_label": "WhatsApp-Nummer",
+    "whatsapp_placeholder": "Z.B.: 2126XXXXXXXX",
+    "duration_label": "Testdauer",
+    "durations": {
+      "24h": "24 Stunden",
+      "48h": "48 Stunden",
+      "3d": "3 Tage"
+    },
+    "submit": "Kostenlose Testversion starten",
+    "cta": "Kostenlos Testen",
+    "cta_subtitle": "24h kostenlos testen",
+    "whatsapp_prefix": "Hallo, ich möchte eine kostenlose Testversion von IPTV Pro.",
+    "guarantee": "🔒 Keine Verpflichtung - Jederzeit kündbar"
+  },
+  "guide": {
+    "title": "Installationsanleitung",
+    "subtitle": "Installieren Sie IPTV Pro in Minuten auf allen Geräten",
+    "tabs": {
+      "android_tv": "Android TV",
+      "smart_tv": "Smart TV",
+      "iphone": "iPhone/iPad",
+      "android": "Android",
+      "pc": "PC/Mac",
+      "firestick": "Fire Stick"
+    },
+    "steps": [
+      {"title": "IPTV-App herunterladen", "desc": "Laden Sie aus dem Google Play Store / App Store: IPTV Smarters, TiviMate oder SMART IPTV"},
+      {"title": "App öffnen", "desc": "Starten Sie die App und klicken Sie auf 'Liste hinzufügen' oder 'Anmelden'"},
+      {"title": "Zugangsdaten eingeben", "desc": "Geben Sie Benutzernamen, Passwort und Server-URL ein, die wir Ihnen per WhatsApp gesendet haben"},
+      {"title": "Senderliste laden", "desc": "Die App lädt automatisch Ihre Senderliste und den elektronischen Programmführer (EPG)"},
+      {"title": "Genießen Sie!", "desc": "Sie können jetzt alle Ihre Lieblingssender in HD, 4K und 8K sehen!"}
+    ],
+    "need_help": "Hilfe nötig? Kontaktieren Sie uns auf WhatsApp"
+  },
+  "matches": {
+    "title": "Sportkalender",
+    "subtitle": "Verpassen Sie kein wichtiges Spiel mit IPTV Pro",
+    "filters": {
+      "all": "Alle",
+      "world_cup": "WM 2026",
+      "champions_league": "Champions League",
+      "premier_league": "Premier League",
+      "la_liga": "La Liga",
+      "bein": "beIN Sports"
+    },
+    "today": "Heute",
+    "tomorrow": "Morgen",
+    "upcoming": "Bevorstehend",
+    "watch_on": "Ansehen auf",
+    "matches_list": [
+      {"date": "2026-06-15", "time": "21:00", "team1": "Marokko", "team2": "Frankreich", "competition": "world_cup", "stadium": "Khalifa-Stadion, Doha"},
+      {"date": "2026-06-18", "time": "18:00", "team1": "Brasilien", "team2": "Portugal", "competition": "world_cup", "stadium": "Lusail-Stadion"},
+      {"date": "2026-06-20", "time": "21:00", "team1": "Algerien", "team2": "Argentinien", "competition": "world_cup", "stadium": "Stadion 974, Doha"},
+      {"date": "2026-06-22", "time": "20:00", "team1": "Real Madrid", "team2": "FC Barcelona", "competition": "la_liga", "stadium": "Santiago Bernabéu"},
+      {"date": "2026-06-25", "time": "21:00", "team1": "Man City", "team2": "Bayern München", "competition": "champions_league", "stadium": "Etihad Stadium"},
+      {"date": "2026-06-28", "time": "17:30", "team1": "Liverpool", "team2": "Arsenal", "competition": "premier_league", "stadium": "Anfield"},
+      {"date": "2026-07-02", "time": "21:00", "team1": "PSG", "team2": "Marseille", "competition": "bein", "stadium": "Parc des Princes"},
+      {"date": "2026-07-05", "time": "20:00", "team1": "Inter Mailand", "team2": "AC Mailand", "competition": "champions_league", "stadium": "San Siro"}
+    ]
+  },
+  "footer": {
+    "rights": "© 2026 IPTV Pro. Alle Rechte vorbehalten.",
+    "whatsapp_cta": "Kontaktieren Sie uns auf WhatsApp",
+    "payment_methods": "Akzeptierte Zahlungsmethoden",
+    "accepted_payments": "Wir akzeptieren: PayPal, Bankkarten, Überweisung, Kryptowährungen"
+  },
+  "language": {
+    "label": "Sprache",
+    "current": "Deutsch"
+  },
+  "whatsapp": {
+    "message": "Hallo, ich möchte IPTV Pro abonnieren",
+    "button": "WhatsApp"
+  },
+  "theme": {
+    "toggle": "Toggle theme"
+  },
+  "contact": {
+    "headline": "Talk to us directly",
+    "title": "Contact Sales Now",
+    "subtitle": "Send your details and get a fast premium IPTV offer",
+    "form_label": "Request",
+    "form_help": "Send your request and we will reply immediately",
+    "name_label": "Name",
+    "name_placeholder": "Your name",
+    "email_label": "Email",
+    "email_placeholder": "Your email",
+    "message_label": "Your message",
+    "message_placeholder": "Describe your request",
+    "button": "Send via WhatsApp",
+    "form_note": "We will reply within minutes on WhatsApp.",
+    "whatsapp_prompt": "I want to subscribe to IPTV Pro.",
+    "trust_title": "Trusted and Secure",
+    "trust_description": "We protect your data and guarantee fast setup with dedicated support.",
+    "cta_title": "Fast WhatsApp Support",
+    "cta_description": "Contact us instantly and get your IPTV subscription ready in minutes.",
+    "whatsapp_button": "Contact on WhatsApp",
+    "submitted": "Message opened in WhatsApp."
+  }
 }

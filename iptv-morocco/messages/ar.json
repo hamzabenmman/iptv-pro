@@ -10,7 +10,9 @@
     "pricing": "الباقات",
     "testimonials": "آراء العملاء",
     "faq": "الأسئلة الشائعة",
-    "contact": "اتصل بنا"
+    "contact": "اتصل بنا",
+    "guide": "الدليل",
+    "matches": "المباريات"
   },
   "hero": {
     "badge": "🔥 عرض خاص: خصم 50% لفترة محدودة بمناسبة كأس العالم 2026",
@@ -202,6 +204,142 @@
       }
     ]
   },
+  "trial": {
+    "title": "جرب مجاناً",
+    "subtitle": "اختبر خدمة IPTV Pro بدون أي التزام",
+    "name_label": "اسمك",
+    "name_placeholder": "أدخل اسمك",
+    "whatsapp_label": "رقم واتساب",
+    "whatsapp_placeholder": "مثال: 2126XXXXXXXX",
+    "duration_label": "مدة التجربة",
+    "durations": {
+      "24h": "24 ساعة",
+      "48h": "48 ساعة",
+      "3d": "3 أيام"
+    },
+    "submit": "ابدأ التجربة المجانية",
+    "cta": "جرب مجاناً",
+    "cta_subtitle": "اختبر الخدمة 24 ساعة بدون دفع",
+    "whatsapp_prefix": "السلام عليكم، أود الحصول على تجربة مجانية لخدمة IPTV Pro.",
+    "guarantee": "🔒 بدون التزام - يمكنك الإلغاء في أي وقت"
+  },
+  "guide": {
+    "title": "دليل التثبيت",
+    "subtitle": "قم بتثبيت IPTV Pro في دقائق على جميع أجهزتك",
+    "tabs": {
+      "android_tv": "Android TV",
+      "smart_tv": "Smart TV",
+      "iphone": "iPhone/iPad",
+      "android": "أندرويد",
+      "pc": "PC/Mac",
+      "firestick": "Fire Stick"
+    },
+    "steps": [
+      {
+        "title": "حمّل تطبيق IPTV",
+        "desc": "من Google Play Store أو App Store، حمّل: IPTV Smarters أو TiviMate أو SMART IPTV"
+      },
+      {
+        "title": "افتح التطبيق",
+        "desc": "شغل التطبيق واضغط على 'إضافة قائمة' أو 'تسجيل الدخول'"
+      },
+      {
+        "title": "أدخل بيانات الدخول",
+        "desc": "أدخل اسم المستخدم، كلمة المرور ورابط السيرفر الذي أرسلناه لك عبر واتساب"
+      },
+      {
+        "title": "حمّل قائمة القنوات",
+        "desc": "سيقوم التطبيق بتحميل قائمة القنوات ودليل البرامج (EPG) تلقائياً"
+      },
+      {
+        "title": "استمتع!",
+        "desc": "يمكنك الآن مشاهدة جميع قنواتك المفضلة بجودة HD و 4K و 8K!"
+      }
+    ],
+    "need_help": "تحتاج مساعدة؟ تواصل معنا عبر واتساب"
+  },
+  "matches": {
+    "title": "التقويم الرياضي",
+    "subtitle": "لا تفوت أي مباراة مهمة مع IPTV Pro",
+    "filters": {
+      "all": "الكل",
+      "world_cup": "كأس العالم 2026",
+      "champions_league": "دوري أبطال أوروبا",
+      "premier_league": "الدوري الإنجليزي",
+      "la_liga": "الدوري الإسباني",
+      "bein": "بي إن سبورت"
+    },
+    "today": "اليوم",
+    "tomorrow": "غداً",
+    "upcoming": "القادمة",
+    "watch_on": "شاهد على",
+    "matches_list": [
+      {
+        "date": "2026-06-15",
+        "time": "21:00",
+        "team1": "المغرب",
+        "team2": "فرنسا",
+        "competition": "world_cup",
+        "stadium": "استاد خليفة، الدوحة"
+      },
+      {
+        "date": "2026-06-18",
+        "time": "18:00",
+        "team1": "البرازيل",
+        "team2": "البرتغال",
+        "competition": "world_cup",
+        "stadium": "استاد لوسيل"
+      },
+      {
+        "date": "2026-06-20",
+        "time": "21:00",
+        "team1": "الجزائر",
+        "team2": "الأرجنتين",
+        "competition": "world_cup",
+        "stadium": "استاد 974، الدوحة"
+      },
+      {
+        "date": "2026-06-22",
+        "time": "20:00",
+        "team1": "ريال مدريد",
+        "team2": "برشلونة",
+        "competition": "la_liga",
+        "stadium": "سانتياغو برنابيو"
+      },
+      {
+        "date": "2026-06-25",
+        "time": "21:00",
+        "team1": "مانشستر سيتي",
+        "team2": "بايرن ميونخ",
+        "competition": "champions_league",
+        "stadium": "الاتحاد"
+      },
+      {
+        "date": "2026-06-28",
+        "time": "17:30",
+        "team1": "ليفربول",
+        "team2": "آرسنال",
+        "competition": "premier_league",
+        "stadium": "أنفيلد"
+      },
+      {
+        "date": "2026-07-02",
+        "time": "21:00",
+        "team1": "باريس سان جيرمان",
+        "team2": "مرسيليا",
+        "competition": "bein",
+        "stadium": "بارك دي برينس"
+      },
+      {
+        "date": "2026-07-05",
+        "time": "20:00",
+        "team1": "إنتر ميلان",
+        "team2": "إيه سي ميلان",
+        "competition": "champions_league",
+        "stadium": "سان سيرو"
+      }
+    ]
+  },
   "footer": {
     "rights": "© 2026 IPTV Pro. جميع الحقوق محفوظة.",
     "whatsapp_cta": "تواصل معنا عبر واتساب",
@@ -215,5 +353,30 @@
   "whatsapp": {
     "message": "السلام عليكم، أود الاشتراك في خدمة IPTV Pro من فضلكم",
     "button": "واتساب"
+  },
+  "theme": {
+    "toggle": "Toggle theme"
+  },
+  "contact": {
+    "headline": "Talk to us directly",
+    "title": "Contact Sales Now",
+    "subtitle": "Send your details and get a fast premium IPTV offer",
+    "form_label": "Request",
+    "form_help": "Send your request and we will reply immediately",
+    "name_label": "Name",
+    "name_placeholder": "Your name",
+    "email_label": "Email",
+    "email_placeholder": "Your email",
+    "message_label": "Your message",
+    "message_placeholder": "Describe your request",
+    "button": "Send via WhatsApp",
+    "form_note": "We will reply within minutes on WhatsApp.",
+    "whatsapp_prompt": "I want to subscribe to IPTV Pro.",
+    "trust_title": "Trusted and Secure",
+    "trust_description": "We protect your data and guarantee fast setup with dedicated support.",
+    "cta_title": "Fast WhatsApp Support",
+    "cta_description": "Contact us instantly and get your IPTV subscription ready in minutes.",
+    "whatsapp_button": "Contact on WhatsApp",
+    "submitted": "Message opened in WhatsApp."
   }
 }

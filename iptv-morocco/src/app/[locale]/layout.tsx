@@ -51,8 +51,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     alternates: {
-      canonical: `https://iptv-pro.com`,
+      canonical: locale === 'ar' ? 'https://iptv-pro.com' : `https://iptv-pro.com/${locale}`,
       languages: {
+        'x-default': 'https://iptv-pro.com',
         'ar': 'https://iptv-pro.com',
         'fr': 'https://iptv-pro.com/fr',
         'en': 'https://iptv-pro.com/en',

@@ -1,6 +1,19 @@
 {
-  "meta": { "title": "IPTV Pro | Arap Dünyası için En İyi IPTV Hizmeti - 25.000+ Kanal", "description": "Arap ve uluslararası kitleler için en iyi IPTV hizmeti. HD, 4K ve 8K kalitesinde 25.000'den fazla TV kanalı ve VOD. Hemen abone olun!", "keywords": "IPTV, IPTV Pro, IPTV aboneliği, beIN Sports, TV kanalları, akış, VOD" },
-  "nav": { "home": "Ana Sayfa", "features": "Özellikler", "pricing": "Fiyatlar", "testimonials": "Yorumlar", "faq": "SSS", "contact": "İletişim" },
+  "meta": {
+    "title": "IPTV Pro | Arap Dünyası için En İyi IPTV Hizmeti - 25.000+ Kanal",
+    "description": "Arap ve uluslararası kitleler için en iyi IPTV hizmeti. HD, 4K ve 8K kalitesinde 25.000'den fazla TV kanalı ve VOD. Hemen abone olun!",
+    "keywords": "IPTV, IPTV Pro, IPTV aboneliği, beIN Sports, TV kanalları, akış, VOD"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "features": "Özellikler",
+    "pricing": "Fiyatlar",
+    "testimonials": "Yorumlar",
+    "faq": "SSS",
+    "contact": "İletişim",
+    "guide": "Rehber",
+    "matches": "Maçlar"
+  },
   "hero": {
     "badge": "🔥 Özel Teklif: 2026 Dünya Kupası'na özel %50 indirim",
     "title": "Elinizin Altında Bir Eğlence Dünyası",
@@ -8,48 +21,277 @@
     "description": "En yeni filmler ve dizilerle tüm Arap ve uluslararası kanalların keyfini çıkarın. Özel spor kanalları. Stabil bağlantı.",
     "cta": "WhatsApp'tan Bize Ulaşın",
     "secondary_cta": "Planları Keşfedin",
-    "stats": { "channels": "25.000+ Kanal", "quality": "HD & 4K & 8K", "servers": "Süper Hızlı Sunucular", "support": "7/24 Destek" }
+    "stats": {
+      "channels": "25.000+ Kanal",
+      "quality": "HD & 4K & 8K",
+      "servers": "Süper Hızlı Sunucular",
+      "support": "7/24 Destek"
+    }
   },
   "features": {
-    "title": "Neden IPTV Pro?", "subtitle": "Dünya standartlarında profesyonel IPTV hizmeti",
+    "title": "Neden IPTV Pro?",
+    "subtitle": "Dünya standartlarında profesyonel IPTV hizmeti",
     "items": [
-      { "title": "25.000+ Kanal", "description": "Tüm Arap, uluslararası ve spor kanalları tek bir yerde" },
-      { "title": "HD - 4K - 8K Kalitesi", "description": "8K'ya kadar çözünürlükle en iyi görüntü kalitesi" },
-      { "title": "Süper Hızlı Sunucular", "description": "Küresel sunucu ağı, stabil bağlantı" },
-      { "title": "Tüm Cihazlar", "description": "Akıllı TV, telefon, PC, tablet, MAG, Enigma 2" },
-      { "title": "7/24 Destek", "description": "Profesyonel destek ekibi 7/24 hizmetinizde" },
-      { "title": "EPG + VOD + Diziler", "description": "Elektronik Rehber + talep üzerine film ve diziler" }
+      {
+        "title": "25.000+ Kanal",
+        "description": "Tüm Arap, uluslararası ve spor kanalları tek bir yerde"
+      },
+      {
+        "title": "HD - 4K - 8K Kalitesi",
+        "description": "8K'ya kadar çözünürlükle en iyi görüntü kalitesi"
+      },
+      {
+        "title": "Süper Hızlı Sunucular",
+        "description": "Küresel sunucu ağı, stabil bağlantı"
+      },
+      {
+        "title": "Tüm Cihazlar",
+        "description": "Akıllı TV, telefon, PC, tablet, MAG, Enigma 2"
+      },
+      {
+        "title": "7/24 Destek",
+        "description": "Profesyonel destek ekibi 7/24 hizmetinizde"
+      },
+      {
+        "title": "EPG + VOD + Diziler",
+        "description": "Elektronik Rehber + talep üzerine film ve diziler"
+      }
     ]
   },
   "pricing": {
-    "title": "Planlarımız", "subtitle": "İhtiyaçlarınıza uygun planı seçin", "popular": "En Popüler", "best_value": "En İyi Değer",
+    "title": "Planlarımız",
+    "subtitle": "İhtiyaçlarınıza uygun planı seçin",
+    "popular": "En Popüler",
+    "best_value": "En İyi Değer",
     "plans": [
-      { "name": "1 Ay", "price": "9.99", "currency": "$", "period": "aylık", "original_price": "19.99", "features": ["25.000+ Kanal", "VOD + EPG", "HD Kalite", "1 Cihaz", "Teknik Destek", "Spor Kanalları"] },
-      { "name": "3 Ay", "price": "19.99", "currency": "$", "period": "3 aylık", "original_price": "59.97", "features": ["25.000+ Kanal", "VOD + EPG", "HD & 4K Kalite", "2 Cihaz", "7/24 Destek", "Özel Spor Kanalları", "%67 Tasarruf"] },
-      { "name": "1 Yıl", "price": "49.99", "currency": "$", "period": "yıllık", "original_price": "239.88", "features": ["25.000+ Kanal", "VOD + EPG", "4K & 8K Kalite", "5 Cihaz", "VIP 7/24 Destek", "Tüm Spor Kanalları", "%79 Tasarruf", "Para İade Garantisi"] }
+      {
+        "name": "1 Ay",
+        "price": "9.99",
+        "currency": "$",
+        "period": "aylık",
+        "original_price": "19.99",
+        "features": [
+          "25.000+ Kanal",
+          "VOD + EPG",
+          "HD Kalite",
+          "1 Cihaz",
+          "Teknik Destek",
+          "Spor Kanalları"
+        ]
+      },
+      {
+        "name": "3 Ay",
+        "price": "19.99",
+        "currency": "$",
+        "period": "3 aylık",
+        "original_price": "59.97",
+        "features": [
+          "25.000+ Kanal",
+          "VOD + EPG",
+          "HD & 4K Kalite",
+          "2 Cihaz",
+          "7/24 Destek",
+          "Özel Spor Kanalları",
+          "%67 Tasarruf"
+        ]
+      },
+      {
+        "name": "1 Yıl",
+        "price": "49.99",
+        "currency": "$",
+        "period": "yıllık",
+        "original_price": "239.88",
+        "features": [
+          "25.000+ Kanal",
+          "VOD + EPG",
+          "4K & 8K Kalite",
+          "5 Cihaz",
+          "VIP 7/24 Destek",
+          "Tüm Spor Kanalları",
+          "%79 Tasarruf",
+          "Para İade Garantisi"
+        ]
+      }
     ]
   },
   "testimonials": {
-    "title": "Müşterilerimiz Ne Diyor?", "subtitle": "50.000'den fazla müşteri bize güveniyor", "items": [
-      { "name": "Ahmed", "location": "Riyad", "rating": 5, "text": "Mükemmel hizmet! Kanallar kusursuz çalışıyor ve kalite süper.", "verified": true },
-      { "name": "Meryem", "location": "Dubai", "rating": 5, "text": "Birçok hizmet denedim ama IPTV Pro en iyisi.", "verified": true },
-      { "name": "Halid", "location": "Kahire", "rating": 5, "text": "Profesyonel hizmet. Yıllık abonelik en iyi karar.", "verified": true },
-      { "name": "Nura", "location": "Abu Dabi", "rating": 5, "text": "Mükemmel hizmet! Sürekli güncellenen kütüphane. Beş yıldız!", "verified": true }
-    ]
-  },
-  "scarcity": { "title": "Sınırlı Teklif!", "subtitle": "İlk 100 aboneye %50 indirim - 2026 Dünya Kupası", "remaining": "Sadece", "spots": "yer kaldı", "timer_title": "Teklif bitiyor:", "days": "gün", "hours": "saat", "minutes": "dakika", "seconds": "saniye", "cta": "Fırsatı kaçırmayın - WhatsApp'tan Ulaşın" },
-  "faq": {
-    "title": "Sık Sorulan Sorular", "subtitle": "IPTV Pro hakkında her şey",
+    "title": "Müşterilerimiz Ne Diyor?",
+    "subtitle": "50.000'den fazla müşteri bize güveniyor",
     "items": [
-      { "question": "IPTV nedir?", "answer": "IPTV, internet üzerinden TV yayın hizmetidir. Binlerce kanal, film ve dizi." },
-      { "question": "Nasıl abone olurum?", "answer": "WhatsApp'tan bize ulaşın. Hesabınızı 5 dakikada kuruyoruz." },
-      { "question": "Hangi cihazlar?", "answer": "Akıllı TV, telefon, PC, tablet, MAG, Enigma 2, Apple TV." },
-      { "question": "Para iade garantisi?", "answer": "Evet, 7 gün para iade garantisi." },
-      { "question": "beIN Sports var mı?", "answer": "Evet, beIN Sports dahil tüm spor kanalları." },
-      { "question": "Bağlantı sorunları?", "answer": "Teknik destek 7/24. WhatsApp'tan ulaşın." }
+      {
+        "name": "Ahmed",
+        "location": "Riyad",
+        "rating": 5,
+        "text": "Mükemmel hizmet! Kanallar kusursuz çalışıyor ve kalite süper.",
+        "verified": true
+      },
+      {
+        "name": "Meryem",
+        "location": "Dubai",
+        "rating": 5,
+        "text": "Birçok hizmet denedim ama IPTV Pro en iyisi.",
+        "verified": true
+      },
+      {
+        "name": "Halid",
+        "location": "Kahire",
+        "rating": 5,
+        "text": "Profesyonel hizmet. Yıllık abonelik en iyi karar.",
+        "verified": true
+      },
+      {
+        "name": "Nura",
+        "location": "Abu Dabi",
+        "rating": 5,
+        "text": "Mükemmel hizmet! Sürekli güncellenen kütüphane. Beş yıldız!",
+        "verified": true
+      }
     ]
   },
-  "footer": { "rights": "© 2026 IPTV Pro. Tüm hakları saklıdır.", "whatsapp_cta": "WhatsApp'tan Ulaşın", "payment_methods": "Ödeme yöntemleri", "accepted_payments": "Kabul: PayPal, kartlar, havale, kripto" },
-  "language": { "label": "Dil", "current": "Türkçe" },
-  "whatsapp": { "message": "Merhaba, IPTV Pro'ya abone olmak istiyorum", "button": "WhatsApp" }
+  "scarcity": {
+    "title": "Sınırlı Teklif!",
+    "subtitle": "İlk 100 aboneye %50 indirim - 2026 Dünya Kupası",
+    "remaining": "Sadece",
+    "spots": "yer kaldı",
+    "timer_title": "Teklif bitiyor:",
+    "days": "gün",
+    "hours": "saat",
+    "minutes": "dakika",
+    "seconds": "saniye",
+    "cta": "Fırsatı kaçırmayın - WhatsApp'tan Ulaşın"
+  },
+  "faq": {
+    "title": "Sık Sorulan Sorular",
+    "subtitle": "IPTV Pro hakkında her şey",
+    "items": [
+      {
+        "question": "IPTV nedir?",
+        "answer": "IPTV, internet üzerinden TV yayın hizmetidir. Binlerce kanal, film ve dizi."
+      },
+      {
+        "question": "Nasıl abone olurum?",
+        "answer": "WhatsApp'tan bize ulaşın. Hesabınızı 5 dakikada kuruyoruz."
+      },
+      {
+        "question": "Hangi cihazlar?",
+        "answer": "Akıllı TV, telefon, PC, tablet, MAG, Enigma 2, Apple TV."
+      },
+      {
+        "question": "Para iade garantisi?",
+        "answer": "Evet, 7 gün para iade garantisi."
+      },
+      {
+        "question": "beIN Sports var mı?",
+        "answer": "Evet, beIN Sports dahil tüm spor kanalları."
+      },
+      {
+        "question": "Bağlantı sorunları?",
+        "answer": "Teknik destek 7/24. WhatsApp'tan ulaşın."
+      }
+    ]
+  },
+  "trial": {
+    "title": "Ücretsiz Dene",
+    "subtitle": "IPTV Pro'yu ücretsiz deneyin, taahhüt yok",
+    "name_label": "Adınız",
+    "name_placeholder": "Adınızı girin",
+    "whatsapp_label": "WhatsApp Numarası",
+    "whatsapp_placeholder": "Örn: 2126XXXXXXXX",
+    "duration_label": "Deneme süresi",
+    "durations": {
+      "24h": "24 Saat",
+      "48h": "48 Saat",
+      "3d": "3 Gün"
+    },
+    "submit": "Ücretsiz Denemeye Başla",
+    "cta": "Ücretsiz Dene",
+    "cta_subtitle": "24 saat ücretsiz dene",
+    "whatsapp_prefix": "Merhaba, IPTV Pro ücretsiz denemek istiyorum.",
+    "guarantee": "🔒 Taahhüt yok - İstediğiniz zaman iptal edin"
+  },
+  "guide": {
+    "title": "Kurulum Rehberi",
+    "subtitle": "IPTV Pro'yu tüm cihazlarınıza dakikalar içinde kurun",
+    "tabs": {
+      "android_tv": "Android TV",
+      "smart_tv": "Smart TV",
+      "iphone": "iPhone/iPad",
+      "android": "Android",
+      "pc": "PC/Mac",
+      "firestick": "Fire Stick"
+    },
+    "steps": [
+      {"title": "IPTV uygulaması indirin", "desc": "Google Play Store / App Store'dan indirin: IPTV Smarters, TiviMate veya SMART IPTV"},
+      {"title": "Uygulamayı açın", "desc": "Uygulamayı başlatın ve 'Liste Ekle' veya 'Giriş Yap'a tıklayın"},
+      {"title": "Bilgilerinizi girin", "desc": "WhatsApp'tan gönderdiğimiz kullanıcı adı, şifre ve sunucu URL'sini girin"},
+      {"title": "Kanal listesini yükleyin", "desc": "Uygulama kanal listenizi ve EPG rehberini otomatik yükleyecek"},
+      {"title": "Keyfini çıkarın!", "desc": "Artık tüm favori kanallarınızı HD, 4K ve 8K'da izleyebilirsiniz!"}
+    ],
+    "need_help": "Yardım mı lazım? WhatsApp'tan bize ulaşın"
+  },
+  "matches": {
+    "title": "Spor Takvimi",
+    "subtitle": "IPTV Pro ile önemli maçları kaçırmayın",
+    "filters": {
+      "all": "Tümü",
+      "world_cup": "Dünya Kupası 2026",
+      "champions_league": "Şampiyonlar Ligi",
+      "premier_league": "Premier Lig",
+      "la_liga": "La Liga",
+      "bein": "beIN Sports"
+    },
+    "today": "Bugün",
+    "tomorrow": "Yarın",
+    "upcoming": "Yakında",
+    "watch_on": "İzle",
+    "matches_list": [
+      {"date": "2026-06-15", "time": "21:00", "team1": "Fas", "team2": "Fransa", "competition": "world_cup", "stadium": "Halife Stadyumu, Doha"},
+      {"date": "2026-06-18", "time": "18:00", "team1": "Brezilya", "team2": "Portekiz", "competition": "world_cup", "stadium": "Lusayl Stadyumu"},
+      {"date": "2026-06-20", "time": "21:00", "team1": "Cezayir", "team2": "Arjantin", "competition": "world_cup", "stadium": "974 Stadyumu, Doha"},
+      {"date": "2026-06-22", "time": "20:00", "team1": "Real Madrid", "team2": "Barcelona", "competition": "la_liga", "stadium": "Santiago Bernabéu"},
+      {"date": "2026-06-25", "time": "21:00", "team1": "Man City", "team2": "Bayern Münih", "competition": "champions_league", "stadium": "Etihad Stadyumu"},
+      {"date": "2026-06-28", "time": "17:30", "team1": "Liverpool", "team2": "Arsenal", "competition": "premier_league", "stadium": "Anfield"},
+      {"date": "2026-07-02", "time": "21:00", "team1": "PSG", "team2": "Marsilya", "competition": "bein", "stadium": "Parc des Princes"},
+      {"date": "2026-07-05", "time": "20:00", "team1": "Inter Milan", "team2": "AC Milan", "competition": "champions_league", "stadium": "San Siro"}
+    ]
+  },
+  "footer": {
+    "rights": "© 2026 IPTV Pro. Tüm hakları saklıdır.",
+    "whatsapp_cta": "WhatsApp'tan Ulaşın",
+    "payment_methods": "Ödeme yöntemleri",
+    "accepted_payments": "Kabul: PayPal, kartlar, havale, kripto"
+  },
+  "language": {
+    "label": "Dil",
+    "current": "Türkçe"
+  },
+  "whatsapp": {
+    "message": "Merhaba, IPTV Pro'ya abone olmak istiyorum",
+    "button": "WhatsApp"
+  },
+  "theme": {
+    "toggle": "Toggle theme"
+  },
+  "contact": {
+    "headline": "Talk to us directly",
+    "title": "Contact Sales Now",
+    "subtitle": "Send your details and get a fast premium IPTV offer",
+    "form_label": "Request",
+    "form_help": "Send your request and we will reply immediately",
+    "name_label": "Name",
+    "name_placeholder": "Your name",
+    "email_label": "Email",
+    "email_placeholder": "Your email",
+    "message_label": "Your message",
+    "message_placeholder": "Describe your request",
+    "button": "Send via WhatsApp",
+    "form_note": "We will reply within minutes on WhatsApp.",
+    "whatsapp_prompt": "I want to subscribe to IPTV Pro.",
+    "trust_title": "Trusted and Secure",
+    "trust_description": "We protect your data and guarantee fast setup with dedicated support.",
+    "cta_title": "Fast WhatsApp Support",
+    "cta_description": "Contact us instantly and get your IPTV subscription ready in minutes.",
+    "whatsapp_button": "Contact on WhatsApp",
+    "submitted": "Message opened in WhatsApp."
+  }
 }

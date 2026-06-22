@@ -1,4 +1,4 @@
-import type { Viewport } from 'next';
+import type { Viewport, Metadata } from 'next';
 import { Inter, Tajawal } from 'next/font/google';
 import './globals.css';
 
@@ -20,6 +20,59 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   themeColor: '#0c0a08',
+  colorScheme: 'dark light',
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://iptv-pro.com'),
+  title: {
+    default: 'IPTV Pro | Best Premium IPTV Service for the Arab World',
+    template: '%s | IPTV Pro',
+  },
+  description: 'Premium IPTV service with 25,000+ HD/4K/8K channels, sports, movies, series & live TV. Multi-language, 24/7 support, WhatsApp integration.',
+  applicationName: 'IPTV Pro',
+  creator: 'IPTV Pro',
+  publisher: 'IPTV Pro',
+  keywords: ['IPTV', 'streaming', 'TV channels', 'VOD', 'sports', 'Arabic', 'premium service'],
+  formatDetection: {
+    telephone: false,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'ar_AE',
+    alternateLocale: ['en_US', 'fr_FR', 'es_ES'],
+    url: 'https://iptv-pro.com',
+    siteName: 'IPTV Pro',
+    title: 'IPTV Pro | Best Premium IPTV Service',
+    description: 'Over 25,000 channels in HD, 4K & 8K. Exclusive sports, movies, series.',
+    images: [
+      {
+        url: 'https://iptv-pro.com/images/og-image.svg',
+        width: 1200,
+        height: 630,
+        alt: 'IPTV Pro Service',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'IPTV Pro | Premium IPTV Service',
+    description: 'Best IPTV service with 25,000+ channels and 24/7 support',
+    images: ['https://iptv-pro.com/images/og-image.svg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 // JSON-LD Schemas - International brand

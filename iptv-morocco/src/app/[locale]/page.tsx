@@ -4,6 +4,10 @@ import Pricing from '@/components/Pricing';
 import Testimonials from '@/components/Testimonials';
 import ScarcityTimer from '@/components/ScarcityTimer';
 import FAQ from '@/components/FAQ';
+import InstallationGuide from '@/components/InstallationGuide';
+import SportsCalendar from '@/components/SportsCalendar';
+import ContactSection from '@/components/ContactSection';
+import FreeTrialForm from '@/components/FreeTrialForm';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
@@ -14,9 +18,13 @@ export default function HomePage() {
       <Hero />
       <FeaturesSection />
       <Pricing />
+      <InstallationGuide />
       <ScarcityTimer />
       <Testimonials />
+      <SportsCalendar />
       <FAQ />
+      <ContactSection />
+      <FreeTrialForm />
       <Footer />
     </main>
   );
