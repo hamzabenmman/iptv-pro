@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   applicationName: 'IPTV Pro',
   creator: 'IPTV Pro',
   publisher: 'IPTV Pro',
-  keywords: ['IPTV', 'streaming', 'TV channels', 'VOD', 'sports', 'Arabic', 'premium service'],
+  keywords: ['IPTV', 'IPTV subscription', 'best IPTV service', 'premium IPTV', '4K IPTV', '8K IPTV', 'beIN Sports', 'World Cup 2026', 'live sports streaming', 'Arabic channels', 'VOD streaming', 'Firestick IPTV', 'Smart TV IPTV', 'anti-freeze IPTV', 'no buffering IPTV', 'stable IPTV', 'IPTV free trial', 'IPTV Morocco', 'IPTV Arab world', 'streaming service', 'TV channels', 'sports', 'Arabic', 'premium service'],
   formatDetection: {
     telephone: false,
   },
@@ -82,15 +82,21 @@ const organizationSchema = {
   name: 'IPTV Pro',
   url: 'https://iptv-pro.com',
   logo: 'https://iptv-pro.com/images/logo.svg',
-  description: 'Premium IPTV service for the Arab world. Over 25,000 TV channels and VOD in HD, 4K and 8K.',
+  description: 'Premium IPTV service for the Arab world and international audiences. Over 25,000 TV channels and VOD in HD, 4K and 8K. Ultra-fast servers, anti-freeze technology, 24/7 support.',
   address: { '@type': 'PostalAddress', addressCountry: 'AE' },
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: '+971-XX-XXX-XXXX',
     contactType: 'customer service',
-    availableLanguage: ['Arabic', 'English', 'French'],
+    availableLanguage: ['Arabic', 'English', 'French', 'German', 'Spanish', 'Turkish', 'Russian', 'Chinese', 'Japanese', 'Portuguese', 'Dutch', 'Italian'],
   },
-  sameAs: ['https://wa.me/971XXXXXXXXX'],
+  sameAs: [
+    'https://wa.me/971XXXXXXXXX',
+  ],
+  foundingDate: '2024',
+  isicV4: '6010',
+  naics: '515210',
+  knowsAbout: ['IPTV', 'Streaming', 'Live TV', 'Sports Broadcasting', 'Digital Entertainment'],
 };
 
 const websiteSchema = {
@@ -139,6 +145,53 @@ const faqSchema = {
   ],
 };
 
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'IPTV Pro Subscription',
+  description: 'Premium IPTV subscription with 25,000+ channels in HD, 4K and 8K. Includes live TV, sports, movies, series, and VOD.',
+  brand: {
+    '@type': 'Brand',
+    name: 'IPTV Pro',
+  },
+  offers: [
+    {
+      '@type': 'Offer',
+      name: '1 Month Plan',
+      price: '9.99',
+      priceCurrency: 'USD',
+      priceValidUntil: '2026-12-31',
+      description: 'One month access to 25,000+ channels in HD quality',
+      availability: 'https://schema.org/InStock',
+    },
+    {
+      '@type': 'Offer',
+      name: '3 Months Plan',
+      price: '19.99',
+      priceCurrency: 'USD',
+      priceValidUntil: '2026-12-31',
+      description: 'Three months access with HD & 4K quality, 2 devices',
+      availability: 'https://schema.org/InStock',
+    },
+    {
+      '@type': 'Offer',
+      name: '1 Year Plan',
+      price: '49.99',
+      priceCurrency: 'USD',
+      priceValidUntil: '2026-12-31',
+      description: 'Full year access with 4K & 8K quality, 5 devices, VIP support',
+      availability: 'https://schema.org/InStock',
+    },
+  ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    bestRating: '5',
+    ratingCount: '50000',
+    reviewCount: '50000',
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -164,6 +217,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
         />
         {/* Preconnect to important origins */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
