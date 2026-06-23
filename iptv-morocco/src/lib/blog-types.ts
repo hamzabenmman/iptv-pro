@@ -23,6 +23,8 @@ export interface Article {
   featured: boolean;
   publishedAt: string | null;
   scheduledFor: string | null;
+  views?: number;
+  source?: string;
   createdAt: string;
   updatedAt: string;
 }
@@ -52,6 +54,41 @@ export interface Backlink {
   notes: string;
   submittedAt: string;
 }
+
+// Category display constants
+export const CATEGORY_ICONS: Record<string, string> = {
+  'world-cup': '🏆',
+  'champions-league': '⭐',
+  'premier-league': '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+  'la-liga': '🇪🇸',
+  'bein-sports': '📺',
+  football: '⚽',
+  'setup-guides': '🔧',
+  'device-tips': '💡',
+  entertainment: '🎬',
+  technology: '💻',
+  'movies-series': '🎥',
+  ramadan: '🌙',
+  'wc-morocco': '🇲🇦',
+  'wc-fixtures': '📅',
+};
+
+export const CATEGORY_NAMES: Record<string, string> = {
+  'world-cup': 'World Cup 2026',
+  'champions-league': 'Champions League',
+  'premier-league': 'Premier League',
+  'la-liga': 'La Liga',
+  'bein-sports': 'beIN Sports',
+  football: 'Football',
+  'setup-guides': 'Setup Guides',
+  'device-tips': 'Device Tips',
+  entertainment: 'Entertainment',
+  technology: 'Technology',
+  'movies-series': 'Movies & Series',
+  ramadan: 'Ramadan',
+  'wc-morocco': 'Morocco',
+  'wc-fixtures': 'Fixtures & Results',
+};
 
 // Default categories structure
 export const DEFAULT_CATEGORIES: Category[] = [

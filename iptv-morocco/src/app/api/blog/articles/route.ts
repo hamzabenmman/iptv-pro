@@ -1,76 +1,59 @@
 import { NextResponse } from 'next/server';
+import { updateArticleStatus, getPendingArticles, getPublishedArticles, getStoredArticles, seedFallbackArticles } from '@/lib/blog-engine';
 
-const CRON_SECRET = process.env.CRON_SECRET;
+export const dynamic = 'force-dynamic';
 
-function isAuthorized(request: Request) {
-  const auth = request.headers.get('authorization');
-  return !CRON_SECRET || auth === `Bearer ${CRON_SECRET}`;
+function isAdmin(request: Request): boolean {
+  const authHeader = request.headers.get('authorization');
+  const adminPassword = process.env.ADMIN_PASSWORD;
+  if (!adminPassword) return true; // No password set = open access
+  return authHeader === `Bearer ${adminPassword}`;
 }
 
-// GET /api/blog/articles?status=published&category=world-cup&limit=10&offset=0
+// GET /api/blog/articles - List articles
 export async function GET(request: Request) {
-  try {
-    const { searchParams } = new URL(request.url);
-    const status = searchParams.get('status') || 'published';
-    const categoryId = searchParams.get('category');
-    const limit = parseInt(searchParams.get('limit') || '12');
-    const offset = parseInt(searchParams.get('offset') || '0');
-    const search = searchParams.get('search');
+  const { searchParams } = new URL(request.url);
+  const status = searchParams.get('status');
 
-    // In production: query database
-    // const articles = await getPublishedArticles({ categoryId, limit, offset });
+  seedFallbackArticles();
 
-    return NextResponse.json({ articles: [], total: 0 });
-  } catch (error) {
-    return NextResponse.json({ error: 'Failed to fetch articles' }, { status: 500 });
+  if (status === 'pending') {
+    return NextResponse.json({ articles: getPendingArticles() });
   }
+  if (status === 'published') {
+    return NextResponse.json({ articles: getPublishedArticles() });
+  }
+
+  return NextResponse.json({ articles: getStoredArticles() });
 }
 
-// POST /api/blog/articles - Create new article (from AI generation or manual)
-export async function POST(request: Request) {
-  if (!isAuthorized(request)) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-  }
-
-  try {
-    const body = await request.json();
-    // In production: save to database
-    // const article = await createArticle(body);
-    return NextResponse.json({ success: true, article: body });
-  } catch (error) {
-    return NextResponse.json({ error: 'Failed to create article' }, { status: 500 });
-  }
-}
-
-// PATCH /api/blog/articles - Update article status
+// PATCH /api/blog/articles - Update article status (approve/reject)
 export async function PATCH(request: Request) {
-  if (!isAuthorized(request)) {
+  if (!isAdmin(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
   try {
-    const { id, status, ...updates } = await request.json();
-    // In production: update article in database
-    // await updateArticleStatus(id, status);
-    // if (Object.keys(updates).length) await updateArticle(id, updates);
-    return NextResponse.json({ success: true });
-  } catch (error) {
+    const { id, status } = await request.json();
+
+    if (!id || !status) {
+      return NextResponse.json({ error: 'Article ID and status are required' }, { status: 400 });
+    }
+
+    const success = updateArticleStatus(id, status);
+    if (!success) {
+      return NextResponse.json({ error: 'Article not found' }, { status: 404 });
+    }
+
+    return NextResponse.json({
+      success: true,
+      message: status === 'published'
+        ? 'Article published successfully!'
+        : status === 'rejected'
+        ? 'Article rejected.'
+        : 'Article updated.',
+    });
+  } catch {
     return NextResponse.json({ error: 'Failed to update article' }, { status: 500 });
-  }
-}
-
-// DELETE /api/blog/articles/:id
-export async function DELETE(request: Request) {
-  if (!isAuthorized(request)) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-  }
-
-  try {
-    const { id } = await request.json();
-    // In production: delete from database
-    // await deleteArticle(id);
-    return NextResponse.json({ success: true });
-  } catch (error) {
-    return NextResponse.json({ error: 'Failed to delete article' }, { status: 500 });
   }
 }
