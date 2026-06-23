@@ -221,15 +221,35 @@
       "firestick": "Fire Stick"
     },
     "steps": [
-      {"title": "IPTVアプリをダウンロード", "desc": "Google Playストア/App Storeからダウンロード：IPTV Smarters、TiviMate、またはSMART IPTV"},
-      {"title": "アプリを開く", "desc": "アプリを起動し、「リストを追加」または「ログイン」をクリック"},
-      {"title": "ログイン情報を入力", "desc": "WhatsAppで送信したユーザー名、パスワード、サーバーURLを入力"},
-      {"title": "チャンネルリストを読み込む", "desc": "アプリが自動的にチャンネルリストとEPG番組ガイドを読み込みます"},
-      {"title": "お楽しみください！", "desc": "HD、4K、8Kでお気に入りのチャンネルを視聴できます！"}
+      {
+        "title": "IPTVアプリをダウンロード",
+        "desc": "Google Playストア/App Storeからダウンロード：IPTV Smarters、TiviMate、またはSMART IPTV"
+      },
+      {
+        "title": "アプリを開く",
+        "desc": "アプリを起動し、「リストを追加」または「ログイン」をクリック"
+      },
+      {
+        "title": "ログイン情報を入力",
+        "desc": "WhatsAppで送信したユーザー名、パスワード、サーバーURLを入力"
+      },
+      {
+        "title": "チャンネルリストを読み込む",
+        "desc": "アプリが自動的にチャンネルリストとEPG番組ガイドを読み込みます"
+      },
+      {
+        "title": "お楽しみください！",
+        "desc": "HD、4K、8Kでお気に入りのチャンネルを視聴できます！"
+      }
     ],
     "need_help": "ヘルプが必要ですか？WhatsAppでお問い合わせください"
   },
   "matches": {
+    "loading": "Loading live matches...",
+    "no_live_match": "No live World Cup matches available right now.",
+    "api_error": "Unable to load live match feed.",
+    "live_title": "Live World Cup Feed",
+    "live_subtitle": "Real-time match updates from a free live API.",
     "title": "スポーツカレンダー",
     "subtitle": "IPTV Proで重要な試合を見逃さない",
     "filters": {
@@ -245,15 +265,45 @@
     "upcoming": "今後の予定",
     "watch_on": "視聴する",
     "matches_list": [
-      {"date": "2026-06-15", "time": "21:00", "team1": "モロッコ", "team2": "フランス", "competition": "world_cup", "stadium": "ハリファ競技場, ドーハ"},
-      {"date": "2026-06-18", "time": "18:00", "team1": "ブラジル", "team2": "ポルトガル", "competition": "world_cup", "stadium": "ルサイル競技場"},
-      {"date": "2026-06-20", "time": "21:00", "team1": "アルジェリア", "team2": "アルゼンチン", "competition": "world_cup", "stadium": "974競技場, ドーハ"},
-      {"date": "2026-06-22", "time": "20:00", "team1": "レアル・マドリード", "team2": "バルセロナ", "competition": "la_liga", "stadium": "サンティアゴ・ベルナベウ"},
-      {"date": "2026-06-25", "time": "21:00", "team1": "マン・シティ", "team2": "バイエルン・ミュンヘン", "competition": "champions_league", "stadium": "エティハド競技場"},
-      {"date": "2026-06-28", "time": "17:30", "team1": "リバプール", "team2": "アーセナル", "competition": "premier_league", "stadium": "アンフィールド"},
-      {"date": "2026-07-02", "time": "21:00", "team1": "PSG", "team2": "マルセイユ", "competition": "bein", "stadium": "パルク・デ・プランス"},
-      {"date": "2026-07-05", "time": "20:00", "team1": "インテル", "team2": "ACミラン", "competition": "champions_league", "stadium": "サン・シーロ"}
-    ]
+      {
+        "date": "2026-06-15",
+        "time": "21:00",
+        "team1": "モロッコ",
+        "team2": "フランス",
+        "competition": "world_cup",
+        "stadium": "ハリファ競技場, ドーハ",
+        "status": "ended",
+        "score": {
+          "team1": 2,
+          "team2": 1
+        }
+      },
+      {
+        "date": "2026-06-18",
+        "time": "18:00",
+        "team1": "ブラジル",
+        "team2": "ポルトガル",
+        "competition": "world_cup",
+        "stadium": "ルサイル競技場",
+        "status": "ended",
+        "score": {
+          "team1": 3,
+          "team2": 2
+        }
+      },
+      {
+        "date": "2026-06-20",
+        "time": "21:00",
+        "team1": "アルジェリア",
+        "team2": "アルゼンチン",
+        "competition": "world_cup",
+        "stadium": "974競技場, ドーハ",
+        "status": "upcoming"
+      }
+    ],
+    "status_live": "Live",
+    "status_ended": "Ended",
+    "status_upcoming": "Upcoming"
   },
   "footer": {
     "rights": "© 2026 IPTV Pro. 全著作権所有。",
@@ -293,5 +343,18 @@
     "cta_description": "Contact us instantly and get your IPTV subscription ready in minutes.",
     "whatsapp_button": "Contact on WhatsApp",
     "submitted": "Message opened in WhatsApp."
+  },
+  "chat": {
+    "title": "IPTV Support Chat",
+    "subtitle": "Stay on site and chat while we assist you.",
+    "save_session": "Save session",
+    "session_saved": "Session saved",
+    "session_placeholder": "Enter your name or nickname",
+    "input_placeholder": "Type your question here...",
+    "invite_prompt": "Invite code appears after saving your session",
+    "invite_code": "Invite code",
+    "send_button": "Send",
+    "open_chat": "Open chat",
+    "error_send": "Unable to send message. Try again."
   }
 }

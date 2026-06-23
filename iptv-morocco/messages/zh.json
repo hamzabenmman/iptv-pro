@@ -221,15 +221,35 @@
       "firestick": "Fire Stick"
     },
     "steps": [
-      {"title": "下载IPTV应用", "desc": "从Google Play商店/App Store下载：IPTV Smarters、TiviMate或SMART IPTV"},
-      {"title": "打开应用", "desc": "启动应用并点击'添加列表'或'登录'"},
-      {"title": "输入您的账户信息", "desc": "输入我们通过WhatsApp发送的用户名、密码和服务器URL"},
-      {"title": "加载频道列表", "desc": "应用将自动加载您的频道列表和EPG节目指南"},
-      {"title": "尽情享受！", "desc": "您现在可以观看所有喜爱的高清、4K和8K频道！"}
+      {
+        "title": "下载IPTV应用",
+        "desc": "从Google Play商店/App Store下载：IPTV Smarters、TiviMate或SMART IPTV"
+      },
+      {
+        "title": "打开应用",
+        "desc": "启动应用并点击'添加列表'或'登录'"
+      },
+      {
+        "title": "输入您的账户信息",
+        "desc": "输入我们通过WhatsApp发送的用户名、密码和服务器URL"
+      },
+      {
+        "title": "加载频道列表",
+        "desc": "应用将自动加载您的频道列表和EPG节目指南"
+      },
+      {
+        "title": "尽情享受！",
+        "desc": "您现在可以观看所有喜爱的高清、4K和8K频道！"
+      }
     ],
     "need_help": "需要帮助？通过WhatsApp联系我们"
   },
   "matches": {
+    "loading": "Loading live matches...",
+    "no_live_match": "No live World Cup matches available right now.",
+    "api_error": "Unable to load live match feed.",
+    "live_title": "Live World Cup Feed",
+    "live_subtitle": "Real-time match updates from a free live API.",
     "title": "体育赛事日历",
     "subtitle": "使用IPTV Pro不错过任何重要比赛",
     "filters": {
@@ -245,15 +265,45 @@
     "upcoming": "即将",
     "watch_on": "观看于",
     "matches_list": [
-      {"date": "2026-06-15", "time": "21:00", "team1": "摩洛哥", "team2": "法国", "competition": "world_cup", "stadium": "哈利法国际体育场，多哈"},
-      {"date": "2026-06-18", "time": "18:00", "team1": "巴西", "team2": "葡萄牙", "competition": "world_cup", "stadium": "卢赛尔体育场"},
-      {"date": "2026-06-20", "time": "21:00", "team1": "阿尔及利亚", "team2": "阿根廷", "competition": "world_cup", "stadium": "974体育场，多哈"},
-      {"date": "2026-06-22", "time": "20:00", "team1": "皇家马德里", "team2": "巴塞罗那", "competition": "la_liga", "stadium": "伯纳乌球场"},
-      {"date": "2026-06-25", "time": "21:00", "team1": "曼城", "team2": "拜仁慕尼黑", "competition": "champions_league", "stadium": "伊蒂哈德球场"},
-      {"date": "2026-06-28", "time": "17:30", "team1": "利物浦", "team2": "阿森纳", "competition": "premier_league", "stadium": "安菲尔德球场"},
-      {"date": "2026-07-02", "time": "21:00", "team1": "巴黎圣日耳曼", "team2": "马赛", "competition": "bein", "stadium": "王子公园球场"},
-      {"date": "2026-07-05", "time": "20:00", "team1": "国际米兰", "team2": "AC米兰", "competition": "champions_league", "stadium": "圣西罗球场"}
-    ]
+      {
+        "date": "2026-06-15",
+        "time": "21:00",
+        "team1": "摩洛哥",
+        "team2": "法国",
+        "competition": "world_cup",
+        "stadium": "哈利法国际体育场，多哈",
+        "status": "ended",
+        "score": {
+          "team1": 2,
+          "team2": 1
+        }
+      },
+      {
+        "date": "2026-06-18",
+        "time": "18:00",
+        "team1": "巴西",
+        "team2": "葡萄牙",
+        "competition": "world_cup",
+        "stadium": "卢赛尔体育场",
+        "status": "ended",
+        "score": {
+          "team1": 3,
+          "team2": 2
+        }
+      },
+      {
+        "date": "2026-06-20",
+        "time": "21:00",
+        "team1": "阿尔及利亚",
+        "team2": "阿根廷",
+        "competition": "world_cup",
+        "stadium": "974体育场，多哈",
+        "status": "upcoming"
+      }
+    ],
+    "status_live": "Live",
+    "status_ended": "Ended",
+    "status_upcoming": "Upcoming"
   },
   "footer": {
     "rights": "© 2026 IPTV Pro. 保留所有权利。",
@@ -293,5 +343,18 @@
     "cta_description": "Contact us instantly and get your IPTV subscription ready in minutes.",
     "whatsapp_button": "Contact on WhatsApp",
     "submitted": "Message opened in WhatsApp."
+  },
+  "chat": {
+    "title": "IPTV Support Chat",
+    "subtitle": "Stay on site and chat while we assist you.",
+    "save_session": "Save session",
+    "session_saved": "Session saved",
+    "session_placeholder": "Enter your name or nickname",
+    "input_placeholder": "Type your question here...",
+    "invite_prompt": "Invite code appears after saving your session",
+    "invite_code": "Invite code",
+    "send_button": "Send",
+    "open_chat": "Open chat",
+    "error_send": "Unable to send message. Try again."
   }
 }

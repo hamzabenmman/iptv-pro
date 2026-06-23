@@ -5,11 +5,12 @@ import Testimonials from '@/components/Testimonials';
 import ScarcityTimer from '@/components/ScarcityTimer';
 import FAQ from '@/components/FAQ';
 import InstallationGuide from '@/components/InstallationGuide';
-import SportsCalendar from '@/components/SportsCalendar';
+import LiveSportsCalendar from '@/components/LiveSportsCalendar';
 import ContactSection from '@/components/ContactSection';
 import FreeTrialForm from '@/components/FreeTrialForm';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import ChatWidget from '@/components/ChatWidget';
 
 export default function HomePage() {
   return (
@@ -21,11 +22,12 @@ export default function HomePage() {
       <InstallationGuide />
       <ScarcityTimer />
       <Testimonials />
-      <SportsCalendar />
+      <LiveSportsCalendar />
       <FAQ />
       <ContactSection />
       <FreeTrialForm />
       <Footer />
+      <ChatWidget />
     </main>
   );
 }

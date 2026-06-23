@@ -259,6 +259,11 @@
     "need_help": "تحتاج مساعدة؟ تواصل معنا عبر واتساب"
   },
   "matches": {
+    "loading": "Loading live matches...",
+    "no_live_match": "No live World Cup matches available right now.",
+    "api_error": "Unable to load live match feed.",
+    "live_title": "Live World Cup Feed",
+    "live_subtitle": "Real-time match updates from a free live API.",
     "title": "التقويم الرياضي",
     "subtitle": "لا تفوت أي مباراة مهمة مع IPTV Pro",
     "filters": {
@@ -280,7 +285,12 @@
         "team1": "المغرب",
         "team2": "فرنسا",
         "competition": "world_cup",
-        "stadium": "استاد خليفة، الدوحة"
+        "stadium": "استاد خليفة، الدوحة",
+        "status": "ended",
+        "score": {
+          "team1": 2,
+          "team2": 1
+        }
       },
       {
         "date": "2026-06-18",
@@ -288,7 +298,12 @@
         "team1": "البرازيل",
         "team2": "البرتغال",
         "competition": "world_cup",
-        "stadium": "استاد لوسيل"
+        "stadium": "استاد لوسيل",
+        "status": "ended",
+        "score": {
+          "team1": 3,
+          "team2": 2
+        }
       },
       {
         "date": "2026-06-20",
@@ -296,49 +311,13 @@
         "team1": "الجزائر",
         "team2": "الأرجنتين",
         "competition": "world_cup",
-        "stadium": "استاد 974، الدوحة"
-      },
-      {
-        "date": "2026-06-22",
-        "time": "20:00",
-        "team1": "ريال مدريد",
-        "team2": "برشلونة",
-        "competition": "la_liga",
-        "stadium": "سانتياغو برنابيو"
-      },
-      {
-        "date": "2026-06-25",
-        "time": "21:00",
-        "team1": "مانشستر سيتي",
-        "team2": "بايرن ميونخ",
-        "competition": "champions_league",
-        "stadium": "الاتحاد"
-      },
-      {
-        "date": "2026-06-28",
-        "time": "17:30",
-        "team1": "ليفربول",
-        "team2": "آرسنال",
-        "competition": "premier_league",
-        "stadium": "أنفيلد"
-      },
-      {
-        "date": "2026-07-02",
-        "time": "21:00",
-        "team1": "باريس سان جيرمان",
-        "team2": "مرسيليا",
-        "competition": "bein",
-        "stadium": "بارك دي برينس"
-      },
-      {
-        "date": "2026-07-05",
-        "time": "20:00",
-        "team1": "إنتر ميلان",
-        "team2": "إيه سي ميلان",
-        "competition": "champions_league",
-        "stadium": "سان سيرو"
+        "stadium": "استاد 974، الدوحة",
+        "status": "upcoming"
       }
-    ]
+    ],
+    "status_live": "Live",
+    "status_ended": "Ended",
+    "status_upcoming": "Upcoming"
   },
   "footer": {
     "rights": "© 2026 IPTV Pro. جميع الحقوق محفوظة.",
@@ -378,5 +357,18 @@
     "cta_description": "Contact us instantly and get your IPTV subscription ready in minutes.",
     "whatsapp_button": "Contact on WhatsApp",
     "submitted": "Message opened in WhatsApp."
+  },
+  "chat": {
+    "title": "IPTV Support Chat",
+    "subtitle": "Stay on site and chat while we assist you.",
+    "save_session": "Save session",
+    "session_saved": "Session saved",
+    "session_placeholder": "Enter your name or nickname",
+    "input_placeholder": "Type your question here...",
+    "invite_prompt": "Invite code appears after saving your session",
+    "invite_code": "Invite code",
+    "send_button": "Send",
+    "open_chat": "Open chat",
+    "error_send": "Unable to send message. Try again."
   }
 }

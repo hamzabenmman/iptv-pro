@@ -221,15 +221,35 @@
       "firestick": "Fire Stick"
     },
     "steps": [
-      {"title": "Descarga una app IPTV", "desc": "Desde Google Play Store / App Store, descarga: IPTV Smarters, TiviMate o SMART IPTV"},
-      {"title": "Abre la app", "desc": "Inicia la app y haz clic en 'Añadir lista' o 'Iniciar sesión'"},
-      {"title": "Ingresa tus datos", "desc": "Ingresa usuario, contraseña y URL del servidor que te enviamos por WhatsApp"},
-      {"title": "Carga la lista de canales", "desc": "La app cargará automáticamente tus canales y la guía EPG"},
-      {"title": "¡Disfruta!", "desc": "¡Ahora puedes ver todos tus canales favoritos en HD, 4K y 8K!"}
+      {
+        "title": "Descarga una app IPTV",
+        "desc": "Desde Google Play Store / App Store, descarga: IPTV Smarters, TiviMate o SMART IPTV"
+      },
+      {
+        "title": "Abre la app",
+        "desc": "Inicia la app y haz clic en 'Añadir lista' o 'Iniciar sesión'"
+      },
+      {
+        "title": "Ingresa tus datos",
+        "desc": "Ingresa usuario, contraseña y URL del servidor que te enviamos por WhatsApp"
+      },
+      {
+        "title": "Carga la lista de canales",
+        "desc": "La app cargará automáticamente tus canales y la guía EPG"
+      },
+      {
+        "title": "¡Disfruta!",
+        "desc": "¡Ahora puedes ver todos tus canales favoritos en HD, 4K y 8K!"
+      }
     ],
     "need_help": "¿Necesitas ayuda? Contáctanos por WhatsApp"
   },
   "matches": {
+    "loading": "Loading live matches...",
+    "no_live_match": "No live World Cup matches available right now.",
+    "api_error": "Unable to load live match feed.",
+    "live_title": "Live World Cup Feed",
+    "live_subtitle": "Real-time match updates from a free live API.",
     "title": "Calendario Deportivo",
     "subtitle": "No te pierdas ningún partido importante con IPTV Pro",
     "filters": {
@@ -245,15 +265,45 @@
     "upcoming": "Próximos",
     "watch_on": "Ver en",
     "matches_list": [
-      {"date": "2026-06-15", "time": "21:00", "team1": "Marruecos", "team2": "Francia", "competition": "world_cup", "stadium": "Estadio Khalifa, Doha"},
-      {"date": "2026-06-18", "time": "18:00", "team1": "Brasil", "team2": "Portugal", "competition": "world_cup", "stadium": "Estadio de Lusail"},
-      {"date": "2026-06-20", "time": "21:00", "team1": "Argelia", "team2": "Argentina", "competition": "world_cup", "stadium": "Estadio 974, Doha"},
-      {"date": "2026-06-22", "time": "20:00", "team1": "Real Madrid", "team2": "Barcelona", "competition": "la_liga", "stadium": "Santiago Bernabéu"},
-      {"date": "2026-06-25", "time": "21:00", "team1": "Man City", "team2": "Bayern Múnich", "competition": "champions_league", "stadium": "Etihad Stadium"},
-      {"date": "2026-06-28", "time": "17:30", "team1": "Liverpool", "team2": "Arsenal", "competition": "premier_league", "stadium": "Anfield"},
-      {"date": "2026-07-02", "time": "21:00", "team1": "PSG", "team2": "Marsella", "competition": "bein", "stadium": "Parc des Princes"},
-      {"date": "2026-07-05", "time": "20:00", "team1": "Inter Milán", "team2": "AC Milán", "competition": "champions_league", "stadium": "San Siro"}
-    ]
+      {
+        "date": "2026-06-15",
+        "time": "21:00",
+        "team1": "Marruecos",
+        "team2": "Francia",
+        "competition": "world_cup",
+        "stadium": "Estadio Khalifa, Doha",
+        "status": "ended",
+        "score": {
+          "team1": 2,
+          "team2": 1
+        }
+      },
+      {
+        "date": "2026-06-18",
+        "time": "18:00",
+        "team1": "Brasil",
+        "team2": "Portugal",
+        "competition": "world_cup",
+        "stadium": "Estadio de Lusail",
+        "status": "ended",
+        "score": {
+          "team1": 3,
+          "team2": 2
+        }
+      },
+      {
+        "date": "2026-06-20",
+        "time": "21:00",
+        "team1": "Argelia",
+        "team2": "Argentina",
+        "competition": "world_cup",
+        "stadium": "Estadio 974, Doha",
+        "status": "upcoming"
+      }
+    ],
+    "status_live": "Live",
+    "status_ended": "Ended",
+    "status_upcoming": "Upcoming"
   },
   "footer": {
     "rights": "© 2026 IPTV Pro. Todos los derechos reservados.",
@@ -293,5 +343,18 @@
     "cta_description": "Contact us instantly and get your IPTV subscription ready in minutes.",
     "whatsapp_button": "Contact on WhatsApp",
     "submitted": "Message opened in WhatsApp."
+  },
+  "chat": {
+    "title": "IPTV Support Chat",
+    "subtitle": "Stay on site and chat while we assist you.",
+    "save_session": "Save session",
+    "session_saved": "Session saved",
+    "session_placeholder": "Enter your name or nickname",
+    "input_placeholder": "Type your question here...",
+    "invite_prompt": "Invite code appears after saving your session",
+    "invite_code": "Invite code",
+    "send_button": "Send",
+    "open_chat": "Open chat",
+    "error_send": "Unable to send message. Try again."
   }
 }
