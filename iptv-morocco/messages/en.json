@@ -221,7 +221,10 @@
     "cta": "Free Trial",
     "cta_subtitle": "Test 24h for free",
     "whatsapp_prefix": "Hello, I would like to get a free trial for IPTV Pro.",
-    "guarantee": "🔒 No commitment - Cancel anytime"
+    "guarantee": "🔒 No commitment - Cancel anytime",
+    "people_tried": "people tried",
+    "people_tried_today": "people tried today",
+    "trials": "trials"
   },
   "guide": {
     "title": "Installation Guide",

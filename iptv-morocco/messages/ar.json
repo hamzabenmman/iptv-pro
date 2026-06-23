@@ -221,7 +221,10 @@
     "cta": "جرب مجاناً",
     "cta_subtitle": "اختبر الخدمة 24 ساعة بدون دفع",
     "whatsapp_prefix": "السلام عليكم، أود الحصول على تجربة مجانية لخدمة IPTV Pro.",
-    "guarantee": "🔒 بدون التزام - يمكنك الإلغاء في أي وقت"
+    "guarantee": "🔒 بدون التزام - يمكنك الإلغاء في أي وقت",
+    "people_tried": "شخص جرب",
+    "people_tried_today": "شخص جرب اليوم",
+    "trials": "تجربة"
   },
   "guide": {
     "title": "دليل التثبيت",
@@ -259,11 +262,11 @@
     "need_help": "تحتاج مساعدة؟ تواصل معنا عبر واتساب"
   },
   "matches": {
-    "loading": "Loading live matches...",
-    "no_live_match": "No live World Cup matches available right now.",
-    "api_error": "Unable to load live match feed.",
-    "live_title": "Live World Cup Feed",
-    "live_subtitle": "Real-time match updates from a free live API.",
+    "loading": "جاري تحميل المباريات...",
+    "no_live_match": "لا توجد مباريات كأس العالم مباشرة الآن",
+    "api_error": "تعذر تحميل بث المباريات المباشرة",
+    "live_title": "بث مباشر لكأس العالم",
+    "live_subtitle": "تحديثات المباريات في الوقت الفعلي",
     "title": "التقويم الرياضي",
     "subtitle": "لا تفوت أي مباراة مهمة مع IPTV Pro",
     "filters": {
@@ -334,41 +337,41 @@
     "button": "واتساب"
   },
   "theme": {
-    "toggle": "Toggle theme"
+    "toggle": "تبديل السمة"
   },
   "contact": {
-    "headline": "Talk to us directly",
-    "title": "Contact Sales Now",
-    "subtitle": "Send your details and get a fast premium IPTV offer",
-    "form_label": "Request",
-    "form_help": "Send your request and we will reply immediately",
-    "name_label": "Name",
-    "name_placeholder": "Your name",
-    "email_label": "Email",
-    "email_placeholder": "Your email",
-    "message_label": "Your message",
-    "message_placeholder": "Describe your request",
-    "button": "Send via WhatsApp",
-    "form_note": "We will reply within minutes on WhatsApp.",
-    "whatsapp_prompt": "I want to subscribe to IPTV Pro.",
-    "trust_title": "Trusted and Secure",
-    "trust_description": "We protect your data and guarantee fast setup with dedicated support.",
-    "cta_title": "Fast WhatsApp Support",
-    "cta_description": "Contact us instantly and get your IPTV subscription ready in minutes.",
-    "whatsapp_button": "Contact on WhatsApp",
-    "submitted": "Message opened in WhatsApp."
+    "headline": "تواصل معنا مباشرة",
+    "title": "اتصل بالمبيعات الآن",
+    "subtitle": "أرسل بياناتك واحصل على عرض IPTV مميز بسرعة",
+    "form_label": "طلب",
+    "form_help": "أرسل طلبك وسنرد عليك فوراً",
+    "name_label": "الاسم",
+    "name_placeholder": "اسمك",
+    "email_label": "البريد الإلكتروني",
+    "email_placeholder": "بريدك الإلكتروني",
+    "message_label": "رسالتك",
+    "message_placeholder": "صف طلبك",
+    "button": "أرسل عبر واتساب",
+    "form_note": "سنرد عليك خلال دقائق عبر واتساب",
+    "whatsapp_prompt": "أريد الاشتراك في IPTV Pro",
+    "trust_title": "موثوق وآمن",
+    "trust_description": "نحن نحمي بياناتك ونضمن إعداداً سريعاً بدعم مخصص",
+    "cta_title": "دعم سريع عبر واتساب",
+    "cta_description": "تواصل معنا فوراً واحصل على اشتراك IPTV جاهز في دقائق",
+    "whatsapp_button": "تواصل عبر واتساب",
+    "submitted": "تم فتح الرسالة في واتساب"
   },
   "chat": {
-    "title": "IPTV Support Chat",
-    "subtitle": "Stay on site and chat while we assist you.",
-    "save_session": "Save session",
-    "session_saved": "Session saved",
-    "session_placeholder": "Enter your name or nickname",
-    "input_placeholder": "Type your question here...",
-    "invite_prompt": "Invite code appears after saving your session",
-    "invite_code": "Invite code",
-    "send_button": "Send",
-    "open_chat": "Open chat",
-    "error_send": "Unable to send message. Try again."
+    "title": "دعم IPTV",
+    "subtitle": "ابق في الموقع وتحدث بينما نساعدك",
+    "save_session": "حفظ الجلسة",
+    "session_saved": "تم حفظ الجلسة",
+    "session_placeholder": "أدخل اسمك أو لقبك",
+    "input_placeholder": "اكتب سؤالك هنا...",
+    "invite_prompt": "يظهر رمز الدعوة بعد حفظ الجلسة",
+    "invite_code": "رمز الدعوة",
+    "send_button": "إرسال",
+    "open_chat": "افتح الدردشة",
+    "error_send": "تعذر إرسال الرسالة. حاول مرة أخرى"
   }
 }

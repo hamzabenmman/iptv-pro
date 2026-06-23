@@ -4,7 +4,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { X, Sparkles, Zap, Clock, CheckCircle, Users } from 'lucide-react';
 import AnimatedCounter from './AnimatedCounter';
 
-const durations = ['6h', '12h', '1d'] as const;
+const durations = ['24h', '48h', '3d'] as const;
 
 export default function FreeTrialForm() {
   const t = useTranslations('trial');

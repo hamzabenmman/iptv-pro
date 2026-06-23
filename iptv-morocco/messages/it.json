@@ -207,7 +207,10 @@
     "cta": "Prova Gratuita",
     "cta_subtitle": "Prova 24h gratis",
     "whatsapp_prefix": "Salve, vorrei una prova gratuita di IPTV Pro.",
-    "guarantee": "🔒 Nessun impegno - Disdici quando vuoi"
+    "guarantee": "🔒 Nessun impegno - Disdici quando vuoi",
+    "people_tried": "persone hanno provato",
+    "people_tried_today": "persone hanno provato oggi",
+    "trials": "prove"
   },
   "guide": {
     "title": "Guida all'Installazione",
@@ -245,11 +248,11 @@
     "need_help": "Hai bisogno di aiuto? Contattaci su WhatsApp"
   },
   "matches": {
-    "loading": "Loading live matches...",
-    "no_live_match": "No live World Cup matches available right now.",
-    "api_error": "Unable to load live match feed.",
-    "live_title": "Live World Cup Feed",
-    "live_subtitle": "Real-time match updates from a free live API.",
+    "loading": "Caricamento partite in diretta...",
+    "no_live_match": "Nessuna partita dei Mondiali in diretta al momento.",
+    "api_error": "Impossibile caricare il feed delle partite in diretta.",
+    "live_title": "Feed Mondiali in Diretta",
+    "live_subtitle": "Aggiornamenti in tempo reale delle partite da un'API live gratuita.",
     "title": "Calendario Sportivo",
     "subtitle": "Non perdere nessuna partita importante con IPTV Pro",
     "filters": {
@@ -301,9 +304,9 @@
         "status": "upcoming"
       }
     ],
-    "status_live": "Live",
-    "status_ended": "Ended",
-    "status_upcoming": "Upcoming"
+    "status_live": "In diretta",
+    "status_ended": "Terminato",
+    "status_upcoming": "Prossimo"
   },
   "footer": {
     "rights": "© 2026 IPTV Pro. Tutti i diritti riservati.",
@@ -320,41 +323,41 @@
     "button": "WhatsApp"
   },
   "theme": {
-    "toggle": "Toggle theme"
+    "toggle": "Cambia tema"
   },
   "contact": {
-    "headline": "Talk to us directly",
-    "title": "Contact Sales Now",
-    "subtitle": "Send your details and get a fast premium IPTV offer",
-    "form_label": "Request",
-    "form_help": "Send your request and we will reply immediately",
-    "name_label": "Name",
-    "name_placeholder": "Your name",
+    "headline": "Parlaci direttamente",
+    "title": "Contatta le Vendite Ora",
+    "subtitle": "Invia i tuoi dati e ricevi un'offerta IPTV premium veloce",
+    "form_label": "Richiesta",
+    "form_help": "Invia la tua richiesta e ti risponderemo immediatamente",
+    "name_label": "Nome",
+    "name_placeholder": "Il tuo nome",
     "email_label": "Email",
-    "email_placeholder": "Your email",
-    "message_label": "Your message",
-    "message_placeholder": "Describe your request",
-    "button": "Send via WhatsApp",
-    "form_note": "We will reply within minutes on WhatsApp.",
-    "whatsapp_prompt": "I want to subscribe to IPTV Pro.",
-    "trust_title": "Trusted and Secure",
-    "trust_description": "We protect your data and guarantee fast setup with dedicated support.",
-    "cta_title": "Fast WhatsApp Support",
-    "cta_description": "Contact us instantly and get your IPTV subscription ready in minutes.",
-    "whatsapp_button": "Contact on WhatsApp",
-    "submitted": "Message opened in WhatsApp."
+    "email_placeholder": "La tua email",
+    "message_label": "Il tuo messaggio",
+    "message_placeholder": "Descrivi la tua richiesta",
+    "button": "Invia tramite WhatsApp",
+    "form_note": "Risponderemo in pochi minuti su WhatsApp.",
+    "whatsapp_prompt": "Voglio abbonarmi a IPTV Pro.",
+    "trust_title": "Affidabile e Sicuro",
+    "trust_description": "Proteggiamo i tuoi dati e garantiamo una configurazione rapida con supporto dedicato.",
+    "cta_title": "Supporto WhatsApp Veloce",
+    "cta_description": "Contattaci subito e ottieni il tuo abbonamento IPTV pronto in minuti.",
+    "whatsapp_button": "Contatta su WhatsApp",
+    "submitted": "Messaggio aperto in WhatsApp."
   },
   "chat": {
-    "title": "IPTV Support Chat",
-    "subtitle": "Stay on site and chat while we assist you.",
-    "save_session": "Save session",
-    "session_saved": "Session saved",
-    "session_placeholder": "Enter your name or nickname",
-    "input_placeholder": "Type your question here...",
-    "invite_prompt": "Invite code appears after saving your session",
-    "invite_code": "Invite code",
-    "send_button": "Send",
-    "open_chat": "Open chat",
-    "error_send": "Unable to send message. Try again."
+    "title": "Chat di Supporto IPTV",
+    "subtitle": "Rimani sul sito e chatta mentre ti assistiamo.",
+    "save_session": "Salva sessione",
+    "session_saved": "Sessione salvata",
+    "session_placeholder": "Inserisci il tuo nome o soprannome",
+    "input_placeholder": "Scrivi qui la tua domanda...",
+    "invite_prompt": "Il codice di invito appare dopo aver salvato la sessione",
+    "invite_code": "Codice di invito",
+    "send_button": "Invia",
+    "open_chat": "Apri chat",
+    "error_send": "Impossibile inviare il messaggio. Riprova."
   }
 }

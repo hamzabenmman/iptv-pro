@@ -207,7 +207,10 @@
     "cta": "Ücretsiz Dene",
     "cta_subtitle": "24 saat ücretsiz dene",
     "whatsapp_prefix": "Merhaba, IPTV Pro ücretsiz denemek istiyorum.",
-    "guarantee": "🔒 Taahhüt yok - İstediğiniz zaman iptal edin"
+    "guarantee": "🔒 Taahhüt yok - İstediğiniz zaman iptal edin",
+    "people_tried": "kişi denedi",
+    "people_tried_today": "kişi bugün denedi",
+    "trials": "deneme"
   },
   "guide": {
     "title": "Kurulum Rehberi",
@@ -245,11 +248,11 @@
     "need_help": "Yardım mı lazım? WhatsApp'tan bize ulaşın"
   },
   "matches": {
-    "loading": "Loading live matches...",
-    "no_live_match": "No live World Cup matches available right now.",
-    "api_error": "Unable to load live match feed.",
-    "live_title": "Live World Cup Feed",
-    "live_subtitle": "Real-time match updates from a free live API.",
+    "loading": "Canlı maçlar yükleniyor...",
+    "no_live_match": "Şu anda canlı Dünya Kupası maçı bulunmuyor.",
+    "api_error": "Canlı maç akışı yüklenemedi.",
+    "live_title": "Canlı Dünya Kupası Akışı",
+    "live_subtitle": "Ücretsiz canlı API'den gerçek zamanlı maç güncellemeleri.",
     "title": "Spor Takvimi",
     "subtitle": "IPTV Pro ile önemli maçları kaçırmayın",
     "filters": {
@@ -301,9 +304,9 @@
         "status": "upcoming"
       }
     ],
-    "status_live": "Live",
-    "status_ended": "Ended",
-    "status_upcoming": "Upcoming"
+    "status_live": "Canlı",
+    "status_ended": "Bitti",
+    "status_upcoming": "Yakında"
   },
   "footer": {
     "rights": "© 2026 IPTV Pro. Tüm hakları saklıdır.",
@@ -320,41 +323,41 @@
     "button": "WhatsApp"
   },
   "theme": {
-    "toggle": "Toggle theme"
+    "toggle": "Temayı değiştir"
   },
   "contact": {
-    "headline": "Talk to us directly",
-    "title": "Contact Sales Now",
-    "subtitle": "Send your details and get a fast premium IPTV offer",
-    "form_label": "Request",
-    "form_help": "Send your request and we will reply immediately",
-    "name_label": "Name",
-    "name_placeholder": "Your name",
-    "email_label": "Email",
-    "email_placeholder": "Your email",
-    "message_label": "Your message",
-    "message_placeholder": "Describe your request",
-    "button": "Send via WhatsApp",
-    "form_note": "We will reply within minutes on WhatsApp.",
-    "whatsapp_prompt": "I want to subscribe to IPTV Pro.",
-    "trust_title": "Trusted and Secure",
-    "trust_description": "We protect your data and guarantee fast setup with dedicated support.",
-    "cta_title": "Fast WhatsApp Support",
-    "cta_description": "Contact us instantly and get your IPTV subscription ready in minutes.",
-    "whatsapp_button": "Contact on WhatsApp",
-    "submitted": "Message opened in WhatsApp."
+    "headline": "Doğrudan bizimle konuşun",
+    "title": "Şimdi Satışla İletişime Geçin",
+    "subtitle": "Bilgilerinizi gönderin ve hızlı bir premium IPTV teklifi alın",
+    "form_label": "Talep",
+    "form_help": "Talebinizi gönderin, hemen yanıtlayalım",
+    "name_label": "Ad",
+    "name_placeholder": "Adınız",
+    "email_label": "E-posta",
+    "email_placeholder": "E-posta adresiniz",
+    "message_label": "Mesajınız",
+    "message_placeholder": "Talebinizi açıklayın",
+    "button": "WhatsApp'tan Gönder",
+    "form_note": "WhatsApp'ta dakikalar içinde yanıt vereceğiz.",
+    "whatsapp_prompt": "IPTV Pro'ya abone olmak istiyorum.",
+    "trust_title": "Güvenilir ve Güvenli",
+    "trust_description": "Verilerinizi koruyor ve özel destekle hızlı kurulum garanti ediyoruz.",
+    "cta_title": "Hızlı WhatsApp Desteği",
+    "cta_description": "Anında bizimle iletişime geçin ve IPTV aboneliğinizi dakikalar içinde alın.",
+    "whatsapp_button": "WhatsApp'tan İletişim",
+    "submitted": "Mesaj WhatsApp'ta açıldı."
   },
   "chat": {
-    "title": "IPTV Support Chat",
-    "subtitle": "Stay on site and chat while we assist you.",
-    "save_session": "Save session",
-    "session_saved": "Session saved",
-    "session_placeholder": "Enter your name or nickname",
-    "input_placeholder": "Type your question here...",
-    "invite_prompt": "Invite code appears after saving your session",
-    "invite_code": "Invite code",
-    "send_button": "Send",
-    "open_chat": "Open chat",
-    "error_send": "Unable to send message. Try again."
+    "title": "IPTV Destek Sohbeti",
+    "subtitle": "Sitede kalın ve size yardımcı olurken sohbet edin.",
+    "save_session": "Oturumu kaydet",
+    "session_saved": "Oturum kaydedildi",
+    "session_placeholder": "Adınızı veya takma adınızı girin",
+    "input_placeholder": "Sorunuzu buraya yazın...",
+    "invite_prompt": "Davet kodu, oturumu kaydettikten sonra görünür",
+    "invite_code": "Davet kodu",
+    "send_button": "Gönder",
+    "open_chat": "Sohbeti aç",
+    "error_send": "Mesaj gönderilemedi. Tekrar deneyin."
   }
 }

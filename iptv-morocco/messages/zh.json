@@ -207,7 +207,10 @@
     "cta": "免费试用",
     "cta_subtitle": "24小时免费体验",
     "whatsapp_prefix": "您好，我想免费试用IPTV Pro。",
-    "guarantee": "🔒 无需承诺 - 随时取消"
+    "guarantee": "🔒 无需承诺 - 随时取消",
+    "people_tried": "人已试用",
+    "people_tried_today": "人今日试用",
+    "trials": "试用"
   },
   "guide": {
     "title": "安装指南",
@@ -245,11 +248,11 @@
     "need_help": "需要帮助？通过WhatsApp联系我们"
   },
   "matches": {
-    "loading": "Loading live matches...",
-    "no_live_match": "No live World Cup matches available right now.",
-    "api_error": "Unable to load live match feed.",
-    "live_title": "Live World Cup Feed",
-    "live_subtitle": "Real-time match updates from a free live API.",
+    "loading": "正在加载实时比赛...",
+    "no_live_match": "目前没有正在直播的世界杯比赛。",
+    "api_error": "无法加载实时比赛信息。",
+    "live_title": "世界杯实时直播",
+    "live_subtitle": "来自免费实时API的比赛实时更新。",
     "title": "体育赛事日历",
     "subtitle": "使用IPTV Pro不错过任何重要比赛",
     "filters": {
@@ -301,9 +304,9 @@
         "status": "upcoming"
       }
     ],
-    "status_live": "Live",
-    "status_ended": "Ended",
-    "status_upcoming": "Upcoming"
+    "status_live": "直播中",
+    "status_ended": "已结束",
+    "status_upcoming": "即将开始"
   },
   "footer": {
     "rights": "© 2026 IPTV Pro. 保留所有权利。",
@@ -320,41 +323,41 @@
     "button": "WhatsApp"
   },
   "theme": {
-    "toggle": "Toggle theme"
+    "toggle": "切换主题"
   },
   "contact": {
-    "headline": "Talk to us directly",
-    "title": "Contact Sales Now",
-    "subtitle": "Send your details and get a fast premium IPTV offer",
-    "form_label": "Request",
-    "form_help": "Send your request and we will reply immediately",
-    "name_label": "Name",
-    "name_placeholder": "Your name",
-    "email_label": "Email",
-    "email_placeholder": "Your email",
-    "message_label": "Your message",
-    "message_placeholder": "Describe your request",
-    "button": "Send via WhatsApp",
-    "form_note": "We will reply within minutes on WhatsApp.",
-    "whatsapp_prompt": "I want to subscribe to IPTV Pro.",
-    "trust_title": "Trusted and Secure",
-    "trust_description": "We protect your data and guarantee fast setup with dedicated support.",
-    "cta_title": "Fast WhatsApp Support",
-    "cta_description": "Contact us instantly and get your IPTV subscription ready in minutes.",
-    "whatsapp_button": "Contact on WhatsApp",
-    "submitted": "Message opened in WhatsApp."
+    "headline": "直接与我们对话",
+    "title": "立即联系销售",
+    "subtitle": "发送您的详细信息，快速获取高级IPTV优惠",
+    "form_label": "请求",
+    "form_help": "发送您的请求，我们将立即回复",
+    "name_label": "姓名",
+    "name_placeholder": "您的姓名",
+    "email_label": "邮箱",
+    "email_placeholder": "您的邮箱",
+    "message_label": "您的留言",
+    "message_placeholder": "描述您的需求",
+    "button": "通过WhatsApp发送",
+    "form_note": "我们将在几分钟内通过WhatsApp回复。",
+    "whatsapp_prompt": "我想订阅IPTV Pro。",
+    "trust_title": "值得信赖且安全",
+    "trust_description": "我们保护您的数据，并保证通过专属支持快速设置。",
+    "cta_title": "快速WhatsApp支持",
+    "cta_description": "立即联系我们，几分钟内即可获得IPTV订阅。",
+    "whatsapp_button": "通过WhatsApp联系",
+    "submitted": "消息已在WhatsApp中打开。"
   },
   "chat": {
-    "title": "IPTV Support Chat",
-    "subtitle": "Stay on site and chat while we assist you.",
-    "save_session": "Save session",
-    "session_saved": "Session saved",
-    "session_placeholder": "Enter your name or nickname",
-    "input_placeholder": "Type your question here...",
-    "invite_prompt": "Invite code appears after saving your session",
-    "invite_code": "Invite code",
-    "send_button": "Send",
-    "open_chat": "Open chat",
-    "error_send": "Unable to send message. Try again."
+    "title": "IPTV支持聊天",
+    "subtitle": "留在网站上，我们为您提供实时聊天帮助。",
+    "save_session": "保存会话",
+    "session_saved": "会话已保存",
+    "session_placeholder": "输入您的姓名或昵称",
+    "input_placeholder": "在此输入您的问题...",
+    "invite_prompt": "保存会话后会显示邀请码",
+    "invite_code": "邀请码",
+    "send_button": "发送",
+    "open_chat": "打开聊天",
+    "error_send": "无法发送消息，请重试。"
   }
 }
