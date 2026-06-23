@@ -54,6 +54,7 @@ export default function Navbar() {
     { key: 'testimonials', href: '#testimonials' },
     { key: 'faq', href: '#faq' },
     { key: 'contact', href: '#contact' },
+    { key: 'blog', href: `/${locale}/blog` },
   ];
 
   // Sync cookie with current locale on mount so refresh respects it

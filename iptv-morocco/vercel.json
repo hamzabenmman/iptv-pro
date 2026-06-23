@@ -51,5 +51,11 @@
       ],
       "permanent": false
     }
+  ],
+  "crons": [
+    {
+      "path": "/api/blog/generate",
+      "schedule": "0 */1 * * *"
+    }
   ]
 }

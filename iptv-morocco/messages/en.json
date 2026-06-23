@@ -12,7 +12,8 @@
     "faq": "FAQ",
     "contact": "Contact",
     "guide": "Guide",
-    "matches": "Matches"
+    "matches": "Matches",
+    "blog": "Blog"
   },
   "hero": {
     "badge": "🔥 Special Offer: 50% off for the 2026 World Cup",
@@ -336,6 +337,26 @@
     "message": "Hello, I would like to subscribe to IPTV Pro please",
     "button": "WhatsApp"
   },
+  "admin": {
+    "title": "Content Management",
+    "subtitle": "Review, approve, and manage your blog content",
+    "pending": "Pending Review",
+    "published": "Published",
+    "rejected": "Rejected",
+    "generated_today": "Generated Today",
+    "total_articles": "Total Articles",
+    "total_views": "Total Views",
+    "approve": "Approve & Publish",
+    "reject": "Reject",
+    "edit": "Edit",
+    "backlinks": "Backlinks",
+    "no_pending": "No articles pending review",
+    "no_published": "No published articles yet",
+    "all_caught_up": "All Caught Up!",
+    "generation_log": "Generation Log",
+    "next_generation": "Next generation scheduled",
+    "articles_per_day": "articles generated daily"
+  },
   "theme": {
     "toggle": "Toggle theme"
   },
@@ -360,6 +381,36 @@
     "cta_description": "Contact us instantly and get your IPTV subscription ready in minutes.",
     "whatsapp_button": "Contact on WhatsApp",
     "submitted": "Message opened in WhatsApp."
+  },
+  "blog": {
+    "title": "Sports & IPTV News",
+    "subtitle": "Stay updated with the latest sports news, IPTV tips, and entertainment coverage",
+    "search": "Search articles...",
+    "all": "All",
+    "featured": "Featured Stories",
+    "latest_articles": "Latest Articles",
+    "articles": "Articles",
+    "no_results": "No articles found",
+    "try_different": "Try a different search or category",
+    "prev": "Previous",
+    "next": "Next",
+    "news_blog": "News & Blog",
+    "subscribe_title": "Want to Write for Us?",
+    "subscribe_desc": "Submit your guest post or get a backlink from our growing sports and IPTV blog.",
+    "submit_backlink": "Submit Backlink",
+    "read_more": "Read More",
+    "min_read": "min read",
+    "by": "By",
+    "share": "Share",
+    "related": "Related Articles",
+    "back_to_blog": "Back to Blog",
+    "table_of_contents": "Table of Contents",
+    "photo_gallery": "Photo Gallery",
+    "slideshow": "Slideshow",
+    "like": "Like",
+    "save": "Save",
+    "liked": "Liked",
+    "saved": "Saved"
   },
   "chat": {
     "title": "IPTV Support Chat",
