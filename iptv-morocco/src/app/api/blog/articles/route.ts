@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { updateArticleStatus, getPendingArticles, getPublishedArticles, getStoredArticles, seedFallbackArticles } from '@/lib/blog-engine';
+import { updateArticleStatus, getPendingArticles, getPublishedArticles, getStoredArticles } from '@/lib/blog-engine';
 
 export const dynamic = 'force-dynamic';
 
@@ -14,8 +14,6 @@ function isAdmin(request: Request): boolean {
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const status = searchParams.get('status');
-
-  seedFallbackArticles();
 
   if (status === 'pending') {
     return NextResponse.json({ articles: getPendingArticles() });
