@@ -9,11 +9,11 @@ const locales = [
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages = [''];
+  const pages = ['', '/matches', '/blog'];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
-  for (const page of staticPages) {
+  for (const page of pages) {
     for (const locale of locales) {
       // Arabic (ar) is the default locale, served at root
       const url = locale === 'ar'
@@ -23,8 +23,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       sitemapEntries.push({
         url,
         lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: page === '' ? 1.0 : 0.8,
+        changeFrequency: page === '' ? 'weekly' : 'daily',
+        priority: page === '' ? 1.0 : page === '/matches' ? 0.9 : 0.8,
         alternates: {
           languages: Object.fromEntries(
             locales.map((l) => [

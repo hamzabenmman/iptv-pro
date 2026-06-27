@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://iptv-pro.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-morocco.vercel.app'),
   title: {
     default: 'IPTV Pro | Best Premium IPTV Service for the Arab World',
     template: '%s | IPTV Pro',
@@ -42,13 +42,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ar_AE',
     alternateLocale: ['en_US', 'fr_FR', 'es_ES'],
-    url: 'https://iptv-pro.com',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-morocco.vercel.app',
     siteName: 'IPTV Pro',
     title: 'IPTV Pro | Best Premium IPTV Service',
     description: 'Over 25,000 channels in HD, 4K & 8K. Exclusive sports, movies, series.',
     images: [
       {
-        url: 'https://iptv-pro.com/images/og-image.svg',
+        url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-morocco.vercel.app') + '/images/og-image.svg',
         width: 1200,
         height: 630,
         alt: 'IPTV Pro Service',
@@ -81,18 +81,18 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'IPTV Pro',
-  url: 'https://iptv-pro.com',
-  logo: 'https://iptv-pro.com/images/logo.svg',
-  description: 'Premium IPTV service for the Arab world and international audiences. Over 25,000 TV channels and VOD in HD, 4K and 8K. Ultra-fast servers, anti-freeze technology, 24/7 support.',
-  address: { '@type': 'PostalAddress', addressCountry: 'AE' },
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-morocco.vercel.app',
+  logo: (process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-morocco.vercel.app') + '/images/logo.svg',
+  description: 'Premium IPTV service for worldwide audiences. Over 25,000 TV channels and VOD in HD, 4K and 8K. Ultra-fast servers, anti-freeze technology, 24/7 support.',
+  address: { '@type': 'PostalAddress', addressCountry: 'MA' },
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+971-XX-XXX-XXXX',
+    telephone: '+212-670-799985',
     contactType: 'customer service',
-    availableLanguage: ['Arabic', 'English', 'French', 'German', 'Spanish', 'Turkish', 'Russian', 'Chinese', 'Japanese', 'Portuguese', 'Dutch', 'Italian'],
+    availableLanguage: ['Arabic', 'English', 'French', 'Spanish', 'German', 'Turkish', 'Portuguese', 'Italian', 'Dutch', 'Russian', 'Chinese', 'Japanese'],
   },
   sameAs: [
-    'https://wa.me/971XXXXXXXXX',
+    'https://wa.me/212670799985',
   ],
   foundingDate: '2024',
   isicV4: '6010',
@@ -104,7 +104,7 @@ const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'IPTV Pro',
-  url: 'https://iptv-pro.com',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-morocco.vercel.app',
 };
 
 const faqSchema = {
