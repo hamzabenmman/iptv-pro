@@ -5,7 +5,7 @@ import Testimonials from '@/components/Testimonials';
 import ScarcityTimer from '@/components/ScarcityTimer';
 import FAQ from '@/components/FAQ';
 import InstallationGuide from '@/components/InstallationGuide';
-import LiveSportsCalendar from '@/components/LiveSportsCalendar';
+import MatchesSection from '@/components/MatchesSection';
 import ContactSection from '@/components/ContactSection';
 import FreeTrialForm from '@/components/FreeTrialForm';
 import Footer from '@/components/Footer';
@@ -22,7 +22,7 @@ export default function HomePage() {
       <InstallationGuide />
       <ScarcityTimer />
       <Testimonials />
-      <LiveSportsCalendar />
+      <MatchesSection />
       <FAQ />
       <ContactSection />
       <FreeTrialForm />
