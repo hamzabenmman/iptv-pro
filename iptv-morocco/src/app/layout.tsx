@@ -25,12 +25,12 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-morocco.vercel.app'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.it.com'),
   title: {
     default: 'IPTV Pro | Best Premium IPTV Service for the Arab World',
     template: '%s | IPTV Pro',
   },
-  description: 'Premium IPTV service with 25,000+ HD/4K/8K channels, sports, movies, series & live TV. Multi-language, 24/7 support, WhatsApp integration.',
+  description: 'Premium IPTV service with 25,000+ HD/4K/8K channels, sports, movies, series & live TV. Multi-language, 24/7 support on WhatsApp. Subscribe now!',
   applicationName: 'IPTV Pro',
   creator: 'IPTV Pro',
   publisher: 'IPTV Pro',
@@ -42,13 +42,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ar_AE',
     alternateLocale: ['en_US', 'fr_FR', 'es_ES'],
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-morocco.vercel.app',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.it.com',
     siteName: 'IPTV Pro',
     title: 'IPTV Pro | Best Premium IPTV Service',
     description: 'Over 25,000 channels in HD, 4K & 8K. Exclusive sports, movies, series.',
     images: [
       {
-        url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-morocco.vercel.app') + '/images/og-image.svg',
+        url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.it.com') + '/images/og-image.svg',
         width: 1200,
         height: 630,
         alt: 'IPTV Pro Service',
@@ -58,8 +58,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'IPTV Pro | Premium IPTV Service',
-    description: 'Best IPTV service with 25,000+ channels and 24/7 support',
-    images: ['https://iptv-pro.com/images/og-image.svg'],
+    description: 'Best IPTV service with 25,000+ channels and 24/7 support',      images: [(process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.it.com') + '/images/og-image.svg'],
   },
   robots: {
     index: true,
@@ -81,8 +80,8 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'IPTV Pro',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-morocco.vercel.app',
-  logo: (process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-morocco.vercel.app') + '/images/logo.svg',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.it.com',
+  logo: (process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.it.com') + '/images/logo.svg',
   description: 'Premium IPTV service for worldwide audiences. Over 25,000 TV channels and VOD in HD, 4K and 8K. Ultra-fast servers, anti-freeze technology, 24/7 support.',
   address: { '@type': 'PostalAddress', addressCountry: 'MA' },
   contactPoint: {
@@ -104,7 +103,7 @@ const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'IPTV Pro',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-morocco.vercel.app',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.it.com',
 };
 
 const faqSchema = {
@@ -223,6 +222,8 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
         />
+        {/* Google Search Console verification */}
+        <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
         {/* Preconnect to important origins */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />

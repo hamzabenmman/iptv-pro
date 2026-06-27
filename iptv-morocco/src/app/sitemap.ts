@@ -6,7 +6,7 @@ const locales = [
   'el', 'he', 'hi', 'th', 'vi', 'ms', 'id', 'fil', 'uk',
 ];
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.it.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = ['', '/matches', '/blog'];
