@@ -39,7 +39,6 @@ const GOOGLE_NEWS_URLS: Record<string, string> = {
   'la-liga': 'https://news.google.com/rss/search?q=La+Liga+Spanish+football&hl=en&gl=US&ceid=US:en',
   'bein-sports': 'https://news.google.com/rss/search?q=beIN+Sports+football+streaming&hl=en&gl=US&ceid=US:en',
   football: 'https://news.google.com/rss/search?q=football+soccer+news+sports&hl=en&gl=US&ceid=US:en',
-  technology: 'https://news.google.com/rss/search?q=IPTV+streaming+technology+TV&hl=en&gl=US&ceid=US:en',
 };
 
 const FALLBACK_ARTICLES: Article[] = [
@@ -218,7 +217,7 @@ Getting the best 4K streaming experience requires the right settings. Here's our
     author: 'IPTV Pro Tech',
     status: 'published',
     categoryId: 'setup-guides',
-    category: DEFAULT_CATEGORIES[2].children[0],
+    category: DEFAULT_CATEGORIES[1].children[0],
     tags: ['IPTV Settings', '4K Streaming', 'Setup Guide', 'Optimization'],
     seoTitle: 'Best IPTV Settings for 4K Streaming | IPTV Pro Guide',
     seoDescription: 'Expert guide to optimizing your IPTV settings for the best 4K streaming experience. Speed requirements, app recommendations, and more.',
@@ -363,7 +362,7 @@ export async function fetchGoogleNews(categoryId?: string): Promise<any[]> {
                        url.includes('Premier+League') ? 'premier-league' :
                        url.includes('La+Liga') ? 'la-liga' :
                        url.includes('beIN') ? 'bein-sports' :
-                       url.includes('IPTV') ? 'technology' : 'football',
+                       'football',
             });
           });
         }
@@ -406,8 +405,6 @@ export async function generateArticleWithGemini(newsHeadline: string, categoryId
     'la-liga': 'Spanish La Liga',
     'bein-sports': 'beIN Sports',
     football: 'International Football',
-    'setup-guides': 'IPTV Setup',
-    technology: 'Streaming Technology',
   };
 
   const prompt = `You are a professional sports journalist for IPTV Pro, a premium IPTV service.
