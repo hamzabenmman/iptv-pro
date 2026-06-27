@@ -19,6 +19,7 @@ type Match = {
   stadium: string;
   status: 'live' | 'upcoming' | 'ended';
   score?: { team1: number; team2: number };
+  liveClock?: string;
 };
 
 type Competition = {
@@ -33,6 +34,10 @@ const COMPETITION_COLORS: Record<string, string> = {
   'champions-league': 'from-blue-500 to-indigo-600',
   'premier-league': 'from-red-500 to-rose-600',
   'la-liga': 'from-orange-500 to-red-500',
+  'bundesliga': 'from-green-500 to-emerald-600',
+  'serie-a': 'from-sky-500 to-blue-600',
+  'ligue-1': 'from-purple-500 to-violet-600',
+  'other': 'from-brand-500 to-yellow-600',
 };
 
 
@@ -84,6 +89,7 @@ export default function MatchesSection() {
         if (data.matches) {
           setMatches(data.matches);
           setCompetitions(data.competitions || []);
+          setError(false);
         } else {
           setError(true);
         }
@@ -94,6 +100,9 @@ export default function MatchesSection() {
       }
     };
     fetchMatches();
+    // Auto-refresh every 45 seconds for live score updates
+    const interval = setInterval(fetchMatches, 45000);
+    return () => clearInterval(interval);
   }, []);
 
   const filtered = useMemo(() => {
@@ -273,7 +282,7 @@ export default function MatchesSection() {
                             <p className="text-white font-bold text-sm truncate">{match.team1}</p>
                             <div className="mx-auto my-3 w-fit rounded-xl bg-dark-800/80 border border-white/5 px-5 py-2.5">
                               {match.score ? (
-                                <span className="text-brand-400 font-bold text-xl">
+                                <span className="text-brand-400 font-bold text-xl tabular-nums">
                                   {match.score.team1} - {match.score.team2}
                                 </span>
                               ) : (
@@ -294,8 +303,13 @@ export default function MatchesSection() {
                             </span>
                           </div>
 
-                          {/* Countdown for upcoming matches */}
-                          {match.status === 'upcoming' && (
+                          {/* Live clock for live matches or countdown for upcoming */}
+                          {match.status === 'live' && match.liveClock ? (
+                            <div className="mt-3 flex items-center justify-center gap-1.5 text-red-400 text-[10px] font-semibold">
+                              <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+                              {match.liveClock}
+                            </div>
+                          ) : match.status === 'upcoming' && (
                             <div className="mt-3 flex items-center justify-center gap-1.5 text-brand-400 text-[10px] font-semibold">
                               <Timer className="w-3 h-3" />
                               Starts in {countdown}

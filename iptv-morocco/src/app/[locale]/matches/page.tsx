@@ -23,6 +23,7 @@ type Match = {
   stadium: string;
   status: 'live' | 'upcoming' | 'ended';
   score?: { team1: number; team2: number };
+  liveClock?: string;
 };
 
 type Competition = {
@@ -139,6 +140,7 @@ export default function MatchesPage() {
         if (data.matches) {
           setMatches(data.matches);
           setCompetitions(data.competitions || []);
+          setError(false);
         } else {
           setError(true);
         }
@@ -149,6 +151,9 @@ export default function MatchesPage() {
       }
     };
     fetchMatches();
+    // Auto-refresh every 45 seconds for live score updates
+    const interval = setInterval(fetchMatches, 45000);
+    return () => clearInterval(interval);
   }, []);
 
   const filtered = useMemo(() => {
@@ -481,7 +486,12 @@ export default function MatchesPage() {
                                         {match.status === 'live' && <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />}
                                         {match.status === 'live' ? 'LIVE' : match.status === 'ended' ? 'FT' : formatDate(match.date)}
                                       </span>
-                                      {match.status === 'upcoming' && (
+                                      {match.status === 'live' && match.liveClock ? (
+                                        <span className="text-[10px] text-red-400 font-semibold flex items-center gap-1">
+                                          <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+                                          {match.liveClock}
+                                        </span>
+                                      ) : match.status === 'upcoming' && (
                                         <span className="text-[10px] text-brand-400 font-semibold flex items-center gap-1">
                                           <Timer className="w-3 h-3" />
                                           {countdown}
