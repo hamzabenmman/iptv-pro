@@ -1,10 +1,11 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Trophy, Shield } from 'lucide-react';
 import RevealAnimation from './RevealAnimation';
 
 export default function Footer() {
+  const locale = useLocale();
   const t = useTranslations('footer');
   const tWhatsapp = useTranslations('whatsapp');
 
@@ -70,17 +71,23 @@ export default function Footer() {
               <div>
                 <h4 className="text-white font-semibold mb-4 text-fluid-base">Quick Links</h4>
                 <ul className="space-y-2">
-                  {['Features', 'Pricing', 'Reviews', 'FAQ'].map((link) => (
-                    <li key={link}>
-                      <a
-                        href={`#${link.toLowerCase()}`}
-                        className="text-dark-400 hover:text-brand-400 text-fluid-sm transition-colors duration-200 inline-flex items-center gap-1.5 group"
-                      >
-                        <span className="w-1 h-1 rounded-full bg-brand-500/0 group-hover:bg-brand-500 transition-all duration-200" />
-                        {link}
-                      </a>
-                    </li>
-                  ))}
+                  {['Features', 'Pricing', 'Matches', 'Reviews', 'Blog', 'FAQ'].map((link) => {
+                    const isPage = link === 'Matches' || link === 'Blog';
+                    const href = isPage
+                      ? `/${locale}/${link.toLowerCase()}`
+                      : `#${link.toLowerCase()}`;
+                    return (
+                      <li key={link}>
+                        <a
+                          href={href}
+                          className="text-dark-400 hover:text-brand-400 text-fluid-sm transition-colors duration-200 inline-flex items-center gap-1.5 group"
+                        >
+                          <span className="w-1 h-1 rounded-full bg-brand-500/0 group-hover:bg-brand-500 transition-all duration-200" />
+                          {link}
+                        </a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
 

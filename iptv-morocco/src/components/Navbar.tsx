@@ -51,6 +51,7 @@ export default function Navbar() {
   const navItems = [
     { key: 'features', href: '#features' },
     { key: 'pricing', href: '#pricing' },
+    { key: 'matches', href: `/${locale}/matches` },
     { key: 'testimonials', href: '#testimonials' },
     { key: 'faq', href: '#faq' },
     { key: 'contact', href: '#contact' },
