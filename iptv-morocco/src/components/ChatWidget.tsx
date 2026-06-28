@@ -1,8 +1,9 @@
 'use client';
 
 import { useEffect, useRef, useState, type KeyboardEvent } from 'react';
+import { useLocale } from 'next-intl';
 import {
-  Send, MessageSquare, X, Sparkles, Trophy, Bot, User,
+  Send, MessageSquare, X, Sparkles, Trophy, Bot, User, ExternalLink,
   CheckCircle, XCircle, ChevronRight, RefreshCw
 } from 'lucide-react';
 
@@ -145,6 +146,7 @@ export default function ChatWidget() {
   const [lastQuizId, setLastQuizId] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLTextAreaElement | null>(null);
+  const locale = useLocale();
 
   // Load saved session
   useEffect(() => {
@@ -256,7 +258,7 @@ export default function ChatWidget() {
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text: messageText, name: sessionName, history }),
+        body: JSON.stringify({ text: messageText, name: sessionName, history, locale }),
       });
 
       const data = await res.json();
@@ -339,9 +341,13 @@ export default function ChatWidget() {
     });
   };
 
-  // Render message text with bold support
+  // Render message text with bold support + clickable links
   const renderMessageText = (text: string) => {
-    const formatted = text
+    // Convert markdown-style links [text](url) first
+    let formatted = text
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-brand-400 hover:text-brand-300 underline underline-offset-2 transition-colors">$1 <svg class="inline w-3 h-3 ml-0.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>')
+      // Also detect bare URLs http/https
+      .replace(/https?:\/\/[^\s<]+/g, '<a href="$&" target="_blank" rel="noopener noreferrer" class="text-brand-400 hover:text-brand-300 underline underline-offset-2 transition-colors">$& <svg class="inline w-3 h-3 ml-0.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>')
       .replace(/\*\*(.*?)\*\*/g, '<strong class="text-white font-semibold">$1</strong>')
       .replace(/\n/g, '<br/>');
     return <span dangerouslySetInnerHTML={{ __html: formatted }} />;
@@ -494,7 +500,11 @@ export default function ChatWidget() {
                     {message.suggestions.map((suggestion, i) => (
                       <button
                         key={i}
-                        onClick={() => handleSuggestionClick(suggestion)}
+                        onClick={() => {
+                          handleSuggestionClick(suggestion);
+                          // Smooth scroll to bottom after sending
+                          setTimeout(() => messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
+                        }}
                         className="group flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-dark-800/40 border border-white/5 text-gray-400 hover:text-brand-400 hover:border-brand-500/20 hover:bg-brand-500/5 transition-all text-[11px] font-medium"
                       >
                         <ChevronRight className="w-2.5 h-2.5 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -556,18 +566,30 @@ export default function ChatWidget() {
             </div>
           )}
 
-          {/* Footer */}
+          {/* Footer with links */}
           <div className="flex items-center justify-between px-1">
-            <span className="text-[9px] text-gray-600">Powered by Gemini AI</span>
-            <a
-              href="https://wa.me/212670799985"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[9px] text-gray-600 hover:text-brand-400 transition-colors flex items-center gap-1"
-            >
-              <MessageSquare className="w-3 h-3" />
-              WhatsApp support
-            </a>
+            <span className="text-[9px] text-gray-500">Powered by Gemini AI</span>
+            <div className="flex items-center gap-2">
+              <a
+                href={`/${locale}/blog`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[9px] text-gray-500 hover:text-brand-400 transition-colors flex items-center gap-1"
+              >
+                <ExternalLink className="w-3 h-3" />
+                Blog
+              </a>
+              <span className="text-[9px] text-gray-600">·</span>
+              <a
+                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '212670799985'}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[9px] text-gray-500 hover:text-brand-400 transition-colors flex items-center gap-1"
+              >
+                <MessageSquare className="w-3 h-3" />
+                WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </div>
