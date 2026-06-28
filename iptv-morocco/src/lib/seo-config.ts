@@ -62,7 +62,10 @@ export const SITE_CONFIG = {
     defaultImage: '/images/og-image.svg',
     publisher: 'IPTV Pro News Team',
   },
-} as const;
+};
+
+// Type helper so consumers still see readonly behavior
+export type SiteConfig = typeof SITE_CONFIG;
 
 // Helper: Get full URL for a path
 export function fullUrl(path: string): string {
