@@ -1,0 +1,21 @@
+{
+  "name": "IPTV Pro | Premium IPTV Service",
+  "short_name": "IPTV Pro",
+  "description": "Premium IPTV service with 25,000+ channels in HD/4K/8K. Watch live sports, movies, and TV shows on any device.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c0a08",
+  "theme_color": "#D4AF37",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["entertainment", "sports", "tv"],
+  "lang": "en",
+  "dir": "ltr"
+}

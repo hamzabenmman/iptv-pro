@@ -1,11 +1,13 @@
-<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="10" width="40" height="40" rx="8" fill="url(#logoGradient)"/>
-  <text x="20" y="37" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">IPTV</text>
-  <text x="55" y="37" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="bold">Maroc</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
   <defs>
-    <linearGradient id="logoGradient" x1="0" y1="0" x2="40" y2="40">
-      <stop offset="0%" stop-color="#22c55e"/>
-      <stop offset="100%" stop-color="#16a34a"/>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#B8860B"/>
     </linearGradient>
   </defs>
+  <rect width="200" height="60" rx="12" fill="#0c0a08"/>
+  <rect x="2" y="2" width="56" height="56" rx="10" fill="url(#goldGrad)"/>
+  <text x="30" y="42" font-family="Arial, sans-serif" font-weight="900" font-size="32" fill="#0c0a08" text-anchor="middle">P</text>
+  <text x="72" y="32" font-family="Arial, sans-serif" font-weight="800" font-size="24" fill="#FFFFFF">IPTV</text>
+  <text x="72" y="50" font-family="Arial, sans-serif" font-weight="700" font-size="16" fill="url(#goldGrad)" letter-spacing="3">PRO</text>
 </svg>

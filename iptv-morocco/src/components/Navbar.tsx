@@ -88,12 +88,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 md:w-11 md:h-11 rounded-xl bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center font-bold text-dark-950 text-sm md:text-base transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-brand-500/30 trophy-glow">
-              P
-            </div>
-            <span className="text-lg md:text-xl font-bold text-white tracking-tight">
-              IPTV <span className="gradient-text">Pro</span>
-            </span>
+            <img
+              src="/images/logo.svg"
+              alt="IPTV Pro"
+              className="h-9 md:h-11 w-auto transition-all duration-500 group-hover:scale-110"
+            />
           </a>
 
           {/* Desktop Nav */}
