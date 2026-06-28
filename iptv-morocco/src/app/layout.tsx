@@ -107,9 +107,6 @@ export const metadata: Metadata = {
     ],
   },
 
-  // Manifest
-  manifest: '/manifest.json',
-
   // Apple Web App
   appleWebApp: {
     capable: true,
