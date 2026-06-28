@@ -1,12 +1,6 @@
 import type { Viewport, Metadata } from 'next';
 import { Inter, Tajawal } from 'next/font/google';
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { SITE_CONFIG, fullUrl } from '@/lib/seo-config';
-import {
-  organizationSchema,
-  websiteSchema,
-  productSchema,
-} from '@/lib/json-ld';
+import { SITE_CONFIG } from '@/lib/seo-config';
 import './globals.css';
 
 const inter = Inter({
@@ -40,128 +34,67 @@ export const metadata: Metadata = {
     template: SITE_CONFIG.titleTemplate,
   },
   description: SITE_CONFIG.defaultDescription,
-  applicationName: SITE_CONFIG.name,
-  creator: SITE_CONFIG.name,
-  publisher: SITE_CONFIG.name,
-  generator: 'Next.js',
-  keywords: [
-    'IPTV', 'IPTV subscription', 'best IPTV service', 'premium IPTV',
-    '4K IPTV', '8K IPTV', 'beIN Sports', 'World Cup 2026',
-    'live sports streaming', 'Arabic channels', 'VOD streaming',
-    'Firestick IPTV', 'Smart TV IPTV', 'anti-freeze IPTV',
-    'no buffering IPTV', 'stable IPTV', 'IPTV free trial',
-    'IPTV Morocco', 'IPTV Arab world', 'streaming service',
-    'TV channels', 'sports', 'premium service',
-  ],
-  authors: [{ name: SITE_CONFIG.name, url: SITE_CONFIG.url }],
-  formatDetection: {
-    telephone: true,
-    email: true,
-    address: false,
-  },
-  referrer: 'origin-when-cross-origin',
-  
-  // Open Graph
   openGraph: {
     type: 'website',
     locale: SITE_CONFIG.locale,
-    alternateLocale: SITE_CONFIG.alternateLocales,
     url: SITE_CONFIG.url,
     siteName: SITE_CONFIG.name,
     title: SITE_CONFIG.defaultTitle,
     description: SITE_CONFIG.defaultDescription,
     images: [
       {
-        url: fullUrl(SITE_CONFIG.ogImage),
-        width: SITE_CONFIG.ogImageWidth,
-        height: SITE_CONFIG.ogImageHeight,
+        url: '/images/og-image.svg',
+        width: 1200,
+        height: 630,
         alt: SITE_CONFIG.name,
       },
     ],
   },
-
-  // Twitter Card
   twitter: {
     card: 'summary_large_image',
     title: `${SITE_CONFIG.name} | ${SITE_CONFIG.tagline}`,
     description: SITE_CONFIG.defaultDescription,
-    images: [fullUrl(SITE_CONFIG.ogImage)],
-    creator: `@${SITE_CONFIG.name.replace(/\s+/g, '')}`,
+    images: ['/images/og-image.svg'],
   },
-
-  // Icons
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
       { url: '/icon.svg', type: 'image/svg+xml' },
     ],
     apple: [
-      { url: '/apple-icon.svg', sizes: '180x180', type: 'image/svg+xml' },
-    ],
-    other: [
-      {
-        rel: 'mask-icon',
-        url: '/safari-pinned-tab.svg',
-        color: '#D4AF37',
-      },
+      { url: '/apple-icon.svg' },
     ],
   },
-
-  // Apple Web App
-  appleWebApp: {
-    capable: true,
-    title: SITE_CONFIG.name,
-    statusBarStyle: 'black-translucent',
-  },
-
-  // Robots
   robots: {
     index: true,
     follow: true,
-    nocache: false,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: false,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
-
-  // Verification
-  verification: {
-    google: SITE_CONFIG.googleVerification,
-    // Add other verification codes as needed
-  },
-
 };
 
 // Category-specific FAQ questions for schema
 const faqQuestions = [
   {
-    name: 'ما هي خدمة IPTV؟',
-    answer: 'IPTV هي خدمة بث تلفزيوني عبر الإنترنت. تتيح لك مشاهدة آلاف القنوات التلفزيونية والأفلام والمسلسلات عبر اتصال الإنترنت الخاص بك دون الحاجة إلى طبق استقبال أو كابل.',
+    name: '\u0645\u0627 \u0647\u064a \u062e\u062f\u0645\u0629 IPTV\u061f',
+    answer: 'IPTV \u0647\u064a \u062e\u062f\u0645\u0629 \u0628\u062b \u062a\u0644\u0641\u0638\u064a \u0645\u0639 \u0627\u0644\u0625\u0646\u062a\u0631\u0646\u062a. \u062a\u062a\u064a\u062d \u0644\u0643 \u0645\u0634\u0627\u0647\u062f\u0629 \u0622\u0644\u0627\u0626 \u0627\u0644\u0642\u0646\u0648\u0627\u062a \u0627\u0644\u062a\u0641\u0644\u0632\u064a\u0648\u0646\u064a\u0629.',
   },
   {
     name: 'How do I subscribe to IPTV Pro?',
-    answer: 'Simply contact us on WhatsApp and we will set up your account in under 5 minutes. Choose from our 1-month, 3-month, or 1-year plans.',
+    answer: 'Contact us on WhatsApp and we will set up your account in under 5 minutes.',
   },
   {
     name: 'What devices are supported?',
-    answer: 'Our service works on all devices: Smart TVs (Samsung, LG, Sony), Android phones and TV boxes, iOS devices, Amazon Fire TV Stick, Windows & Mac computers, MAG boxes, and Enigma2 devices.',
+    answer: 'Smart TVs, Android, iOS, Fire TV Stick, Windows, Mac, MAG boxes, and Enigma2.',
   },
   {
     name: 'Is there a money-back guarantee?',
-    answer: 'Yes, we offer a full 7-day money-back guarantee if you are not satisfied with our service.',
+    answer: 'Yes, we offer a full 7-day money-back guarantee.',
   },
   {
     name: 'Do you offer beIN Sports channels?',
-    answer: 'Yes, we offer full beIN Sports coverage including beIN Sports 4K channels for World Cup 2026, Champions League, and all major football events.',
+    answer: 'Yes, full beIN Sports coverage for World Cup 2026, Champions League, and more.',
   },
   {
     name: 'How many channels do you have?',
-    answer: 'We offer over 25,000 channels in HD, 4K, and 8K quality including sports, movies, news, entertainment, and kids channels from around the world.',
+    answer: 'Over 25,000 channels in HD, 4K, and 8K quality.',
   },
 ];
 
@@ -170,40 +103,51 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const baseUrl = SITE_CONFIG.url || 'https://iptv-pro.it.com';
+
   return (
     <html className={`${inter.variable} ${tajawal.variable}`}>
       <head>
-        {/* Font Awesome */}
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
-
-        {/* Preconnect to important origins */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://newsapi.org" />
-        <link rel="dns-prefetch" href="https://newsapi.org" />
-        <link rel="preconnect" href="https://free-api-live-football-data.p.rapidapi.com" />
-        <link rel="dns-prefetch" href="https://free-api-live-football-data.p.rapidapi.com" />
 
         {/* JSON-LD Schemas */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: organizationSchema() }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: SITE_CONFIG.name,
+              url: baseUrl,
+              logo: `${baseUrl}/images/logo.svg`,
+              description: SITE_CONFIG.defaultDescription,
+              contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: SITE_CONFIG.business.telephone,
+                contactType: 'customer service',
+              },
+            }).replace(/</g, '\\u003c'),
+          }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: websiteSchema() }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: SITE_CONFIG.name,
+              url: baseUrl,
+              description: SITE_CONFIG.defaultDescription,
+            }).replace(/</g, '\\u003c'),
+          }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: productSchema() }}
-        />
-
-        {/* Fallback FAQ Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -221,14 +165,9 @@ export default function RootLayout({
             }).replace(/</g, '\\u003c'),
           }}
         />
-
-        {/* DNS Prefetch for faster navigation */}
-        <link rel="dns-prefetch" href="//iptv-pro.it.com" />
       </head>
       <body className="font-sans antialiased bg-dark-950">
         {children}
-        {/* Preload critical resources */}
-        <link rel="preload" href={SITE_CONFIG.ogImage} as="image" />
       </body>
     </html>
   );
