@@ -2,10 +2,7 @@
   "framework": "nextjs",
   "buildCommand": "next build",
   "outputDirectory": ".next",
-  "env": {
-    "npm_config_legacy_peer_deps": "true",
-    "npm_config_ignore_scripts": "true"
-  },
+
   "headers": [
     {
       "source": "/images/(.*)",
