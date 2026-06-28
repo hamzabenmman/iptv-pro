@@ -6,6 +6,16 @@ import AnimatedCounter from './AnimatedCounter';
 
 const durations = ['24h', '48h', '3d'] as const;
 
+function generateVisitorId(): string {
+  if (typeof window === 'undefined') return 'server';
+  let id = localStorage.getItem('iptv_visitor_id');
+  if (!id) {
+    id = 'v_' + Math.random().toString(36).substring(2, 15) + Date.now().toString(36);
+    localStorage.setItem('iptv_visitor_id', id);
+  }
+  return id;
+}
+
 export default function FreeTrialForm() {
   const t = useTranslations('trial');
   const locale = useLocale();
@@ -14,6 +24,7 @@ export default function FreeTrialForm() {
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({ name: '', whatsapp: '', duration: '24h' });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '212XXXXXXXXX';
 
@@ -32,11 +43,27 @@ export default function FreeTrialForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setSubmitting(true);
+
+    // Track trial submission to analytics (fire and forget)
+    fetch('/api/analytics/track', {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: formData.name,
+        whatsapp: formData.whatsapp,
+        duration: formData.duration,
+        source: locale || 'en',
+        visitor_id: generateVisitorId(),
+      }),
+    }).catch(() => {});
+
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${buildWhatsappText()}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
     setSubmitted(true);
+    setSubmitting(false);
     setTimeout(() => {
       setIsOpen(false);
       setSubmitted(false);
@@ -144,10 +171,13 @@ export default function FreeTrialForm() {
                       })}
                     </div>
                   </div>
-                  <button type="submit"
-                    className="w-full flex items-center justify-center gap-2 py-3.5 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white rounded-xl font-bold text-sm transition-all hover:scale-[1.02] shadow-lg shadow-green-500/30">
-                    <Zap size={16} />
-                    <span>{t('submit')}</span>
+                  <button type="submit" disabled={submitting}
+                    className="w-full flex items-center justify-center gap-2 py-3.5 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white rounded-xl font-bold text-sm transition-all hover:scale-[1.02] shadow-lg shadow-green-500/30 disabled:opacity-50">
+                    {submitting ? (
+                      <span className="flex items-center gap-2"><Zap size={16} className="animate-spin" /> Submitting...</span>
+                    ) : (
+                      <span className="flex items-center gap-2"><Zap size={16} />{t('submit')}</span>
+                    )}
                   </button>
                   <p className="text-center text-gray-600 text-xs">{t('guarantee')}</p>
                 </form>
