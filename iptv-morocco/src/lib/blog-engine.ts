@@ -728,12 +728,134 @@ export async function searchPexelsImage(query: string): Promise<string> {
   }
 }
 
-// ===== MAIN: FETCH NEWS (RAPIDAPI + GOOGLE NEWS + SEEDED) =====
-export async function fetchNews(categoryId?: string): Promise<{ news: any[]; articles: Article[]; source: string }> {
+// ===== NEWSAPI FETCHER (PRIMARY NEWS SOURCE) =====
+import {
+  fetchTopHeadlines,
+  fetchTrendingTopics as fetchTrendingFromAPI,
+  newsAPIToArticle,
+} from './news-api';
+
+let cachedTrending: string[] = [];
+let lastTrendingFetch = 0;
+
+export async function fetchTrending(): Promise<string[]> {
+  const now = Date.now();
+  // Cache trending for 10 minutes
+  if (cachedTrending.length > 0 && now - lastTrendingFetch < 600000) {
+    return cachedTrending;
+  }
+
+  try {
+    const topics = await fetchTrendingFromAPI(12);
+    if (topics.length > 0) {
+      cachedTrending = topics;
+      lastTrendingFetch = now;
+      return topics;
+    }
+  } catch {
+    // Fallback to default trending topics
+  }
+
+  // Default trending topics when NewsAPI is unavailable
+  const defaults = [
+    'World Cup 2026', 'Champions League', 'Premier League',
+    'Real Madrid', 'Manchester City', 'Barcelona',
+    'Transfer News', 'La Liga', 'Morocco',
+    'Liverpool', 'Bayern Munich', 'Serie A',
+  ];
+  cachedTrending = defaults;
+  lastTrendingFetch = now;
+  return defaults;
+}
+
+// Fetch news articles from NewsAPI and convert to our format
+async function fetchNewsAPIArticles(categoryId?: string): Promise<Article[]> {
+  const apiKey = process.env.NEWSAPI_KEY;
+  if (!apiKey) return [];
+
+  try {
+    // Try to get top headlines for the relevant category
+    const headlines = await fetchTopHeadlines(categoryId, 'gb', 20);
+    if (headlines.length === 0) return [];
+
+    const articles: Article[] = [];
+    const now = new Date();
+
+    for (const item of headlines) {
+      const converted = newsAPIToArticle(item, categoryId || 'football', generateSlug, generateId);
+      if (!converted) continue;
+
+      // Determine the best category for this article
+      let catId = categoryId || 'football';
+      const title = item.title.toLowerCase();
+      const sourceName = item.source?.name?.toLowerCase() || '';
+
+      if (title.includes('champions league') || title.includes('ucl') || sourceName.includes('champions league')) {
+        catId = 'champions-league';
+      } else if (title.includes('premier league') || title.includes('epl')) {
+        catId = 'premier-league';
+      } else if (title.includes('la liga') || title.includes('barcelona') || title.includes('real madrid')) {
+        catId = 'la-liga';
+      } else if (title.includes('world cup') || title.includes('fifa')) {
+        catId = 'world-cup';
+      } else if (title.includes('bein sports')) {
+        catId = 'bein-sports';
+      }
+
+      articles.push({
+        id: generateId(),
+        title: converted.title,
+        slug: converted.slug,
+        excerpt: converted.excerpt,
+        content: converted.content,
+        coverImage: converted.coverImage,
+        images: converted.coverImage ? [converted.coverImage] : [],
+        videos: [],
+        slideshow: converted.coverImage ? [converted.coverImage] : [],
+        author: item.author || 'IPTV Pro News',
+        status: 'published' as ArticleStatus,
+        categoryId: catId,
+        category: null,
+        tags: converted.tags,
+        seoTitle: converted.title,
+        seoDescription: converted.excerpt.slice(0, 160),
+        seoKeywords: converted.tags.join(', '),
+        readTime: converted.readTime,
+        featured: false,
+        publishedAt: converted.publishedAt,
+        scheduledFor: null,
+        createdAt: new Date(item.publishedAt || now.toISOString()).toISOString(),
+        updatedAt: now.toISOString(),
+        views: Math.floor(Math.random() * 200) + 30,
+        source: converted.source,
+      });
+    }
+
+    return articles;
+  } catch {
+    return [];
+  }
+}
+
+// ===== MAIN: FETCH NEWS (NEWSAPI + RAPIDAPI + GOOGLE NEWS + SEEDED) =====
+export async function fetchNews(categoryId?: string): Promise<{ news: any[]; articles: Article[]; source: string; trending: string[] }> {
   // Start with pre-seeded articles (always available)
   let allArticles = [...articlesStore];
   let source = 'seeded';
   let news: any[] = [];
+
+  // Try NewsAPI as primary source for real headlines
+  try {
+    const newsAPIArticles = await fetchNewsAPIArticles(categoryId);
+    if (newsAPIArticles.length > 0) {
+      // Prepend NewsAPI articles to the store
+      articlesStore = [...newsAPIArticles, ...articlesStore];
+      allArticles = [...newsAPIArticles, ...allArticles];
+      source = 'newsapi';
+    }
+  } catch {
+    // NewsAPI failed, continue with other sources
+  }
 
   // Try RapidAPI live data for fresh articles
   try {
@@ -742,10 +864,10 @@ export async function fetchNews(categoryId?: string): Promise<{ news: any[]; art
       // Prepend live articles to the store
       articlesStore = [...liveArticles, ...articlesStore];
       allArticles = [...liveArticles, ...allArticles];
-      source = 'live';
+      if (source === 'seeded') source = 'live';
     }
   } catch {
-    // RapidAPI failed, continue with seeded articles
+    // RapidAPI failed, continue
   }
 
   // Try Google News RSS for additional content
@@ -753,18 +875,21 @@ export async function fetchNews(categoryId?: string): Promise<{ news: any[]; art
     const googleNews = await fetchGoogleNews(categoryId);
     if (googleNews.length > 0) {
       news = googleNews;
-      source = 'google-news';
+      if (source === 'seeded') source = 'google-news';
     }
   } catch {
     // Google News failed, that's ok - we have seeded articles
   }
+
+  // Fetch trending topics
+  const trending = await fetchTrending();
 
   // Filter by category if specified
   if (categoryId) {
     allArticles = allArticles.filter(a => a.categoryId === categoryId);
   }
 
-  return { news, articles: allArticles, source };
+  return { news, articles: allArticles, source, trending };
 }
 
 // ===== GOOGLE NEWS RSS (LEGACY - used by API route) =====

@@ -11,6 +11,8 @@ import {
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import RevealAnimation from '@/components/RevealAnimation';
+import BreakingNewsTicker from '@/components/BreakingNewsTicker';
+import TrendingTopics from '@/components/TrendingTopics';
 import type { Article } from '@/lib/blog-types';
 import { CATEGORY_ICONS, CATEGORY_NAMES } from '@/lib/blog-types';
 
@@ -62,6 +64,10 @@ export default function BlogPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [error, setError] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
+  const [activeTrendingTopic, setActiveTrendingTopic] = useState<string | null>(null);
+  const [trending, setTrending] = useState<string[]>([]);
+  const [trendingLoading, setTrendingLoading] = useState(true);
+  const [breakingNews, setBreakingNews] = useState<{ title: string; slug: string; category: string }[]>([]);
   const articlesPerPage = 9;
 
   const fetchArticles = useCallback(async () => {
@@ -72,6 +78,32 @@ export default function BlogPage() {
       if (data.articles && data.articles.length > 0) {
         setArticles(data.articles);
         setAllArticles(data.articles);
+
+        // Set breaking news (top 8 articles for ticker)
+        const breaking = data.articles.slice(0, 8).map((a: Article) => ({
+          title: a.title,
+          slug: a.slug,
+          category: a.categoryId,
+        }));
+        setBreakingNews(breaking);
+
+        // Set trending topics from API or extract from articles
+        if (data.trending && data.trending.length > 0) {
+          setTrending(data.trending);
+        } else {
+          // Extract trending from article tags
+          const tagCount = new Map<string, number>();
+          data.articles.forEach((a: Article) => {
+            a.tags?.forEach((t: string) => {
+              tagCount.set(t, (tagCount.get(t) || 0) + 1);
+            });
+          });
+          const sorted = [...tagCount.entries()]
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 10)
+            .map(([tag]) => tag);
+          setTrending(sorted.length > 0 ? sorted : ['World Cup 2026', 'Champions League', 'Premier League', 'La Liga', 'Football']);
+        }
       } else {
         setError(true);
       }
@@ -79,6 +111,7 @@ export default function BlogPage() {
       setError(true);
     } finally {
       setLoading(false);
+      setTrendingLoading(false);
     }
   }, []);
 
@@ -86,8 +119,23 @@ export default function BlogPage() {
 
   const handleRefresh = async () => {
     setRefreshing(true);
+    setCurrentPage(1);
+    setActiveCategory(null);
+    setActiveTrendingTopic(null);
+    setSearchQuery('');
     await fetchArticles();
     setTimeout(() => setRefreshing(false), 500);
+  };
+
+  const handleTrendingClick = (topic: string) => {
+    if (activeTrendingTopic?.toLowerCase() === topic.toLowerCase()) {
+      setActiveTrendingTopic(null);
+    } else {
+      setActiveTrendingTopic(topic);
+      setActiveCategory(null);
+      setSearchQuery('');
+    }
+    setCurrentPage(1);
   };
 
   const filteredArticles = allArticles.filter(a => {
@@ -95,6 +143,11 @@ export default function BlogPage() {
     if (activeCategory && a.categoryId !== activeCategory) return false;
     if (searchQuery) {
       const q = searchQuery.toLowerCase();
+      return a.title.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q) || a.tags?.some(t => t.toLowerCase().includes(q));
+    }
+    // Filter by trending topic if selected
+    if (activeTrendingTopic) {
+      const q = activeTrendingTopic.toLowerCase();
       return a.title.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q) || a.tags?.some(t => t.toLowerCase().includes(q));
     }
     return true;
@@ -114,7 +167,12 @@ export default function BlogPage() {
       <Navbar />
 
       {/* ===== HERO SECTION ===== */}
-      <section className="relative pt-32 pb-20 md:pb-24 overflow-hidden">
+      {/* ===== BREAKING NEWS TICKER ===== */}
+      <div className="pt-20">
+        <BreakingNewsTicker items={breakingNews} />
+      </div>
+
+      <section className="relative pt-12 pb-20 md:pb-24 overflow-hidden">
         {/* Background effects */}
         <div className="absolute inset-0 bg-gradient-to-b from-brand-500/5 via-transparent to-transparent" />
         <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-brand-500/5 rounded-full blur-[140px]" />
@@ -137,14 +195,14 @@ export default function BlogPage() {
               </h1>
 
               <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-8">
-                {t('subtitle') || 'Real news from Google News • Enhanced by AI • Curated for you'}
+                {t('subtitle') || 'Real news from NewsAPI + Google News • AI Enhanced • Curated for you'}
               </p>
 
               <div className="flex items-center justify-center gap-3 flex-wrap">
                 {[
                   { icon: Globe, label: t('real_news') || 'Real News', color: 'text-brand-400', border: 'border-brand-500/20', bg: 'bg-brand-500/10' },
+                  { icon: TrendingUp, label: t('curated') || 'Live Updates', color: 'text-purple-400', border: 'border-purple-500/20', bg: 'bg-purple-500/10' },
                   { icon: Sparkles, label: t('ai_enhanced') || 'AI Enhanced', color: 'text-blue-400', border: 'border-blue-500/20', bg: 'bg-blue-500/10' },
-                  { icon: TrendingUp, label: t('curated') || 'Curated', color: 'text-purple-400', border: 'border-purple-500/20', bg: 'bg-purple-500/10' },
                 ].map((badge, i) => (
                   <div key={i} className={`flex items-center gap-2 px-4 py-2 rounded-full ${badge.bg} ${badge.border} border`}>
                     <badge.icon className={`w-4 h-4 ${badge.color}`} />
@@ -156,6 +214,18 @@ export default function BlogPage() {
           </RevealAnimation>
         </div>
       </section>
+
+      {/* ===== TRENDING TOPICS BAR ===== */}
+      <div className="container mx-auto px-4 mb-4">
+        <RevealAnimation direction="up" delay={0}>
+          <TrendingTopics
+            topics={trending}
+            onTopicClick={handleTrendingClick}
+            activeTopic={activeTrendingTopic}
+            loading={trendingLoading}
+          />
+        </RevealAnimation>
+      </div>
 
       {/* ===== SEARCH & FILTER BAR ===== */}
       <div className="sticky top-0 z-40 py-4 bg-dark-950/80 backdrop-blur-xl border-b border-brand-500/5">
@@ -382,6 +452,15 @@ export default function BlogPage() {
                           {article.readTime}m
                         </span>
                       </div>
+
+                      {/* Source badge */}
+                      {article.source && article.source !== 'IPTV Pro News' && (
+                        <div className="absolute bottom-3 left-3">
+                          <span className="px-2 py-0.5 rounded-full bg-dark-950/50 text-[9px] text-brand-400/80 border border-brand-500/10 backdrop-blur-sm font-medium">
+                            {article.source}
+                          </span>
+                        </div>
+                      )}
                     </div>
 
                     {/* Content */}

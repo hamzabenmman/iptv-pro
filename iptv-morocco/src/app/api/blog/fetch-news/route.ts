@@ -9,7 +9,7 @@ export async function GET(request: Request) {
   const category = searchParams.get('category') || undefined;
 
   try {
-    // Use the new unified fetchNews function that tries multiple sources
+    // Use the unified fetchNews function that tries NewsAPI + RapidAPI + Google News + seeded
     const result = await fetchNews(category);
 
     return NextResponse.json({
@@ -17,6 +17,7 @@ export async function GET(request: Request) {
       news: result.news,
       articles: result.articles,
       source: result.source,
+      trending: result.trending || [],
     });
   } catch (error) {
     // Always fall back to stored articles
@@ -26,6 +27,7 @@ export async function GET(request: Request) {
       news: [],
       articles: stored,
       source: 'fallback',
+      trending: [],
     });
   }
 }
