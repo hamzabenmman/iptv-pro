@@ -4,8 +4,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { useParams } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import Link from 'next/link';
-import {
-  ArrowLeft, Clock, Calendar, Bookmark, ThumbsUp,
+import { ArrowLeft, Clock, Calendar, Bookmark, ThumbsUp,
   ChevronLeft, ChevronRight, Image as ImageIcon, ExternalLink, Globe,
   Sparkles, TrendingUp, Hash, List, ChevronUp, Copy, Check,
   MessageCircle, Trophy
@@ -13,6 +12,7 @@ import {
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import RevealAnimation from '@/components/RevealAnimation';
+import { updateSEOMeta, resetSEOMeta } from '@/lib/seo-client';
 import type { Article } from '@/lib/blog-types';
 import { CATEGORY_ICONS, CATEGORY_NAMES } from '@/lib/blog-types';
 
@@ -106,6 +106,24 @@ export default function ArticlePage() {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   const slug = params.slug as string;
+
+  // Update SEO meta tags dynamically when article loads
+  useEffect(() => {
+    if (article) {
+      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.it.com';
+      updateSEOMeta({
+        title: `${article.title} | IPTV Pro Blog`,
+        description: article.excerpt || article.seoDescription || 'Read the latest sports news and analysis on IPTV Pro.',
+        image: article.coverImage ? (article.coverImage.startsWith('http') ? article.coverImage : `${siteUrl}${article.coverImage}`) : undefined,
+        url: typeof window !== 'undefined' ? window.location.href : undefined,
+        siteName: 'IPTV Pro',
+        type: 'article',
+      });
+    } else if (!loading) {
+      // Reset SEO when article is not found
+      resetSEOMeta();
+    }
+  }, [article, loading]);
 
   useEffect(() => {
     async function loadArticle() {

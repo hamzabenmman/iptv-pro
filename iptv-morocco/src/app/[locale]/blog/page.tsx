@@ -13,6 +13,7 @@ import Footer from '@/components/Footer';
 import RevealAnimation from '@/components/RevealAnimation';
 import BreakingNewsTicker from '@/components/BreakingNewsTicker';
 import TrendingTopics from '@/components/TrendingTopics';
+import { updateSEOMeta } from '@/lib/seo-client';
 import type { Article } from '@/lib/blog-types';
 import { CATEGORY_ICONS, CATEGORY_NAMES } from '@/lib/blog-types';
 
@@ -113,6 +114,17 @@ export default function BlogPage() {
       setLoading(false);
       setTrendingLoading(false);
     }
+  }, []);
+
+  // Set SEO meta tags for blog listing page
+  useEffect(() => {
+    updateSEOMeta({
+      title: 'Sports & IPTV News - Blog | IPTV Pro',
+      description: 'Latest sports news, World Cup 2026 coverage, match previews, and IPTV streaming guides. Real news from NewsAPI and Google News.',
+      type: 'website',
+      url: typeof window !== 'undefined' ? window.location.href : undefined,
+      siteName: 'IPTV Pro',
+    });
   }, []);
 
   useEffect(() => { fetchArticles(); }, [fetchArticles]);
