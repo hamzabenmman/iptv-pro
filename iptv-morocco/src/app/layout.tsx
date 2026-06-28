@@ -34,7 +34,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_CONFIG.url),
+  metadataBase: new URL(SITE_CONFIG.url || 'https://iptv-pro.it.com'),
   title: {
     default: SITE_CONFIG.defaultTitle,
     template: SITE_CONFIG.titleTemplate,
@@ -138,13 +138,6 @@ export const metadata: Metadata = {
     // Add other verification codes as needed
   },
 
-  // Other
-  other: {
-    'google-site-verification': SITE_CONFIG.googleVerification,
-    'msvalidate.01': '', // Bing verification
-    'yandex-verification': '', // Yandex verification
-    'facebook-domain-verification': '', // Facebook domain verification
-  },
 };
 
 // Category-specific FAQ questions for schema
