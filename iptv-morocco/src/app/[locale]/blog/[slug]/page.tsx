@@ -13,6 +13,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import RevealAnimation from '@/components/RevealAnimation';
 import { updateSEOMeta, resetSEOMeta } from '@/lib/seo-client';
+import { newsArticleSchema, blogPostingSchema, breadcrumbSchema } from '@/lib/json-ld';
 import type { Article } from '@/lib/blog-types';
 import { CATEGORY_ICONS, CATEGORY_NAMES } from '@/lib/blog-types';
 
@@ -120,7 +121,6 @@ export default function ArticlePage() {
         type: 'article',
       });
     } else if (!loading) {
-      // Reset SEO when article is not found
       resetSEOMeta();
     }
   }, [article, loading]);
@@ -320,6 +320,26 @@ export default function ArticlePage() {
                   )}
                 </div>
               )}
+
+              {/* JSON-LD Schema */}
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: article.categoryId === 'football' || article.categoryId === 'champions-league' || article.categoryId === 'premier-league' || article.categoryId === 'la-liga'
+                    ? newsArticleSchema(article, locale)
+                    : blogPostingSchema(article, locale),
+                }}
+              />
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: breadcrumbSchema([
+                    { name: 'Home', url: `/${locale}` },
+                    { name: 'Blog', url: `/${locale}/blog` },
+                    { name: article.title, url: `/${locale}/blog/${article.slug}` },
+                  ]),
+                }}
+              />
 
               {/* Content */}
               <div className="bg-dark-800/20 border border-white/5 rounded-2xl p-6 md:p-10">

@@ -1,43 +1,58 @@
 import { MetadataRoute } from 'next';
+import { SITE_CONFIG, fullUrl } from '@/lib/seo-config';
+import { getStoredArticles } from '@/lib/blog-engine';
 
-const locales = [
-  'ar', 'fr', 'en', 'es', 'de', 'it', 'pt', 'nl', 'ru', 'zh',
-  'ja', 'ko', 'tr', 'pl', 'sv', 'da', 'fi', 'cs', 'hu', 'ro',
-  'el', 'he', 'hi', 'th', 'vi', 'ms', 'id', 'fil', 'uk',
-];
+// Supported locales
+const locales = ['ar', 'fr', 'en', 'es', 'de', 'it', 'pt', 'nl', 'ru', 'zh', 'tr', 'ja'];
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.it.com';
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const entries: MetadataRoute.Sitemap = [];
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = ['', '/matches', '/blog'];
+  // ===== STATIC PAGES =====
+  // Each page needs entries for every locale
+  const staticRoutes = [
+    { path: '', priority: 1.0, changefreq: 'weekly' as const },
+    { path: 'blog', priority: 0.9, changefreq: 'daily' as const },
+    { path: 'matches', priority: 0.8, changefreq: 'hourly' as const },
+    { path: 'backlinks', priority: 0.3, changefreq: 'monthly' as const },
+  ];
 
-  const sitemapEntries: MetadataRoute.Sitemap = [];
-
-  for (const page of pages) {
-    for (const locale of locales) {
-      // Arabic (ar) is the default locale, served at root
+  for (const locale of locales) {
+    for (const route of staticRoutes) {
       const url = locale === 'ar'
-        ? `${siteUrl}${page}`
-        : `${siteUrl}/${locale}${page}`;
+        ? fullUrl(route.path ? `/${route.path}` : '')
+        : fullUrl(`/${locale}${route.path ? `/${route.path}` : ''}`);
 
-      sitemapEntries.push({
+      entries.push({
         url,
         lastModified: new Date(),
-        changeFrequency: page === '' ? 'weekly' : 'daily',
-        priority: page === '' ? 1.0 : page === '/matches' ? 0.9 : 0.8,
-        alternates: {
-          languages: Object.fromEntries(
-            locales.map((l) => [
-              l,
-              l === 'ar'
-                ? `${siteUrl}${page}`
-                : `${siteUrl}/${l}${page}`,
-            ])
-          ),
-        },
+        changeFrequency: route.changefreq,
+        priority: route.priority,
       });
     }
   }
 
-  return sitemapEntries;
+  // ===== BLOG ARTICLES =====
+  try {
+    const articles = getStoredArticles();
+    const publishedArticles = articles.filter(a => a.status === 'published');
+
+    for (const article of publishedArticles) {
+      for (const locale of locales) {
+        const url = fullUrl(`/${locale}/blog/${article.slug}`);
+        entries.push({
+          url,
+          lastModified: new Date(article.updatedAt || article.createdAt),
+          changeFrequency: 'weekly',
+          priority: 0.7,
+        });
+      }
+    }
+  } catch {
+    // Blog articles not available, skip
+  }
+
+  // ===== LOCALE-SPECIFIC HOME PAGES (already covered above) =====
+
+  return entries;
 }

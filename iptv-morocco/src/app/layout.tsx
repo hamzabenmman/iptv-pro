@@ -1,6 +1,12 @@
 import type { Viewport, Metadata } from 'next';
 import { Inter, Tajawal } from 'next/font/google';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SITE_CONFIG, fullUrl } from '@/lib/seo-config';
+import {
+  organizationSchema,
+  websiteSchema,
+  productSchema,
+} from '@/lib/json-ld';
 import './globals.css';
 
 const inter = Inter({
@@ -20,46 +26,98 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
-  themeColor: '#0c0a08',
+  themeColor: [
+    { media: '(prefers-color-scheme: dark)', color: '#0c0a08' },
+    { media: '(prefers-color-scheme: light)', color: '#f8f7f5' },
+  ],
   colorScheme: 'dark light',
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.it.com'),
+  metadataBase: new URL(SITE_CONFIG.url),
   title: {
-    default: 'IPTV Pro | Best Premium IPTV Service for the Arab World',
-    template: '%s | IPTV Pro',
+    default: SITE_CONFIG.defaultTitle,
+    template: SITE_CONFIG.titleTemplate,
   },
-  description: 'Premium IPTV service with 25,000+ HD/4K/8K channels, sports, movies, series & live TV. Multi-language, 24/7 support on WhatsApp. Subscribe now!',
-  applicationName: 'IPTV Pro',
-  creator: 'IPTV Pro',
-  publisher: 'IPTV Pro',
-  keywords: ['IPTV', 'IPTV subscription', 'best IPTV service', 'premium IPTV', '4K IPTV', '8K IPTV', 'beIN Sports', 'World Cup 2026', 'live sports streaming', 'Arabic channels', 'VOD streaming', 'Firestick IPTV', 'Smart TV IPTV', 'anti-freeze IPTV', 'no buffering IPTV', 'stable IPTV', 'IPTV free trial', 'IPTV Morocco', 'IPTV Arab world', 'streaming service', 'TV channels', 'sports', 'Arabic', 'premium service'],
+  description: SITE_CONFIG.defaultDescription,
+  applicationName: SITE_CONFIG.name,
+  creator: SITE_CONFIG.name,
+  publisher: SITE_CONFIG.name,
+  generator: 'Next.js',
+  keywords: [
+    'IPTV', 'IPTV subscription', 'best IPTV service', 'premium IPTV',
+    '4K IPTV', '8K IPTV', 'beIN Sports', 'World Cup 2026',
+    'live sports streaming', 'Arabic channels', 'VOD streaming',
+    'Firestick IPTV', 'Smart TV IPTV', 'anti-freeze IPTV',
+    'no buffering IPTV', 'stable IPTV', 'IPTV free trial',
+    'IPTV Morocco', 'IPTV Arab world', 'streaming service',
+    'TV channels', 'sports', 'premium service',
+  ],
+  authors: [{ name: SITE_CONFIG.name, url: SITE_CONFIG.url }],
   formatDetection: {
-    telephone: false,
+    telephone: true,
+    email: true,
+    address: false,
   },
+  referrer: 'origin-when-cross-origin',
+  
+  // Open Graph
   openGraph: {
     type: 'website',
-    locale: 'ar_AE',
-    alternateLocale: ['en_US', 'fr_FR', 'es_ES'],
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.it.com',
-    siteName: 'IPTV Pro',
-    title: 'IPTV Pro | Best Premium IPTV Service',
-    description: 'Over 25,000 channels in HD, 4K & 8K. Exclusive sports, movies, series.',
+    locale: SITE_CONFIG.locale,
+    alternateLocale: SITE_CONFIG.alternateLocales,
+    url: SITE_CONFIG.url,
+    siteName: SITE_CONFIG.name,
+    title: SITE_CONFIG.defaultTitle,
+    description: SITE_CONFIG.defaultDescription,
     images: [
       {
-        url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.it.com') + '/images/og-image.svg',
-        width: 1200,
-        height: 630,
-        alt: 'IPTV Pro Service',
+        url: fullUrl(SITE_CONFIG.ogImage),
+        width: SITE_CONFIG.ogImageWidth,
+        height: SITE_CONFIG.ogImageHeight,
+        alt: SITE_CONFIG.name,
       },
     ],
   },
+
+  // Twitter Card
   twitter: {
     card: 'summary_large_image',
-    title: 'IPTV Pro | Premium IPTV Service',
-    description: 'Best IPTV service with 25,000+ channels and 24/7 support',      images: [(process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.it.com') + '/images/og-image.svg'],
+    title: `${SITE_CONFIG.name} | ${SITE_CONFIG.tagline}`,
+    description: SITE_CONFIG.defaultDescription,
+    images: [fullUrl(SITE_CONFIG.ogImage)],
+    creator: `@${SITE_CONFIG.name.replace(/\s+/g, '')}`,
   },
+
+  // Icons
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      {
+        rel: 'mask-icon',
+        url: '/safari-pinned-tab.svg',
+        color: '#D4AF37',
+      },
+    ],
+  },
+
+  // Manifest
+  manifest: '/manifest.json',
+
+  // Apple Web App
+  appleWebApp: {
+    capable: true,
+    title: SITE_CONFIG.name,
+    statusBarStyle: 'black-translucent',
+  },
+
+  // Robots
   robots: {
     index: true,
     follow: true,
@@ -73,124 +131,49 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-};
 
-// JSON-LD Schemas - International brand
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'IPTV Pro',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.it.com',
-  logo: (process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.it.com') + '/images/logo.svg',
-  description: 'Premium IPTV service for worldwide audiences. Over 25,000 TV channels and VOD in HD, 4K and 8K. Ultra-fast servers, anti-freeze technology, 24/7 support.',
-  address: { '@type': 'PostalAddress', addressCountry: 'MA' },
-  contactPoint: {
-    '@type': 'ContactPoint',
-    telephone: '+212-670-799985',
-    contactType: 'customer service',
-    availableLanguage: ['Arabic', 'English', 'French', 'Spanish', 'German', 'Turkish', 'Portuguese', 'Italian', 'Dutch', 'Russian', 'Chinese', 'Japanese'],
+  // Verification
+  verification: {
+    google: SITE_CONFIG.googleVerification,
+    // Add other verification codes as needed
   },
-  sameAs: [
-    'https://wa.me/212670799985',
-  ],
-  foundingDate: '2024',
-  isicV4: '6010',
-  naics: '515210',
-  knowsAbout: ['IPTV', 'Streaming', 'Live TV', 'Sports Broadcasting', 'Digital Entertainment'],
-};
 
-const websiteSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'IPTV Pro',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://iptv-pro.it.com',
-};
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'ما هي خدمة IPTV؟',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'IPTV هي خدمة بث تلفزيوني عبر الإنترنت. تتيح لك مشاهدة آلاف القنوات التلفزيونية والأفلام والمسلسلات عبر اتصال الإنترنت الخاص بك دون الحاجة إلى طبق استقبال أو كابل.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'كيف يمكنني الاشتراك؟',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'كل ما عليك فعله هو التواصل معنا عبر واتساب على الرقم الظاهر في الموقع. سنقوم بتجهيز حسابك في أقل من 5 دقائق.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'ما هي الأجهزة التي تدعم الخدمة؟',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'خدمتنا تعمل على جميع الأجهزة: التلفزيونات الذكية، الهواتف، الكمبيوتر، الأجهزة اللوحية، MAG، و Enigma 2.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'هل يوجد ضمان لاسترجاع الأموال؟',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'نعم، نوفر ضمان استرجاع الأموال بالكامل خلال 7 أيام إذا لم تكن راضياً عن الخدمة.',
-      },
-    },
-  ],
-};
-
-const productSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: 'IPTV Pro Subscription',
-  description: 'Premium IPTV subscription with 25,000+ channels in HD, 4K and 8K. Includes live TV, sports, movies, series, and VOD.',
-  brand: {
-    '@type': 'Brand',
-    name: 'IPTV Pro',
-  },
-  offers: [
-    {
-      '@type': 'Offer',
-      name: '1 Month Plan',
-      price: '9.99',
-      priceCurrency: 'USD',
-      priceValidUntil: '2026-12-31',
-      description: 'One month access to 25,000+ channels in HD quality',
-      availability: 'https://schema.org/InStock',
-    },
-    {
-      '@type': 'Offer',
-      name: '3 Months Plan',
-      price: '19.99',
-      priceCurrency: 'USD',
-      priceValidUntil: '2026-12-31',
-      description: 'Three months access with HD & 4K quality, 2 devices',
-      availability: 'https://schema.org/InStock',
-    },
-    {
-      '@type': 'Offer',
-      name: '1 Year Plan',
-      price: '49.99',
-      priceCurrency: 'USD',
-      priceValidUntil: '2026-12-31',
-      description: 'Full year access with 4K & 8K quality, 5 devices, VIP support',
-      availability: 'https://schema.org/InStock',
-    },
-  ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    bestRating: '5',
-    ratingCount: '50000',
-    reviewCount: '50000',
+  // Other
+  other: {
+    'google-site-verification': SITE_CONFIG.googleVerification,
+    'msvalidate.01': '', // Bing verification
+    'yandex-verification': '', // Yandex verification
+    'facebook-domain-verification': '', // Facebook domain verification
   },
 };
+
+// Category-specific FAQ questions for schema
+const faqQuestions = [
+  {
+    name: 'ما هي خدمة IPTV؟',
+    answer: 'IPTV هي خدمة بث تلفزيوني عبر الإنترنت. تتيح لك مشاهدة آلاف القنوات التلفزيونية والأفلام والمسلسلات عبر اتصال الإنترنت الخاص بك دون الحاجة إلى طبق استقبال أو كابل.',
+  },
+  {
+    name: 'How do I subscribe to IPTV Pro?',
+    answer: 'Simply contact us on WhatsApp and we will set up your account in under 5 minutes. Choose from our 1-month, 3-month, or 1-year plans.',
+  },
+  {
+    name: 'What devices are supported?',
+    answer: 'Our service works on all devices: Smart TVs (Samsung, LG, Sony), Android phones and TV boxes, iOS devices, Amazon Fire TV Stick, Windows & Mac computers, MAG boxes, and Enigma2 devices.',
+  },
+  {
+    name: 'Is there a money-back guarantee?',
+    answer: 'Yes, we offer a full 7-day money-back guarantee if you are not satisfied with our service.',
+  },
+  {
+    name: 'Do you offer beIN Sports channels?',
+    answer: 'Yes, we offer full beIN Sports coverage including beIN Sports 4K channels for World Cup 2026, Champions League, and all major football events.',
+  },
+  {
+    name: 'How many channels do you have?',
+    answer: 'We offer over 25,000 channels in HD, 4K, and 8K quality including sports, movies, news, entertainment, and kids channels from around the world.',
+  },
+];
 
 export default function RootLayout({
   children,
@@ -200,36 +183,62 @@ export default function RootLayout({
   return (
     <html className={`${inter.variable} ${tajawal.variable}`}>
       <head>
+        {/* Font Awesome */}
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-        />
-        {/* Google Search Console verification */}
-        <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
+
         {/* Preconnect to important origins */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://newsapi.org" />
+        <link rel="dns-prefetch" href="https://newsapi.org" />
+        <link rel="preconnect" href="https://free-api-live-football-data.p.rapidapi.com" />
+        <link rel="dns-prefetch" href="https://free-api-live-football-data.p.rapidapi.com" />
+
+        {/* JSON-LD Schemas */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: organizationSchema() }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: websiteSchema() }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: productSchema() }}
+        />
+
+        {/* Fallback FAQ Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: faqQuestions.map(q => ({
+                '@type': 'Question',
+                name: q.name,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: q.answer,
+                },
+              })),
+            }).replace(/</g, '\\u003c'),
+          }}
+        />
+
+        {/* DNS Prefetch for faster navigation */}
+        <link rel="dns-prefetch" href="//iptv-pro.it.com" />
       </head>
       <body className="font-sans antialiased bg-dark-950">
         {children}
+        {/* Preload critical resources */}
+        <link rel="preload" href={SITE_CONFIG.ogImage} as="image" />
       </body>
     </html>
   );
