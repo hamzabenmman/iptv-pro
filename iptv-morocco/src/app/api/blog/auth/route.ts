@@ -7,9 +7,12 @@ export async function POST(request: Request) {
     const { password } = await request.json();
     const adminPassword = process.env.ADMIN_PASSWORD;
 
+    // Admin password MUST be set in production environment
     if (!adminPassword) {
-      // No password set = admin access is open (dev mode)
-      return NextResponse.json({ authenticated: true, message: 'No password required (dev mode)' });
+      return NextResponse.json({
+        authenticated: false,
+        message: 'Admin password not configured. Please set ADMIN_PASSWORD in environment variables.',
+      }, { status: 500 });
     }
 
     if (password === adminPassword) {

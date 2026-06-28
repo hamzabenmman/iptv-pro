@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic';
 function isAdmin(request: Request): boolean {
   const authHeader = request.headers.get('authorization');
   const adminPassword = process.env.ADMIN_PASSWORD;
-  if (!adminPassword) return true; // No password set = open access
+  if (!adminPassword) return false; // Password must be configured
   return authHeader === `Bearer ${adminPassword}`;
 }
 
