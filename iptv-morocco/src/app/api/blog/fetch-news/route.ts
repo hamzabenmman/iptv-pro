@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { fetchGoogleNews, getStoredArticles } from '@/lib/blog-engine';
+import { fetchNews, getStoredArticles } from '@/lib/blog-engine';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 30;
@@ -9,25 +9,23 @@ export async function GET(request: Request) {
   const category = searchParams.get('category') || undefined;
 
   try {
-    // Try to fetch real news
-    const newsItems = await fetchGoogleNews(category);
-
-    // Also return stored articles
-    const storedArticles = getStoredArticles();
+    // Use the new unified fetchNews function that tries multiple sources
+    const result = await fetchNews(category);
 
     return NextResponse.json({
       success: true,
-      news: newsItems.slice(0, 20),
-      articles: storedArticles,
-      source: newsItems.length > 0 ? 'google-news' : 'fallback',
+      news: result.news,
+      articles: result.articles,
+      source: result.source,
     });
   } catch (error) {
+    // Always fall back to stored articles
+    const stored = getStoredArticles();
     return NextResponse.json({
-      success: false,
+      success: true,
       news: [],
-      articles: getStoredArticles(),
+      articles: stored,
       source: 'fallback',
-      error: 'Failed to fetch news',
     });
   }
 }
